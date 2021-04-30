@@ -1,0 +1,24 @@
+{
+  "name": "admin-template",
+  "private": true,
+  "dependencies": {
+    "@github/include-fragment-element": "^5.3.1",
+    "alpine-magic-helpers": "^1.1.0",
+    "alpinejs": "^2.8.2",
+    "kutty": "^0.5.1",
+    "page": "^1.11.6",
+    "vue": "^2.6.12"
+  },
+  "devDependencies": {
+    "@tailwindcss/forms": "^0.3.2",
+    "@tailwindcss/typography": "^0.4.0",
+    "autoprefixer": "^10.2.5",
+    "postcss-extend-rule": "^3.0.0",
+    "postcss-nested": "^5.0.5",
+    "tailwindcss": "^2.0.4",
+    "laravel-mix": "^6.0.13",
+    "laravel-mix-purgecss": "^6.0.0",
+    "laravel-mix-tailwind": "^0.1.2",
+    "postcss": "^8.1"
+  }
+}

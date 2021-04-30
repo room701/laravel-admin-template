@@ -1,0 +1,33 @@
+{
+    "name": "dennykuo/laravel-admin-template",
+    "description": "",
+    "authors": [
+        {
+            "name": "Denny",
+            "email": "dennykuo@gmail.com"
+        }
+    ],
+    "require": {
+        "spatie/yaml-front-matter": "^2.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Dennykuo\\AdminView\\": "src/"
+        },
+        "files": [
+            "src/helpers.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Dennykuo\\AdminView\\Test\\": "tests"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Dennykuo\\AdminView\\AdminViewServiceProvider"
+            ]
+        }
+    }
+}

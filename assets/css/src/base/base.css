@@ -1,0 +1,14 @@
+@layer base {
+    [x-cloak] {
+        display: none;
+    }
+
+    *:focus {
+        outline: 0 !important;
+        box-shadow: none !important;
+    }
+
+    button, input, optgroup, select, textarea {
+        line-height: 1em;
+    }
+}
