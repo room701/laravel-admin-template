@@ -1,7 +1,9 @@
 <?php
 
+use Dennykuo\AdminView\AdminView;
 
-if (! function_exists('foo')) {
+
+if (! function_exists('adminView')) {
     /**
      * Get the evaluated view contents for the given view.
      *
@@ -10,8 +12,9 @@ if (! function_exists('foo')) {
      * @param  array  $mergeData
      * @return \Illuminate\Contracts\View\View|\Illuminate\Contracts\View\Factory
      */
-    function foo($view = null, $data = [], $mergeData = [])
+    function adminView($view = null, $data = [], $mergeData = [])
     {
-        //
+        return AdminView::make($view, $data, $mergeData);
     }
 }
+

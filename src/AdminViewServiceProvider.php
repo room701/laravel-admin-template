@@ -16,16 +16,6 @@ class AdminViewServiceProvider extends ServiceProvider
 
         // Load views
         $this->loadViewsFrom(__DIR__.'/../views', 'admin-view');
-
-        // Blade directive
-        // Blade::directive('adminViewOutline', function ($expression = null) {
-        //     // $content = <<<'EOD'
-        //     //     Example of string
-        //     //     spanning multiple lines
-        //     //     using nowdoc syntax.
-        //     // EOD;
-        //     // return echo $content;
-        // });
     }
 
     public function register()
