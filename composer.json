@@ -1,12 +1,6 @@
 {
-    "name": "dennykuo/laravel-admin-template",
-    "description": "",
-    "authors": [
-        {
-            "name": "Denny",
-            "email": "dennykuo@gmail.com"
-        }
-    ],
+    "name": "dennykuo/laravel-admin-view",
+    "description": "後台",
     "require": {
         "spatie/yaml-front-matter": "^2.0"
     },

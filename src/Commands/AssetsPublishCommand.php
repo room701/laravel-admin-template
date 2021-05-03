@@ -7,14 +7,14 @@ use Illuminate\Support\Facades\File;
 
 class AssetsPublishCommand extends Command
 {
-    protected $signature = 'laravel-admin-template:assets-publish';
+    protected $signature = 'laravel-admin-view:assets-publish';
 
-    protected $description = '上傳 laravel-admin-template 的 assets';
+    protected $description = 'Publish/update laravel-admin-view assets';
 
     public function handle()
     {
         $params = [
-            '--tag' => 'laravel-admin-template',
+            '--tag' => 'laravel-admin-view',
             '--force' => true,
         ];
 

@@ -541,14 +541,6 @@
       "oAP" : "\/views\/components\/form-search.blade.php",
       "oF" : 0
     },
-    "\/views\/index.blade.php" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/views\/index.blade.php",
-      "oF" : 0
-    },
     "\/views\/layouts\/master.blade.php" : {
       "cB" : 0,
       "ft" : 8192,

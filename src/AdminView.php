@@ -18,9 +18,10 @@ class AdminView
     {
         $viewHTML = view($view, $data, $mergeData)->toHtml();
         $viewParsed = YamlFrontMatter::parse($viewHTML);
-        $params = $viewParsed->matter();
         $content = $viewParsed->body();
+        $viewParams = $viewParsed->matter();
+        $viewParams = collect($viewParams);
 
-        return view('admin-view::carrier', compact('content') + $params, $mergeData);
+        return view('admin-view::carrier', compact('content', 'viewParams'), $mergeData);
     }
 }

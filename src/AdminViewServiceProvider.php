@@ -16,6 +16,13 @@ class AdminViewServiceProvider extends ServiceProvider
 
         // Load views
         $this->loadViewsFrom(__DIR__.'/../views', 'admin-view');
+
+        // Blade directive
+        // Blade::directive('adminViewPartials', function ($expression) {
+        //     return "<?= Blade::include('admin-view::partials.breadcrumb')"\?\>";
+        // return "<?php echo view('$formPartial')->render(); \?\>";
+        // });
+
     }
 
     public function register()
@@ -38,12 +45,12 @@ class AdminViewServiceProvider extends ServiceProvider
         // Publish configs
         $this->publishes([
             __DIR__.'/config/admin-view.php' => config_path('admin-view.php'),
-        ], 'laravel-admin-template:config');
+        ], 'laravel-admin-view:config');
 
         // Publish assets
         $this->publishes([
-            __DIR__.'/../assets' => public_path('vendor/laravel-admin-template'),
-        ], 'laravel-admin-template:assets');
+            __DIR__.'/../assets' => public_path('vendor/laravel-admin-view'),
+        ], 'laravel-admin-view:assets');
     }
 
 }
