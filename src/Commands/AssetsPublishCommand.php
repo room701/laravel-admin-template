@@ -14,7 +14,7 @@ class AssetsPublishCommand extends Command
     public function handle()
     {
         $params = [
-            '--tag' => 'laravel-admin-view',
+            '--tag' => 'laravel-admin-view:assets',
             '--force' => true,
         ];
 

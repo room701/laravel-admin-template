@@ -471,6 +471,14 @@
       "oAP" : "\/src\/Commands\/AssetsPublishCommand.php",
       "oF" : 0
     },
+    "\/src\/Concerns\/Setting.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/src\/Concerns\/Setting.php",
+      "oF" : 0
+    },
     "\/src\/config\/admin-view.php" : {
       "cB" : 0,
       "ft" : 8192,

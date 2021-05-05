@@ -20,7 +20,7 @@ class AdminView
         $viewParsed = YamlFrontMatter::parse($viewHTML);
         $content = $viewParsed->body();
         $viewParams = $viewParsed->matter();
-        $viewParams = collect($viewParams);
+        $viewParams = collect($viewParams)->recursive(); // AdminViewServiceProvider 中有設定 Collection 擴展
 
         return view('admin-view::carrier', compact('content', 'viewParams'), $mergeData);
     }

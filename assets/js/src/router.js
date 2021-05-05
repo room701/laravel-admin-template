@@ -18,8 +18,7 @@ class Router {
         [].forEach.call(this.links, (link) => {
             link.addEventListener('click', (e) => {
                 e.preventDefault();
-                let url = e.target.dataset.fetchUrl;
-
+                let url = e.target.href;
                 window.history.pushState({}, null, url);
 
                 this.loadContent(url);

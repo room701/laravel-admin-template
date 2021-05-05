@@ -2,6 +2,7 @@
 
 use Dennykuo\AdminView\AdminView;
 
+use Dennykuo\AdminView\Concerns\Setting;
 
 if (! function_exists('adminView')) {
     /**
@@ -15,6 +16,13 @@ if (! function_exists('adminView')) {
     function adminView($view = null, $data = [], $mergeData = [])
     {
         return AdminView::make($view, $data, $mergeData);
+    }
+}
+
+if (! function_exists('adminAsset')) {
+    function adminAsset($path = null)
+    {
+        return asset(config('admin-view.assets-path')) .'/'. ltrim($path, '/');
     }
 }
 

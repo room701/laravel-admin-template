@@ -3,11 +3,15 @@
 namespace Dennykuo\AdminView;
 
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\Blade;
 use Dennykuo\AdminView\Commands;
+use Dennykuo\AdminView\Concerns\Setting;
 
 class AdminViewServiceProvider extends ServiceProvider
 {
+    use Setting;
+
     public function boot()
     {
         if ($this->app->runningInConsole()) {
@@ -15,19 +19,29 @@ class AdminViewServiceProvider extends ServiceProvider
         }
 
         // Load views
-        $this->loadViewsFrom(__DIR__.'/../views', 'admin-view');
+        $this->loadViewsFrom(__DIR__.'/../views', self::$viewNamespace);
 
         // Blade directive
-        // Blade::directive('adminViewPartials', function ($expression) {
-        //     return "<?= Blade::include('admin-view::partials.breadcrumb')"\?\>";
-        // return "<?php echo view('$formPartial')->render(); \?\>";
+        // Blade::directive('foo', function ($expression) {
+
         // });
 
+        // 擴展 Collection
+        \Illuminate\Support\Collection::macro('recursive', function () {
+            return $this->map(function ($value) {
+                if (is_array($value) || is_object($value)) {
+                    return collect($value)->recursive();
+                }
+
+                return $value;
+            });
+        });
     }
 
     public function register()
     {
-        $this->mergeConfigFrom(__DIR__.'/config/admin-view.php', 'admin-view');
+        $this->mergeConfigFrom(__DIR__.'/config/admin-view.php', static::$publishConfigName);
+        Config::set(static::$publishConfigName . '.assets-path', static::$publishAssetsPath);
     }
 
     /**
@@ -42,15 +56,15 @@ class AdminViewServiceProvider extends ServiceProvider
             Commands\AssetsPublishCommand::class,
         ]);
 
-        // Publish configs
-        $this->publishes([
-            __DIR__.'/config/admin-view.php' => config_path('admin-view.php'),
-        ], 'laravel-admin-view:config');
-
         // Publish assets
         $this->publishes([
-            __DIR__.'/../assets' => public_path('vendor/laravel-admin-view'),
+            __DIR__.'/../assets' => public_path(static::$publishAssetsPath),
         ], 'laravel-admin-view:assets');
+
+        // Publish configs
+        $this->publishes([
+            __DIR__.'/config/admin-view.php' => config_path(static::$publishConfigName . '.php'),
+        ], 'laravel-admin-view:config');
     }
 
 }

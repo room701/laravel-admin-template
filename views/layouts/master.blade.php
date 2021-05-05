@@ -5,14 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>Admin</title>
   {{--  favicon  --}}
-  <link rel="icon" type="image/x-icon" href="/vendor/laravel-admin-template/img/favicon-icons/favicon.ico">
-  <link rel="icon" type="image/png" sizes="32x32" href="/vendor/laravel-admin-template/img/favicon-icons/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/vendor/laravel-admin-template/img/favicon-icons/favicon-16x16.png">
+  <link rel="icon" type="image/x-icon" href="{{ adminAsset('/img/favicon-icons/favicon.ico') }}">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ adminAsset('/img/favicon-icons/favicon-32x32.png') }}">
+  <link rel="icon" type="image/png" sizes="16x16" href="{{ adminAsset('/vendor/laravel-admin-template/img/favicon-icons/favicon-16x16.png') }}">
   {{--  stylesheets  --}}
-  <link rel="stylesheet" href="/vendor/laravel-admin-template/img/icons/zwicon/zwicon.css">
-  <link rel="stylesheet" href="/vendor/laravel-admin-template/css/dist/app.css">
+  <link rel="stylesheet" href="{{ adminAsset('/img/icons/zwicon/zwicon.css') }}">
+  <link rel="stylesheet" href="{{ adminAsset('/css/dist/app.css') }}">
   {{--  scripts  --}}
-  <script type="module" defer src="/vendor/laravel-admin-template/js/dist/app.js"></script>
+  <script type="module" defer src="{{ adminAsset('/js/dist/app.js') }}"></script>
 </head>
 
 <body x-data="rootAlpineInstance()"

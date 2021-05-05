@@ -6,9 +6,9 @@
 
   @foreach (config('admin-view.nav', ['測試' => 'admin.index']) as $name => $route)
     <a class="p-nav-item"
-      href="{{ Route::has($route) ? route($route) : 'javascript:void(0)' }}"
-      :class="{ 'is-active': sidebar.active == 'table' }"
-      data-fetch-url="{{ Route::has($route) ? route($route) : '/' }}"
+       data-fetch-url
+       href="{{ Route::has($route) ? route($route) : '/' }}"
+       :class="{ 'is-active': sidebar.active == 'table' }"
     >
       {{ $name }}
     </a>
