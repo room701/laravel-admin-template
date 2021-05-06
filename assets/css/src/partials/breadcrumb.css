@@ -2,8 +2,13 @@
     @apply flex flex-row flex-wrap items-center content-center whitespace-nowrap;
 
     .breadcrumb-item {
-        @apply leading-none;
-        @apply font-normal text-gray-500;
+        &, a {
+            @apply leading-none lg:text-lg !important;
+        }
+
+        & {
+            @apply font-normal text-gray-500;
+        }
 
         a {
             @apply font-medium text-gray-700;
@@ -20,7 +25,9 @@
 
     &.breadcrumb-sm {
         .breadcrumb-item {
-            @apply text-xs;
+            &, a {
+                @apply text-xs lg:text-base !important;
+            }
         }
 
         .breadcrumb-item + .breadcrumb-item {
