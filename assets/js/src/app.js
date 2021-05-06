@@ -26,7 +26,7 @@ window.rootAlpineInstance = () => {
         },
 
         init() {
-            new Router();
+            window.addEventListener('load', () => new Router() );
         }
     }
 };

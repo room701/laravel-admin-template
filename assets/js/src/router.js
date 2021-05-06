@@ -7,7 +7,10 @@ class Router {
         this.container = this.getContainer();
         this.links = document.querySelectorAll('a[data-fetch-url]');
 
+        let url = location.href.replace(new RegExp("\/$", "g"), ''); // 去除最後的 '/'，因 href 屬性會自動在根目錄加上 '/'
+
         this.handleRouter();
+        this.handlePageUI(url);
     }
 
     getContainer() {
@@ -19,10 +22,11 @@ class Router {
             link.addEventListener('click', (e) => {
                 e.preventDefault();
                 let url = e.target.href;
+                url = url.replace(new RegExp("\/$", "g"), ''); // 去除最後的 '/'，因 href 屬性會自動在根目錄加上 '/'
                 window.history.pushState({}, null, url);
 
                 this.loadContent(url);
-                this.handlePageUI();
+                this.handlePageUI(url);
             });
         });
     }
@@ -100,23 +104,13 @@ class Router {
         }
     }
 
-    handlePageUI() {
+    handlePageUI(url) {
         // page scroll to top;
         window.helpers.goTop(false);
 
-        if (document.readyState == 'complete') {
-            return handleSidebar.call(this);
-        }
-
-        window.addEventListener('load', (e) => {
-            handleSidebar.call(this);
-        });
-
-        function handleSidebar() {
-            // change alpine components data outside
-            document.body.__x.$data.sidebar.isShow = false;
-            document.body.__x.$data.sidebar.active = this.path;
-        }
+        // change alpine components data outside
+        document.body.__x.$data.sidebar.isShow = false;
+        document.body.__x.$data.sidebar.active = url;
     }
 
 }
