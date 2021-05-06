@@ -1,0 +1,33 @@
+.breadcrumb {
+    @apply flex flex-row flex-wrap items-center content-center whitespace-nowrap;
+
+    .breadcrumb-item {
+        @apply leading-none;
+        @apply font-normal text-gray-500;
+
+        a {
+            @apply font-medium text-gray-700;
+        }
+    }
+
+    .breadcrumb-item + .breadcrumb-item {
+        @apply pl-3;
+    }
+    .breadcrumb-item + .breadcrumb-item::before {
+        @apply inline-block pr-3 text-indigo-300;
+        content: '/';
+    }
+
+    &.breadcrumb-sm {
+        .breadcrumb-item {
+            @apply text-xs;
+        }
+
+        .breadcrumb-item + .breadcrumb-item {
+            @apply pl-1.5 md:pl-2.5;
+        }
+        .breadcrumb-item + .breadcrumb-item::before {
+            @apply pr-1.5 md:pr-2.5;
+        }
+    }
+}

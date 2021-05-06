@@ -22,7 +22,6 @@
         @load.window="
           setTimeout(function() {
             open = $el.querySelectorAll('.is-active').length > 0;
-            console.log($el.querySelectorAll('.is-active').length > 0)
           }, 400);
         "
         :class="{ 'is-open': open }"

@@ -2,7 +2,7 @@
   <button class="lg:hidden text-gray-700 text-2xl" @click.stop="sidebar.isShow = true"><i class="zwicon-hamburger-menu"></i></button>
 
   <div class="p-brand absolute lg:static left-1/2 z-5 transform -translate-x-1/2 lg:translate-x-0 mx-auto min-w-min max-w-xl lg:w-64 lg:-ml-8 text-xl lg:text-2xl tracking-wider text-center">
-    <a href="/" class="p-brand-name">ADMIN</a>
+    <a href="{{ config('admin-view.home') }}" data-fetch-url class="p-brand-name">ADMIN</a>
   </div>
 
   <div class="flex flex-wrap content-center space-x-4">

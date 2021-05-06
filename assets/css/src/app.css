@@ -13,4 +13,5 @@
 
 @import "./partials/header";
 @import "./partials/nav";
+@import "./partials/breadcrumb";
 @import "./partials/unit";
