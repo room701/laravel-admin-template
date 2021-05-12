@@ -37,6 +37,26 @@
       "oAP" : "\/assets\/css\/dist\/app.css.map",
       "oF" : 0
     },
+    "\/assets\/css\/dist\/components\/loader.css" : {
+      "aP" : 1,
+      "bl" : 0,
+      "ci" : 1,
+      "co" : 0,
+      "ft" : 16,
+      "ma" : 1,
+      "oA" : 0,
+      "oAP" : "\/assets\/css\/dist\/components\/loader.css",
+      "oF" : 0,
+      "pg" : 2
+    },
+    "\/assets\/css\/dist\/components\/loader.css.map" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/assets\/css\/dist\/components\/loader.css.map",
+      "oF" : 0
+    },
     "\/assets\/css\/dist\/partials\/breadcrumb.css" : {
       "aP" : 1,
       "bl" : 0,
@@ -166,6 +186,18 @@
       "ma" : 1,
       "oA" : 1,
       "oAP" : "\/assets\/css\/dist\/components\/forms.css",
+      "oF" : 0,
+      "pg" : 2
+    },
+    "\/assets\/css\/src\/components\/loader.css" : {
+      "aP" : 1,
+      "bl" : 0,
+      "ci" : 1,
+      "co" : 0,
+      "ft" : 16,
+      "ma" : 1,
+      "oA" : 1,
+      "oAP" : "\/assets\/css\/dist\/components\/loader.css",
       "oF" : 0,
       "pg" : 2
     },

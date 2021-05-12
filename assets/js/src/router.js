@@ -125,9 +125,13 @@ class Router {
 
     habdleFadeEffect() {
         return new Promise((resolve) => {
+            let loader = document.getElementById('loader');
+            loader.classList.add('is-show');
+
             this.containerWrapper.classList.remove('is-show');
             this.containerWrapper.ontransitionend = (e) => {
                 if (! this.containerWrapper.classList.contains('is-show')) {
+                    loader.classList.remove('is-show');
                     this.containerWrapper.classList.add('is-show');
                     resolve();
                 }
