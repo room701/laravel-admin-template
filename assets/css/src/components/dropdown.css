@@ -1,3 +1,5 @@
-.dropdown:hover .dropdown-menu {
-    display: block;
+@layer components {
+    .dropdown:hover .dropdown-menu {
+        display: block;
+    }
 }

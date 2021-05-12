@@ -4,7 +4,10 @@ class Router {
 
     constructor() {
         this.containerId = 'content-container';
+        this.containerWrapperId = 'content-container-wrapper';
         this.container = this.getContainer();
+        this.containerWrapper = document.getElementById(this.containerWrapperId);
+
         this.links = document.querySelectorAll('a[data-fetch-url]');
 
         let url = location.href.replace(new RegExp("\/$", "g"), ''); // 去除最後的 '/'，因 href 屬性會自動在根目錄加上 '/'
@@ -32,28 +35,35 @@ class Router {
     }
 
     loadContent(url) {
-        fetch(url, { cache: 'no-cache' })
-            .then((response) => {
-                if (! response.ok) {
-                    throw new Error('頁面請求發生錯誤');
-                }
+        fetch(url, {
+            'cache': 'no-cache',
+            'headers': {
+                'X-Requested-With': 'XMLHttpRequest'
+            }
+        })
+        .then((response) => {
+            if (! response.ok) {
+                throw new Error('頁面請求發生錯誤');
+            }
 
-                return response.text();
-            })
-            .then((html) => {
-                let parser = new DOMParser();
-	            let content = parser.parseFromString(html, 'text/html')
+            return response.text();
+        })
+        .then((html) => {
+            let parser = new DOMParser();
+            let content = parser.parseFromString(html, 'text/html')
                                 .getElementById('content-container');
 
+            this.habdleFadeEffect().then(() => {
                 this.container.replaceWith(content);
                 this.container = this.getContainer(); // 轉換 container
-
                 this.executeScripts();
-            })
-            .catch((error) => {
-                alert(error.message);
-                console.log(error);
             });
+
+        })
+        .catch((error) => {
+            alert(error.message);
+            console.log(error);
+        });
     }
 
     executeScripts() {
@@ -111,6 +121,18 @@ class Router {
         // change alpine components data outside
         document.body.__x.$data.sidebar.isShow = false;
         document.body.__x.$data.sidebar.active = url;
+    }
+
+    habdleFadeEffect() {
+        return new Promise((resolve) => {
+            this.containerWrapper.classList.remove('is-show');
+            this.containerWrapper.ontransitionend = (e) => {
+                if (! this.containerWrapper.classList.contains('is-show')) {
+                    this.containerWrapper.classList.add('is-show');
+                    resolve();
+                }
+            };
+        });
     }
 
 }

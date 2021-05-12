@@ -1,4 +1,6 @@
-@font-face {
-    font-family: 'Expletus Sans';
-    src: url(../../fonts//Expletus_Sans/ExpletusSans-Medium.ttf);
+@layer base {
+    @font-face {
+        font-family: 'Expletus Sans';
+        src: url(../../fonts//Expletus_Sans/ExpletusSans-Medium.ttf);
+    }
 }

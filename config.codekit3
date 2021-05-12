@@ -57,6 +57,46 @@
       "oAP" : "\/assets\/css\/dist\/partials\/breadcrumb.css.map",
       "oF" : 0
     },
+    "\/assets\/css\/dist\/partials\/content-container.css" : {
+      "aP" : 1,
+      "bl" : 0,
+      "ci" : 1,
+      "co" : 0,
+      "ft" : 16,
+      "ma" : 1,
+      "oA" : 0,
+      "oAP" : "\/assets\/css\/dist\/partials\/content-container.css",
+      "oF" : 0,
+      "pg" : 2
+    },
+    "\/assets\/css\/dist\/partials\/content-container.css.map" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/assets\/css\/dist\/partials\/content-container.css.map",
+      "oF" : 0
+    },
+    "\/assets\/css\/dist\/partials\/content.css" : {
+      "aP" : 1,
+      "bl" : 0,
+      "ci" : 1,
+      "co" : 0,
+      "ft" : 16,
+      "ma" : 1,
+      "oA" : 0,
+      "oAP" : "\/assets\/css\/dist\/partials\/content.css",
+      "oF" : 0,
+      "pg" : 2
+    },
+    "\/assets\/css\/dist\/partials\/content.css.map" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/assets\/css\/dist\/partials\/content.css.map",
+      "oF" : 0
+    },
     "\/assets\/css\/src\/app.css" : {
       "aP" : 1,
       "bl" : 0,
@@ -141,6 +181,18 @@
       "oF" : 0,
       "pg" : 2
     },
+    "\/assets\/css\/src\/partials\/content-container.css" : {
+      "aP" : 1,
+      "bl" : 0,
+      "ci" : 1,
+      "co" : 0,
+      "ft" : 16,
+      "ma" : 1,
+      "oA" : 1,
+      "oAP" : "\/assets\/css\/dist\/partials\/content-container.css",
+      "oF" : 0,
+      "pg" : 2
+    },
     "\/assets\/css\/src\/partials\/header.css" : {
       "aP" : 1,
       "bl" : 0,
@@ -189,8 +241,8 @@
       "oA" : 0,
       "oAP" : "\/assets\/img\/favicon-icons\/favicon-16x16.png",
       "oF" : 0,
-      "oIPL" : 0,
-      "opt" : 0,
+      "oIPL" : 1,
+      "opt" : 1,
       "oT" : 1,
       "ou" : "lpckwebp-none",
       "q" : 100,
@@ -202,8 +254,8 @@
       "oA" : 0,
       "oAP" : "\/assets\/img\/favicon-icons\/favicon-32x32.png",
       "oF" : 0,
-      "oIPL" : 0,
-      "opt" : 0,
+      "oIPL" : 1,
+      "opt" : 1,
       "oT" : 1,
       "ou" : "lpckwebp-none",
       "q" : 100,
@@ -479,52 +531,10 @@
       "rFN" : 0,
       "uCM" : 0
     },
-    "\/src\/AdminView.php" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/src\/AdminView.php",
-      "oF" : 0
-    },
-    "\/src\/AdminViewServiceProvider.php" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/src\/AdminViewServiceProvider.php",
-      "oF" : 0
-    },
-    "\/src\/Commands\/AssetsPublishCommand.php" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/src\/Commands\/AssetsPublishCommand.php",
-      "oF" : 0
-    },
-    "\/src\/Concerns\/Setting.php" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/src\/Concerns\/Setting.php",
-      "oF" : 0
-    },
-    "\/src\/config\/admin-view.php" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/src\/config\/admin-view.php",
-      "oF" : 0
-    },
-    "\/src\/helpers.php" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/src\/helpers.php",
+    "\/src" : {
+      "ft" : 65536,
+      "oA" : 1,
+      "oAP" : "\/src",
       "oF" : 0
     },
     "\/tailwind.config.js" : {
@@ -537,6 +547,12 @@
       "oF" : 0,
       "sC" : 3,
       "tS" : 1
+    },
+    "\/tests" : {
+      "ft" : 65536,
+      "oA" : 1,
+      "oAP" : "\/tests",
+      "oF" : 0
     },
     "\/TODO.md" : {
       "cB" : 0,
@@ -557,132 +573,10 @@
       "rFN" : 0,
       "uCM" : 0
     },
-    "\/views\/carrier.blade.php" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/views\/carrier.blade.php",
-      "oF" : 0
-    },
-    "\/views\/components\/error.blade.php" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/views\/components\/error.blade.php",
-      "oF" : 0
-    },
-    "\/views\/components\/form-search.blade.php" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/views\/components\/form-search.blade.php",
-      "oF" : 0
-    },
-    "\/views\/layouts\/master.blade.php" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/views\/layouts\/master.blade.php",
-      "oF" : 0
-    },
-    "\/views\/login.html" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/views\/login.html",
-      "oF" : 0
-    },
-    "\/views\/pages\/article.html" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/views\/pages\/article.html",
-      "oF" : 0
-    },
-    "\/views\/pages\/detail.html" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/views\/pages\/detail.html",
-      "oF" : 0
-    },
-    "\/views\/pages\/form.html" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/views\/pages\/form.html",
-      "oF" : 0
-    },
-    "\/views\/pages\/home.blade.php" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/views\/pages\/home.blade.php",
-      "oF" : 0
-    },
-    "\/views\/pages\/news.html" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/views\/pages\/news.html",
-      "oF" : 0
-    },
-    "\/views\/pages\/submenu.html" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/views\/pages\/submenu.html",
-      "oF" : 0
-    },
-    "\/views\/pages\/table.html" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/views\/pages\/table.html",
-      "oF" : 0
-    },
-    "\/views\/pages\/vue.html" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/views\/pages\/vue.html",
-      "oF" : 0
-    },
-    "\/views\/partials\/breadcrumb.blade.php" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/views\/partials\/breadcrumb.blade.php",
-      "oF" : 0
-    },
-    "\/views\/partials\/header.blade.php" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/views\/partials\/header.blade.php",
-      "oF" : 0
-    },
-    "\/views\/partials\/nav.blade.php" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/views\/partials\/nav.blade.php",
+    "\/views" : {
+      "ft" : 65536,
+      "oA" : 1,
+      "oAP" : "\/views",
       "oF" : 0
     },
     "\/webpack.mix.js" : {
@@ -722,7 +616,7 @@
   "projectSettings" : {
     "abortBuildOnError" : 1,
     "allowInjectionReloads" : 1,
-    "alwaysUseExternalServer" : 0,
+    "alwaysUseExternalServer" : 1,
     "animateCSSInjections" : 1,
     "autoBuildNewItems" : 1,
     "autoprefixerEnableIEGrid" : 0,
@@ -2135,7 +2029,7 @@
       }
     },
     "esLintSourceType" : 1,
-    "externalServerAddress" : "http:\/\/localhost:8888",
+    "externalServerAddress" : "http:\/\/laravel-admin-templete",
     "gitIgnoreBuildFolder" : 1,
     "hideConfigFile" : 0,
     "jsCheckerReservedNamesString" : "",
@@ -2763,7 +2657,7 @@
     "npmInstallOptionalDependencies" : 0,
     "npmSaveExactVersion" : 0,
     "npmTargetDependencyListType" : 1,
-    "overrideExternalServerCSS" : 0,
+    "overrideExternalServerCSS" : 1,
     "previewPathAddition" : "",
     "purgeCSS" : {
       "blocklistEntries" : [
@@ -2793,7 +2687,7 @@
       "ENVIRONMENT:::$NODE_ENV"
     ],
     "rollupTreeshakingEnabled" : 1,
-    "skippedFoldersString" : "\/assets\/icons,\/storage\/framework\/sessions,node_modules,log,logs,\/assets\/fonts,.idea,_cache,_logs,cache",
+    "skippedFoldersString" : "logs,cache,\/assets\/icons,\/src,\/storage\/framework\/sessions,_cache,\/tests,\/assets\/fonts,node_modules,log,_logs,.idea,\/views",
     "sourceFolderName" : "source",
     "susyVersion" : 3,
     "tsAllowSyntheticDefaultImports" : 0,

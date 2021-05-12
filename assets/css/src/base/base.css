@@ -3,6 +3,10 @@
         display: none;
     }
 
+    html {
+        min-height: 100vh;
+    }
+
     *:focus {
         outline: 0 !important;
         box-shadow: none !important;
