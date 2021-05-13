@@ -1,6 +1,4 @@
-export default Router;
-
-class Router {
+export default class Router {
 
     constructor() {
         this.containerId = 'content-container';

@@ -1,5 +1,3 @@
-{{--  <div class="loader"><span class="loader-inner"></span></div>  --}}
-
 <div id="loader" class="loader-wrapper flex justify-center items-center mt-12 lg:mt-16 lg:ml-60">
   <div class="loader ease-linear rounded-full border-4 border-t-4 border-gray-300 h-9 w-9"></div>
 </div>

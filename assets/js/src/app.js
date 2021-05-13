@@ -3,7 +3,6 @@
 //
 import 'alpine-magic-helpers';
 import 'alpinejs';
-import '@github/include-fragment-element';
 
 //
 // Router
