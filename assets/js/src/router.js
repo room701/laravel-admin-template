@@ -1,12 +1,16 @@
+import { isUndefined } from "lodash";
+
 export default class Router {
 
     constructor() {
-        this.containerId = 'content-container';
-        this.containerWrapperId = 'content-container-wrapper';
+        this.elementIds = {
+            containerWrapper: 'content-container-wrapper',
+            container: 'content-container',
+            loader: 'loader'
+        };
         this.container = this.getContainer();
-        this.containerWrapper = document.getElementById(this.containerWrapperId);
-
-        this.links = document.querySelectorAll('a[data-fetch-url]');
+        this.containerWrapper = document.getElementById(this.elementIds.containerWrapper);
+        this.loader = document.getElementById(this.elementIds.loader);
 
         let url = location.href.replace(new RegExp("\/$", "g"), ''); // 去除最後的 '/'，因 href 屬性會自動在根目錄加上 '/'
 
@@ -15,29 +19,36 @@ export default class Router {
     }
 
     getContainer() {
-        return document.getElementById(this.containerId);
+        return document.getElementById(this.elementIds.container);
     }
 
     handleRouter() {
-        [].forEach.call(this.links, (link) => {
-            link.addEventListener('click', (e) => {
-                e.preventDefault();
-                let url = e.target.href;
-                url = url.replace(new RegExp("\/$", "g"), ''); // 去除最後的 '/'，因 href 屬性會自動在根目錄加上 '/'
-                window.history.pushState({}, null, url);
+        // click event delegation
+        document.onclick = (e) => {
+            let a = e.target.closest('a');
 
-                this.loadContent(url);
-                this.handlePageUI(url);
-            });
-        });
+            if (! a || a.dataset.fetchUrl === undefined)
+                return;
+
+            e.preventDefault();
+
+            let url = a.href;
+            url = url.replace(new RegExp("\/$", "g"), ''); // 去除最後的 '/'，因 href 屬性會自動在根目錄加上 '/'
+            window.history.pushState({}, null, url);
+
+            this.loadContent(url);
+            this.handlePageUI(url);
+
+            return false;
+        };
     }
 
     loadContent(url) {
+        this.handleFadeOut();
+
         fetch(url, {
             'cache': 'no-cache',
-            'headers': {
-                'X-Requested-With': 'XMLHttpRequest'
-            }
+            'headers': { 'X-Requested-With': 'XMLHttpRequest' }
         })
         .then((response) => {
             if (! response.ok) {
@@ -51,12 +62,14 @@ export default class Router {
             let content = parser.parseFromString(html, 'text/html')
                                 .getElementById('content-container');
 
-            this.habdleFadeEffect().then(() => {
+            new Promise((resolve) => {
                 this.container.replaceWith(content);
                 this.container = this.getContainer(); // 轉換 container
                 this.executeScripts();
+                resolve();
+            }).then(() => {
+                this.handleFadeIn();
             });
-
         })
         .catch((error) => {
             alert(error.message);
@@ -121,20 +134,14 @@ export default class Router {
         document.body.__x.$data.sidebar.active = url;
     }
 
-    habdleFadeEffect() {
-        return new Promise((resolve) => {
-            let loader = document.getElementById('loader');
-            loader.classList.add('is-show');
+    handleFadeOut() {
+        this.loader.classList.add('is-show');
+        this.containerWrapper.classList.remove('is-show');
+    }
 
-            this.containerWrapper.classList.remove('is-show');
-            this.containerWrapper.ontransitionend = (e) => {
-                if (! this.containerWrapper.classList.contains('is-show')) {
-                    loader.classList.remove('is-show');
-                    this.containerWrapper.classList.add('is-show');
-                    resolve();
-                }
-            };
-        });
+    handleFadeIn() {
+        this.loader.classList.remove('is-show');
+        this.containerWrapper.classList.add('is-show');
     }
 
 }

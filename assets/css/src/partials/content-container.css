@@ -1,6 +1,6 @@
 #content-container-wrapper {
     will-change: auto;
-    transition: opacity 280ms;
+    transition: opacity 320ms;
     opacity: 0;
 
     &.is-show {
