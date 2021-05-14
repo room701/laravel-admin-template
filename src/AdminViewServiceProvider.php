@@ -6,11 +6,11 @@ use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\Blade;
 use Dennykuo\AdminView\Commands;
-use Dennykuo\AdminView\Concerns\Setting;
+use Dennykuo\AdminView\Concerns\PackageSetting;
 
 class AdminViewServiceProvider extends ServiceProvider
 {
-    use Setting;
+    use PackageSetting;
 
     public function boot()
     {
@@ -20,11 +20,6 @@ class AdminViewServiceProvider extends ServiceProvider
 
         // Load views
         $this->loadViewsFrom(__DIR__.'/../views', self::$viewNamespace);
-
-        // Blade directive
-        // Blade::directive('foo', function ($expression) {
-
-        // });
 
         // 擴展 Collection
         \Illuminate\Support\Collection::macro('recursive', function () {

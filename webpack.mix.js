@@ -1,12 +1,22 @@
 let mix = require('laravel-mix');
 
+mix.browserSync({
+    proxy: 'laravel-admin-templete',
+    files: [
+        'assets/**/dist',
+        'src',
+        'views'
+    ],
+    cors: true,
+    open: false
+});
+
 /*
 |--------------------------------------------------------------------------
 | Javascropt
 |--------------------------------------------------------------------------
 */
 
-// --------------------
 // Vendor JS
 // --------------------
 // mix.combine(
@@ -16,11 +26,9 @@ let mix = require('laravel-mix');
 //     'assets/js/dist/vendor.js'
 // );
 
-// --------------------
 // APP JS
 // --------------------
 mix.js('assets/js/src/app.js', 'assets/js/dist').sourceMaps();
-
 
 /*
 |--------------------------------------------------------------------------
@@ -28,7 +36,6 @@ mix.js('assets/js/src/app.js', 'assets/js/dist').sourceMaps();
 |--------------------------------------------------------------------------
 */
 
-// --------------------
 // tailwind css
 // --------------------
 require('laravel-mix-tailwind');
@@ -67,7 +74,6 @@ function processProductionCSS() {
         });
 }
 
-// --------------------
 // Vendor CSS
 // --------------------
 // mix.combine(
