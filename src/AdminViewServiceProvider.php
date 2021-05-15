@@ -36,6 +36,7 @@ class AdminViewServiceProvider extends ServiceProvider
     public function register()
     {
         $this->mergeConfigFrom(__DIR__.'/config/admin-view.php', static::$publishConfigName);
+        // Set assets publish config
         Config::set(static::$publishConfigName . '.assets-path', static::$publishAssetsPath);
     }
 

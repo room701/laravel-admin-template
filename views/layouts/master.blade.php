@@ -22,11 +22,11 @@
   class="flex flex-col h-screen bg-gray-100 text-gray-600 tracking-wider font-normal antialiased"
 >
 
-  @include('admin-view::partials.header')
+  @include('admin::partials.header')
 
-  @include('admin-view::partials.nav')
+  @include('admin::partials.nav')
 
-  @include('admin-view::partials.content')
+  @include('admin::partials.content')
 
   <button @click="helpers.goTop()" class="p-unit-gotop" type="button"><i class="zwicon-arrow-up"></i></button>
 

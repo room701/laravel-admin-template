@@ -1,1 +1,1 @@
-@extends('admin-view::layouts.master')
+@extends('admin::layouts.master')

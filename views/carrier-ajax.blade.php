@@ -1,1 +1,1 @@
-@include('admin-view::partials.content')
+@include('admin::partials.content')

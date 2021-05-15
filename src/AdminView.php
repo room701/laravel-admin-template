@@ -20,7 +20,7 @@ class AdminView
         $viewParsed = self::parseView($viewHTML);
         $viewParams = collect($viewParsed->params)->recursive(); // AdminViewServiceProvider 中有設定 Collection 擴展
         $viewContent = $viewParsed->content;
-        $viewFile = request()->ajax() ? 'admin-view::carrier-ajax' : 'admin-view::carrier';
+        $viewFile = request()->ajax() ? 'admin::carrier-ajax' : 'admin::carrier';
 
         return view($viewFile, compact('viewContent', 'viewParams'), $mergeData);
     }

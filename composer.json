@@ -2,7 +2,8 @@
     "name": "dennykuo/laravel-admin-view",
     "description": "後台",
     "require": {
-        "spatie/yaml-front-matter": "^2.0"
+        "spatie/yaml-front-matter": "^2.0",
+        "laravelcollective/html": "^6.2"
     },
     "autoload": {
         "psr-4": {
