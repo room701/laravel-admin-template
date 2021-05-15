@@ -7,7 +7,7 @@
 ])
 
 @php
-  $attributes = ['url' => $url ?? '', 'method' => $method, 'files' => $files, 'class' => 'space-y-5'];
+  $attributes = ['url' => $url ?? '', 'method' => $method, 'files' => $files, 'class' => 'space-y-default'];
 @endphp
 
 @if (isset($model))

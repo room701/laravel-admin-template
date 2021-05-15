@@ -1,4 +1,4 @@
-<div class="c-section c-setcion-form space-y-5 lg:w-7/8 xl:w-5/6 xl:max-w-2xl mx-auto">
+<div class="c-section c-setcion-form space-y-default lg:w-7/8 xl:w-5/6 xl:max-w-2xl mx-auto">
 
   <x-admin::error />
 
