@@ -1,7 +1,7 @@
 // This file controls how Tailwind processes your CSS. For details, see
 // https://tailwindcss.com/docs/configuration
 
-module.exports = 
+module.exports =
 {
   //
   // WARNING: CodeKit overwrites all properties of the "purge" object (except those below) with values from the UI.
@@ -18,7 +18,7 @@ module.exports =
   //
   // All other TailwindCSS options are 100% under your control. Edit this config file as shown in the Tailwind Docs
   // to enable the settings or customizations you need.
-  // 
+  //
   theme: {
     container: {
       center: true,
@@ -55,7 +55,7 @@ module.exports =
       '80': 80,
       '90': 90,
       '100': 100,
-      'auto': 'auto'
+      'auto': 'auto',
     },
     extend: {
       colors: {
@@ -80,7 +80,7 @@ module.exports =
 
   //
   // If you want to run any Tailwind plugins (such as 'tailwindcss-typography'), simply install those into the Project via the
-  // Packages area in CodeKit, then pass their names (and, optionally, any configuration values) here. 
+  // Packages area in CodeKit, then pass their names (and, optionally, any configuration values) here.
   // Full file paths are not necessary; CodeKit will find them.
   //
   plugins: [

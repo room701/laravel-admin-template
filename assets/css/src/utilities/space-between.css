@@ -1,0 +1,7 @@
+@layer utilities {
+    @variants responsive {
+        .space-y-default {
+            @apply space-y-5;
+        }
+    }
+}

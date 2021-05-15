@@ -18,8 +18,6 @@
 
         i, .icon {
             pointer-events: none;
-            /* --tw-text-opacity: 1; */
-            /* color: rgba(148, 163, 184, var(--tw-text-opacity)); */
             @apply absolute flex items-center h-full pl-4 text-gray-700 text-xl;
         }
     }
