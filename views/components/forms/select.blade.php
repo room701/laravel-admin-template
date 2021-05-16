@@ -1,6 +1,8 @@
 @props([
+  'name',
   'label',
   'type' => 'text',
+  'placeholder',
   'wrapper-class',
   'input-class',
 ])
@@ -9,5 +11,10 @@
   @if ($label)
     <label>{{ $label }}</label>
   @endif
-  <input type="{{ $type }}" class="form-input {{ $inputClass ?? '' }}">
+  <input name="{{ $name ?? '' }}"
+         value=""
+         type="{{ $type }}"
+         class="form-input {{ $inputClass ?? '' }}"
+         placeholder="{{ $placeholder ?? '' }}"
+  >
 </div>

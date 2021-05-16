@@ -53,9 +53,10 @@ class AdminViewServiceProvider extends ServiceProvider
         ]);
 
         // Publish assets
-        $this->publishes([
-            __DIR__.'/../assets' => public_path(static::$publishAssetsPath),
-        ], 'laravel-admin-view:assets');
+        // 需要改成另外的資料夾位置，為使用者自己修改的資源了
+        // $this->publishes([
+        //     __DIR__.'/../assets' => public_path(static::$publishAssetsPath),
+        // ], 'laravel-admin-view:assets');
 
         // Publish configs
         $this->publishes([
