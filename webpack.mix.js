@@ -1,5 +1,12 @@
 let mix = require('laravel-mix');
 
+mix.setPublicPath(`./assets`); // for mix-manifest.json publish
+
+/*
+|--------------------------------------------------------------------------
+| BrowserSync
+|--------------------------------------------------------------------------
+*/
 mix.browserSync({
     proxy: 'laravel-admin-templete',
     files: [
@@ -16,7 +23,6 @@ mix.browserSync({
 | Javascropt
 |--------------------------------------------------------------------------
 */
-
 // Vendor JS
 // --------------------
 // mix.combine(
@@ -28,14 +34,15 @@ mix.browserSync({
 
 // APP JS
 // --------------------
-mix.js('assets/js/src/app.js', 'assets/js/dist').sourceMaps();
+mix.js('assets/js/src/app.js', 'assets/js/dist')
+   .sourceMaps()
+   .version();
 
 /*
 |--------------------------------------------------------------------------
 | CSS
 |--------------------------------------------------------------------------
 */
-
 // tailwind css
 // --------------------
 require('laravel-mix-tailwind');
@@ -53,7 +60,8 @@ function processDevCSS() {
         .options({
             processCssUrls: false,
         })
-        .tailwind();
+        .tailwind()
+        .version();
 }
 
 function processProductionCSS() {
@@ -71,7 +79,8 @@ function processProductionCSS() {
                     '**/*.blade.php'
                 ]
             }
-        });
+        })
+        .version();
 }
 
 // Vendor CSS

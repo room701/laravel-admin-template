@@ -225,8 +225,8 @@ eval("// shim for using process in browser\nvar process = module.exports = {};\n
 /******/ 		// undefined = chunk not loaded, null = chunk preloaded/prefetched
 /******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
 /******/ 		var installedChunks = {
-/******/ 			"/assets/js/dist/app": 0,
-/******/ 			"assets/css/dist/app": 0
+/******/ 			"/js/dist/app": 0,
+/******/ 			"css/dist/app": 0
 /******/ 		};
 /******/ 		
 /******/ 		// no chunk on demand loading
@@ -274,8 +274,8 @@ eval("// shim for using process in browser\nvar process = module.exports = {};\n
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
-/******/ 	__webpack_require__.O(undefined, ["assets/css/dist/app"], () => (__webpack_require__("./assets/js/src/app.js")))
-/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["assets/css/dist/app"], () => (__webpack_require__("./assets/css/src/app.css")))
+/******/ 	__webpack_require__.O(undefined, ["css/dist/app"], () => (__webpack_require__("./assets/js/src/app.js")))
+/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["css/dist/app"], () => (__webpack_require__("./assets/css/src/app.css")))
 /******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
 /******/ 	
 /******/ })()

@@ -19,10 +19,24 @@ if (! function_exists('adminView')) {
     }
 }
 
-if (! function_exists('adminAsset')) {
-    function adminAsset($path = null)
+if (! function_exists('admin_base_path')) {
+    function admin_base_path($path = null)
     {
-        return asset(config('admin-view.assets-path')) .'/'. ltrim($path, '/');
+        return __DIR__.'/../'. ltrim($path, '/');
     }
 }
 
+if (! function_exists('admin_asset')) {
+    function admin_asset($path = null)
+    {
+        return '/'. config('admin-view.assets-path') .'/'. ltrim($path, '/');
+    }
+}
+
+if (! function_exists('admin_asset_mix')) {
+    function admin_asset_mix($path = null)
+    {
+        $manifestDirectory = rtrim(admin_asset(), '/');
+        return mix(ltrim($path, '/'), $manifestDirectory);
+    }
+}
