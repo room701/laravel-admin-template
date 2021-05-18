@@ -41,7 +41,7 @@ class AdminViewServiceProvider extends ServiceProvider
     }
 
     /**
-     * Console-specific booting.
+     * Console booting.
      *
      * @return void
      */
@@ -59,8 +59,9 @@ class AdminViewServiceProvider extends ServiceProvider
         // ], 'laravel-admin-view:assets');
 
         // Publish configs
+        $output = config_path(static::$publishConfigName . '.php');
         $this->publishes([
-            __DIR__.'/config/admin-view.php' => config_path(static::$publishConfigName . '.php'),
+            __DIR__.'/config/admin-view.php' => $output,
         ], 'laravel-admin-view:config');
     }
 

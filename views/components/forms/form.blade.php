@@ -3,11 +3,13 @@
   'url' => null,
   'method' => 'post',
   'files' => false,
-  'class',
+  'class' => '',
 ])
 
 @php
-  $attributes = ['url' => $url ?? '', 'method' => $method, 'files' => $files, 'class' => 'space-y-default'];
+  $attributes = $attributes->getAttributes() + [
+    'class' => "space-y-default {{ $class ?? '' }}",
+  ];
 @endphp
 
 @if (isset($model))

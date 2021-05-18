@@ -1,20 +1,22 @@
 @props([
-  'name',
-  'label',
-  'type' => 'text',
-  'placeholder',
-  'wrapper-class',
-  'input-class',
+  'name' => null,
+  'label' => null,
+  'options' => [],
+  'value' => null,
+  'wrapperClass' => '',
+  'inputClass' => '',
 ])
 
-<div class="form-group {{ $wrapperClass ?? '' }}">
+@php
+  $attributes = $attributes->getAttributes() + [
+    'class' => "form-select {$inputClass}",
+  ];
+@endphp
+
+<div class="form-group {{ $wrapperClass }}">
   @if ($label)
     <label>{{ $label }}</label>
   @endif
-  <input name="{{ $name ?? '' }}"
-         value=""
-         type="{{ $type }}"
-         class="form-input {{ $inputClass ?? '' }}"
-         placeholder="{{ $placeholder ?? '' }}"
-  >
+
+  {!! Form::select($name, $options, $value, $attributes) !!}
 </div>

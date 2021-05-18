@@ -1,20 +1,29 @@
 @props([
-  'name',
-  'label',
+  'name' => null,
+  'label' => null,
   'type' => 'text',
-  'placeholder',
-  'wrapper-class',
-  'input-class',
+  'value' => null,
+  'wrapperClass' => '',
+  'inputClass' => '',
 ])
 
-<div class="form-group {{ $wrapperClass ?? '' }}">
+@php
+  $attributes = $attributes->getAttributes() + [
+    'class' => "form-input {$inputClass}",
+  ];
+@endphp
+
+<div class="form-group {{ $wrapperClass }}">
   @if ($label)
     <label>{{ $label }}</label>
   @endif
-  <input name="{{ $name ?? '' }}"
-         value=""
-         type="{{ $type }}"
-         class="form-input {{ $inputClass ?? '' }}"
-         placeholder="{{ $placeholder ?? '' }}"
-  >
+
+  @switch($type)
+    @case('text')       {!! Form::text($name, $value, $attributes) !!}     @break
+    @case('number')     {!! Form::number($name, $value, $attributes) !!}   @break
+    @case('date')       {!! Form::date($name, $value, $attributes) !!}     @break
+    @case('email')      {!! Form::email($name, $value, $attributes) !!}    @break
+    @case('password')   {!! Form::password($name, $attributes) !!}         @break
+    @case('file')       {!! Form::file($name, $attributes) !!}             @break
+  @endswitch
 </div>
