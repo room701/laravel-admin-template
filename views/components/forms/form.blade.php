@@ -1,5 +1,5 @@
 @props([
-  'model',
+  'model' => null,
   'url' => null,
   'method' => 'post',
   'files' => false,
@@ -8,7 +8,10 @@
 
 @php
   $attributes = $attributes->getAttributes() + [
-    'class' => "space-y-default {{ $class ?? '' }}",
+    'url' => $url,
+    'method' => $method,
+    'class' => "space-y-default {$class}",
+    'files' => $files,
   ];
 @endphp
 
