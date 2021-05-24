@@ -1,5 +1,6 @@
 @props([
   'size' => 'full',
+  'id' => null,
   'class' => '',
 ])
 
@@ -16,6 +17,6 @@
   }
 @endphp
 
-<div class="c-section c-setcion-form {{ $sizeClass }} {{ $class }}">
+<div id="{{ $id ?? '' }}" class="c-section c-setcion-form {{ $sizeClass }} {{ $class }}">
   {{ $slot }}
 </div>

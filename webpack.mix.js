@@ -1,6 +1,6 @@
 let mix = require('laravel-mix');
 
-mix.setPublicPath(`./assets`); // for mix-manifest.json publish
+mix.setPublicPath('./assets'); // for mix-manifest.json publish
 
 /*
 |--------------------------------------------------------------------------
@@ -27,10 +27,16 @@ mix.browserSync({
 // --------------------
 // mix.combine(
 //     [
-//         'node_modules/kutty/dist/kutty.min.js'
+//         'node_modules/vue/dist/vue.js',
+//         'node_modules/vue2-datepicker/index.min.js',
 //     ],
 //     'assets/js/dist/vendor.js'
-// );
+// ).version();
+
+let jsVendorDir = './assets/js/vendor';
+mix.copy('node_modules/jquery/dist', `${jsVendorDir}/jquery`);
+mix.copy('node_modules/vue/dist', `${jsVendorDir}/vue`);
+mix.copy('node_modules/air-datepicker/dist', `${jsVendorDir}/air-datepicker`);
 
 // APP JS
 // --------------------
@@ -85,9 +91,11 @@ function processProductionCSS() {
 
 // Vendor CSS
 // --------------------
-// mix.combine(
-//     [
-//         'node_modules/material-design-icons/iconfont/material-icons.css'
-//     ],
-//     'assets/css/dist/vendor.css'
-// );
+let cssVendorDir = './assets/css/vendor';
+let cssVendorFile = `${cssVendorDir}/vendor.css`;
+mix.combine(
+    [
+        'node_modules/air-datepicker/dist/css/datepicker.min.css'
+    ],
+    cssVendorFile
+).version();

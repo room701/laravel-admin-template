@@ -6,3 +6,7 @@ window.helpers.goTop = (smooth = true) => {
         behavior: smooth ? 'smooth' : 'auto'
     });
 };
+
+window.helpers.initDatepicker = () => {
+    $('.js-datepicker').datepicker();
+};
