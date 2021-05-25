@@ -1,10 +1,4 @@
 //
-// Vendor
-//
-import 'alpine-magic-helpers';
-import 'alpinejs';
-
-//
 // Router
 //
 import Router from './router.js';
@@ -15,19 +9,19 @@ import Router from './router.js';
 import './helpers.js';
 
 //
-// Root Alpine Instance
+// Header Vue instance
 //
-window.rootAlpineInstance = () => {
-    return {
-        sidebar: {
-            active: null,
-            isShow: false
-        },
+import './vue/header.js';
 
-        init() {
-            window.addEventListener('load', () => {
-                new Router();
-            });
-        }
-    }
-};
+//
+// Nav Vue instance
+//
+import './vue/nav.js';
+
+//
+// Other
+//
+document.body.addEventListener('click', (e) => {
+    if (navVm.sidebar.isShow == true)
+        navVm.sidebar.isShow = false;
+});

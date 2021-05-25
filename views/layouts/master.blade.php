@@ -14,17 +14,12 @@
   <link rel="stylesheet" href="{{ admin_asset_mix('/css/dist/app.css') }}">
   {{--  scripts  --}}
   <script src="{{ admin_asset('/js/vendor/jquery/jquery.min.js') }}"></script>
-  <script src="{{ admin_asset('/js/vendor/air-datepicker/js/datepicker.min.js') }}"></script>
-  <script src="{{ admin_asset('/js/vendor/air-datepicker/js/i18n/datepicker.zh.js') }}"></script>
+  {{-- <script src="{{ admin_asset('/js/vendor/air-datepicker/js/datepicker.min.js') }}"></script> --}}
+  {{-- <script src="{{ admin_asset('/js/vendor/air-datepicker/js/i18n/datepicker.zh.js') }}"></script> --}}
   <script type="module" defer src="{{ admin_asset_mix('/js/dist/app.js') }}"></script>
 </head>
 
-<body x-data="rootAlpineInstance()"
-  x-init="init"
-  x-cloak
-  :class="{ 'overflow-hidden': sidebar.isShow }"
-  class="flex flex-col h-screen bg-gray-100 text-gray-600 tracking-wider font-normal antialiased"
->
+<body class="flex flex-col h-screen bg-gray-100 text-gray-600 tracking-wider font-normal antialiased">
 
   @include('admin::partials.header')
 
@@ -32,7 +27,7 @@
 
   @include('admin::partials.content')
 
-  <button @click="helpers.goTop()" class="p-unit-gotop" type="button"><i class="zwicon-arrow-up"></i></button>
+  <button onclick="helpers.goTop()" class="p-unit-gotop" type="button"><i class="zwicon-arrow-up"></i></button>
 
   @include('admin::partials.scripts')
 

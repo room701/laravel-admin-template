@@ -4,7 +4,6 @@
   "dependencies": {
     "air-datepicker": "^2.2.3",
     "alpine-magic-helpers": "^1.1.0",
-    "alpinejs": "^2.8.2",
     "jquery": "^3.6.0",
     "kutty": "^0.5.1",
     "page": "^1.11.6",
