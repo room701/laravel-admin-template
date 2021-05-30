@@ -1,5 +1,3 @@
-import Vue from '../../../../node_modules/vue/dist/vue.js';
-
 window.headerVm = new Vue({
     el: '#header',
 

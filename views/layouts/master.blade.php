@@ -10,12 +10,11 @@
   <link rel="icon" type="image/png" sizes="16x16" href="{{ admin_asset('/vendor/laravel-admin-template/img/favicon-icons/favicon-16x16.png') }}">
   {{--  stylesheets  --}}
   <link rel="stylesheet" href="{{ admin_asset('/fonts/icons/zwicon/zwicon.css') }}">
-  <link rel="stylesheet" href="{{ admin_asset_mix('/css/vendor/vendor.css') }}">
+  {{-- <link rel="stylesheet" href="{{ admin_asset_mix('/css/vendor/vendor.css') }}"> --}}
   <link rel="stylesheet" href="{{ admin_asset_mix('/css/dist/app.css') }}">
   {{--  scripts  --}}
   <script src="{{ admin_asset('/js/vendor/jquery/jquery.min.js') }}"></script>
-  {{-- <script src="{{ admin_asset('/js/vendor/air-datepicker/js/datepicker.min.js') }}"></script> --}}
-  {{-- <script src="{{ admin_asset('/js/vendor/air-datepicker/js/i18n/datepicker.zh.js') }}"></script> --}}
+  <script src="{{ admin_asset('/js/vendor/vue/vue.js') }}"></script>
   <script type="module" defer src="{{ admin_asset_mix('/js/dist/app.js') }}"></script>
 </head>
 

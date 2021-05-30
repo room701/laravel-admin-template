@@ -19,6 +19,11 @@ import './vue/header.js';
 import './vue/nav.js';
 
 //
+// Vue Components
+//
+import './vue/components-register.js';
+
+//
 // Other
 //
 document.body.addEventListener('click', (e) => {

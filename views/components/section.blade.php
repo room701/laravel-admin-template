@@ -10,7 +10,7 @@
       $sizeClass = '';
       break;
     case 'md':
-      $sizeClass = 'lg:w-7/8 xl:w-5/6 xl:max-w-2xl';
+      $sizeClass = 'w-full md:w-6/7 lg:w-5/6 lg:max-w-2xl';
       break;
     default:
       $sizeClass = '';

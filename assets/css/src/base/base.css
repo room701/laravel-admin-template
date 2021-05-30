@@ -7,6 +7,10 @@
         min-height: 100vh;
     }
 
+    html, body {
+        -ms-overflow-style: -ms-autohiding-scrollbar;
+    }
+
     *:focus {
         outline: 0 !important;
         box-shadow: none !important;

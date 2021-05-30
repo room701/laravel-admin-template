@@ -9,33 +9,36 @@
     {{-- 單層選單 --}}
     @if (is_string($link))
       @php $link = Route::has($link) ? route($link) : '/'; @endphp
-
-      <a href="{{ $link }}"
-         data-fetch-url
-         class="p-nav-item"
-         :class="{
-           'is-active': currentUrl == '{{ $link }}' || sidebar.active == '{{ $link }}'
-         }"
-      >
-        {{ $name }}
-      </a>
+      <nav-item name="{{ $name }}" href="{{ $link }}"></nav-item>
     @endif
 
     {{-- 雙層選單 --}}
     @if (is_array($link))
-      <dropdown-set name="{{ $name }}">
+      <nav-set name="{{ $name }}">
         @foreach ($link as $name => $link)
           @php $link = Route::has($link) ? route($link) : '/'; @endphp
-          <dropdown-item name="{{ $name }}" href="{{ $link }}"></dropdown-item>
+          <nav-item name="{{ $name }}" href="{{ $link }}"></nav-item>
         @endforeach
-      </dropdown-set>
+      </nav-set>
     @endif
 
   @endforeach
 
 </nav>
 
-<script id="nav-dropdown-set" type="text/x-template">
+{{-- vue component template --}}
+<script id="nav-item" type="text/x-template">
+  <a :href="href"
+     data-fetch-url
+     class="p-nav-item"
+     :class="{ 'is-active': isActive }"
+  >
+    @{{ name }}
+  </a>
+</script>
+
+{{-- vue component template --}}
+<script id="nav-set" type="text/x-template">
   <div :class="{ 'is-open': isOpen }" class="p-nav-set">
 
     <div @click="isOpen = ! isOpen" class="p-nav-item">
@@ -50,14 +53,4 @@
     </div>
 
   </div>
-</script>
-
-<script id="nav-dropdown-item" type="text/x-template">
-  <a :href="href"
-     data-fetch-url
-     class="p-nav-item"
-     :class="{ 'is-active': isActive }"
-  >
-    @{{ name }}
-  </a>
 </script>

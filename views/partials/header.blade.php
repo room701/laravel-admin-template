@@ -21,6 +21,7 @@
 
 </header>
 
+{{-- vue component template --}}
 <script id="header-dropdown-set" type="text/x-template">
   <div class="relative">
     <a @click.stop.prevent="isOpen = ! isOpen" href="javascript:void(0)" class="text-gray-700 text-2xl"><i class="zwicon-user"></i></a>
@@ -38,6 +39,7 @@
   </div>
 </script>
 
+{{-- vue component template --}}
 <script id="header-dropdown-item" type="text/x-template">
   <a :href="href" class="block px-5 py-3 text-sm text-gray-600 hover:bg-blue-400 hover:text-white">
    @{{ name }}

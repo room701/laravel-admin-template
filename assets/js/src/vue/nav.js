@@ -1,5 +1,3 @@
-import Vue from '../../../../node_modules/vue/dist/vue.js';
-
 window.navVm = new Vue({
     el: '#nav',
 
@@ -20,7 +18,27 @@ window.navVm = new Vue({
 
 function getComponents() {
     return {
-        'dropdown-set': {
+        'nav-item': {
+            props: ['name', 'href'],
+
+            data: function() {
+                return {
+                    isActive: this.$root.currentUrl == this.href
+                              || this.$root.sidebar.active ==  this.href
+                }
+            },
+
+            mounted: function() {
+                if (this.isActive) {
+                    if (this.$parent != this.$root)
+                        this.$parent.isOpen = true;
+                }
+            },
+
+            template: '#nav-item'
+        },
+
+        'nav-set': {
             props: {
                 name: {
                     type: String,
@@ -36,25 +54,7 @@ function getComponents() {
                     isOpen: this.open
                 }
             },
-            template: '#nav-dropdown-set'
-        },
-
-        'dropdown-item': {
-            props: ['name', 'href'],
-
-            data: function () {
-                return {
-                    isActive: this.$root.currentUrl == this.href || this.$root.sidebar.active ==  this.href
-                }
-            },
-
-            mounted: function() {
-                if (this.isActive) {
-                    this.$parent.isOpen = true;
-                }
-            },
-
-            template: '#nav-dropdown-item'
+            template: '#nav-set'
         }
     }
 }

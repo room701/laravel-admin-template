@@ -1,12 +1,12 @@
 .p-nav {
-    @apply flex flex-col fixed top-0 lg:top-14 left-0 z-20 h-screen overflow-x-hidden overflow-y-scroll bg-white border-r w-9/12 lg:w-60 px-2.5 py-1.5 text-sm text-gray-600 transition origin-left transform -translate-x-full lg:translate-x-0;
+    @apply flex flex-col fixed top-0 lg:top-14 left-0 z-20 h-screen overflow-x-hidden overflow-y-auto bg-white border-r w-9/12 lg:w-60 px-2.5 py-1.5 text-sm text-gray-600 transition origin-left transform -translate-x-full lg:translate-x-0;
 
     &.is-open {
         @apply translate-x-0;
     }
 
     .p-nav-item {
-        @apply flex items-center pl-8 py-3.5 my-0.5 transition cursor-pointer hover:bg-blue-400 hover:text-white;
+        @apply flex justify-between items-center pl-5 pr-5 py-3.5 my-0.5 transition cursor-pointer hover:bg-blue-400 hover:text-white;
 
         &.is-active {
             @apply text-gray-800 bg-gray-200;
@@ -22,17 +22,20 @@
             @apply hidden transition transform mb-1;
 
             .p-nav-item {
-                @apply pl-12;
+                @apply ml-4;
             }
         }
 
-        &.is-open .p-nav-item-append-icon {
-            @apply rotate-90;
+        &.is-open {
+            .p-nav-item-append-icon {
+                @apply rotate-90;
+            }
+
+            .p-nav-submenu {
+                @apply block;
+            }
         }
 
-        &.is-open .p-nav-submenu {
-            @apply block;
-        }
     }
 
 }
