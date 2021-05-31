@@ -13,9 +13,9 @@ if (! function_exists('adminView')) {
      * @param  array  $mergeData
      * @return \Illuminate\Contracts\View\View|\Illuminate\Contracts\View\Factory
      */
-    function adminView($view = null, $data = [], $mergeData = [])
+    function adminView(\Illuminate\View\View $view)
     {
-        return AdminView::make($view, $data, $mergeData);
+        return AdminView::make($view);
     }
 }
 

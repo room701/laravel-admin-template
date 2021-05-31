@@ -14,15 +14,15 @@ class AdminView
      * @param  array  $mergeData
      * @return \Illuminate\Contracts\View\View|\Illuminate\Contracts\View\Factory
      */
-    public static function make($view = null, $data = [], $mergeData = [])
+    public static function make(\Illuminate\View\View $view)
     {
-        $viewHTML = view($view, $data, $mergeData)->toHtml();
+        $viewHTML = $view->toHtml();
         $viewParsed = self::parseView($viewHTML);
         $viewParams = collect($viewParsed->params)->recursive(); // AdminViewServiceProvider 中有設定 Collection 擴展
         $viewContent = $viewParsed->content;
-        $viewFile = request()->ajax() ? 'admin::carrier-ajax' : 'admin::carrier';
+        $viewWrapper = request()->ajax() ? 'admin::carrier-ajax' : 'admin::carrier';
 
-        return view($viewFile, compact('viewContent', 'viewParams'), $mergeData);
+        return view($viewWrapper, compact('viewContent', 'viewParams'));
     }
 
     protected static function parseView($viewHTML)

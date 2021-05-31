@@ -1,9 +1,9 @@
-@props([
+or @props([
   'name' => null,
   'label' => null,
   'wrapperClass' => '',
   'inputClass' => '',
-  'id' => bin2hex(random_bytes(4)),
+  'id' => 'file-input-' . bin2hex(random_bytes(4)),
 ])
 
 @php
@@ -15,8 +15,15 @@
 
 <div class="form-group {{ $wrapperClass }}">
   <label>{{ $label }}</label>
-  <label class="form-input cursor-pointer {{ $inputClass }}" for="{{ $id }}" x-data="{ file: null }">
-    <input name="{{ $name }}" type="file" id="{{ $id }}" @change="file = $event.target.files.length ? $event.target.files[0].name : null" class="hidden" {!! $attributesHTML !!}>
-    <span class="block w-full truncate" x-text="file || '選擇檔案...'"></span>
+  <label class="form-input cursor-pointer {{ $inputClass }}" for="{{ $id }}">
+    <input id="{{ $id }}" name="{{ $name }}" type="file" class="hidden" {!! $attributesHTML !!}>
+    <span class="block w-full truncate">選擇檔案</span>
   </label>
 </div>
+
+<script>
+  document.getElementById('{{ $id }}').addEventListener('change', function(e) {
+    let fileNameEl = e.target.nextElementSibling;
+    fileNameEl.innerText = e.target.files.length ? e.target.files[0].name : '選擇檔案';
+  });
+</script>
