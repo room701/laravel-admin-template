@@ -2,8 +2,6 @@
 
 use Dennykuo\AdminView\AdminView;
 
-use Dennykuo\AdminView\Concerns\Setting;
-
 if (! function_exists('adminView')) {
     /**
      * Get the evaluated view contents for the given view.

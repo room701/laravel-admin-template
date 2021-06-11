@@ -1,0 +1,11 @@
+.c-data-table {
+    @apply border-collapse border border-gray-200 min-w-full;
+
+    th {
+        @apply px-5 py-3 border-b border-gray-200 text-center text-sm text-gray-400 font-normal;
+    }
+
+    td {
+        @apply px-5 py-4 border-b border-gray-200 text-center text-sm;
+    }
+}

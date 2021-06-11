@@ -2,6 +2,7 @@
   'isVueModel' => false, // 同一的 vue vm 裡不可混用不同設定
   'name' => null,
   'label' => null,
+  'hasTime' => false,
   'value' => null,
   'wrapperClass' => '',
   'inputClass' => '',
@@ -28,11 +29,12 @@
 
       <vue-ctk-date-time-picker
         v-model="date"
-        formatted="YYYY-MM-DD"
-        output-format="YYYY-MM-DD"
+        format="{{ $hasTime ? 'YYYY-MM-DD HH:mm' : 'YYYY-MM-DD' }}"
+        formatted="{{ $hasTime ? 'YYYY-MM-DD HH:mm' : 'YYYY-MM-DD' }}"
+        output-format="{{ $hasTime ? 'YYYY-MM-DD HH:mm' : 'YYYY-MM-DD' }}"
+        :only-date="{{ $hasTime ? 'false' : 'true' }}"
         locale="zh_TW"
-        :only-date="true"
-        :auto-close="true"
+        button-now-translation="現在"
         :no-label="true"
         :no-header="true"
       >

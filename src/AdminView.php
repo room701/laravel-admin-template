@@ -7,11 +7,9 @@ use Spatie\YamlFrontMatter\YamlFrontMatter;
 class AdminView
 {
     /**
-     * Get the evaluated view contents for the given view.
+     * 處理內容 view，分析頁面的 YAML 變數及內容。視請求是否為 ａjax 做不同頁面外圍包裹後回應
      *
-     * @param  string|null  $view
-     * @param  \Illuminate\Contracts\Support\Arrayable|array  $data
-     * @param  array  $mergeData
+     * @param \Illuminate\View\View $view
      * @return \Illuminate\Contracts\View\View|\Illuminate\Contracts\View\Factory
      */
     public static function make(\Illuminate\View\View $view)
@@ -25,7 +23,7 @@ class AdminView
         return view($viewWrapper, compact('viewContent', 'viewParams'));
     }
 
-    protected static function parseView($viewHTML)
+    protected static function parseView(string $viewHTML)
     {
         $viewParsed = YamlFrontMatter::parse($viewHTML);
 

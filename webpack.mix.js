@@ -15,7 +15,7 @@ mix.browserSync({
         'views'
     ],
     cors: true,
-    open: true
+    open: false
 });
 
 /*

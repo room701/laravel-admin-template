@@ -1,4 +1,4 @@
-or @props([
+@props([
   'name' => null,
   'label' => null,
   'wrapperClass' => '',
@@ -17,7 +17,7 @@ or @props([
   <label>{{ $label }}</label>
   <label class="form-input cursor-pointer {{ $inputClass }}" for="{{ $id }}">
     <input id="{{ $id }}" name="{{ $name }}" type="file" class="hidden" {!! $attributesHTML !!}>
-    <span class="block w-full truncate">選擇檔案</span>
+    <span class="block w-full truncate text-gray-500">選擇檔案</span>
   </label>
 </div>
 

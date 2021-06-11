@@ -7,13 +7,12 @@
 @import "./base/fonts";
 @import "./base/base";
 
-@import "./utilities/space-between";
-
-@import "./components/buttons";
-@import "./components/forms";
+@import "./components/table";
+@import "./components/section";
+@import "./components/form";
+@import "./components/button";
 @import "./components/dropdown";
 @import "./components/loader";
-@import "./components/section";
 
 @import "./partials/header";
 @import "./partials/nav";
