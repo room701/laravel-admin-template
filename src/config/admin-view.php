@@ -1,6 +1,8 @@
 <?php
 
 return [
+    'name' => '後台',
+
     'home' => '/',
 
     'nav-link-type' => 'route', // route or url

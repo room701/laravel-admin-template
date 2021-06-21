@@ -1,5 +1,5 @@
 @layer components {
-    form {
+    .c-setcion-form form {
         @apply space-y-6;
     }
 
