@@ -26,37 +26,38 @@
             </g>
           </svg>
         </div>
-        <div class="text-2xl text-indigo-800 tracking-wide ml-2 font-semibold">
+        <div class="text-2xl text-indigo-800 ml-2 font-semibold">
           {{ config('admin-view.name', '後台') }}
         </div>
       </div>
 
       <div class="mt-24 lg:mt-14 px-12 sm:px-24 md:px-48 lg:px-12 xl:px-24 xl:max-w-2xl">
-        {{-- <h2 class="text-center text-4xl text-indigo-900 font-display font-semibold lg:text-left xl:text-5xl xl:text-bold">登入</h2> --}}
+        {{-- <h2 class="text-center text-4xl text-indigo-900 font-semibold lg:text-left xl:text-5xl xl:text-bold">登入</h2> --}}
+
+        <x-admin::alert.error-2 :errors="$errors" wrapper-class="mb-10" />
+
         <form>
           <div>
-            <div class="text-sm font-bold text-gray-500 tracking-wide mb-0.5">Email</div>
-            <input name="email" type="email" class="w-full text-lg px-0 py-1.5 border-0 border-b border-gray-300 focus:outline-none focus:border-indigo-500" >
+            <div class="text-sm font-bold text-gray-500">Email</div>
+            <input name="email" type="email" class="w-full text-lg px-0 py-1 border-0 border-b border-gray-300 focus:outline-none focus:border-indigo-500" >
           </div>
           <div class="mt-8">
             <div class="flex justify-between items-center">
-              <div class="text-sm font-bold text-gray-500 tracking-wide mb-0.5">密碼</div>
+              <div class="text-sm font-bold text-gray-500">密碼</div>
               <div>
-                <a class="text-xs font-display font-semibold text-indigo-600 hover:text-indigo-800
+                <a class="text-xs font-semibold text-indigo-600 hover:text-indigo-800
                 cursor-pointer">忘記密碼</a>
               </div>
             </div>
-            <input name="password" type="password" class="w-full text-lg px-0 py-1.5 border-0 border-b border-gray-300 focus:outline-none focus:border-indigo-500">
+            <input name="password" type="password" class="w-full text-lg px-0 py-1 border-0 border-b border-gray-300 focus:outline-none focus:border-indigo-500">
           </div>
           <div class="mt-10">
-            <button class="bg-indigo-500 text-gray-100 p-4 w-full rounded-full tracking-wide
-            font-semibold font-display focus:outline-none focus:shadow-outline hover:bg-indigo-600
-            shadow-lg">
+            <button class="bg-indigo-500 text-gray-100 p-4 w-full rounded-full font-semibold focus:outline-none focus:shadow-outline hover:bg-indigo-600 shadow-md">
               登入
             </button>
           </div>
         </form>
-        {{-- <div class="mt-12 text-sm font-display font-semibold text-gray-700 text-center">
+        {{-- <div class="mt-12 text-sm font-semibold text-gray-700 text-center">
           Don't have an account ? <a class="cursor-pointer text-indigo-600 hover:text-indigo-800">Sign up</a>
         </div> --}}
       </div>
