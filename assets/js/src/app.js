@@ -9,11 +9,6 @@ import Router from './router.js';
 import './helpers.js';
 
 //
-// Header Vue instance
-//
-import './vue/header.js';
-
-//
 // Nav Vue instance
 //
 import './vue/nav.js';
@@ -26,7 +21,8 @@ import './vue/components-register.js';
 //
 // Other
 //
+// TODO: 改成 div 控制會比較好
 document.body.addEventListener('click', (e) => {
     if (navVm.sidebar.isShow == true)
-        navVm.sidebar.isShow = false;
+        window.helpers.toggleNavSidebar(false);
 });

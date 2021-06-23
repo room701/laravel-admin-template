@@ -3,8 +3,9 @@
 namespace Dennykuo\AdminView;
 
 use Illuminate\Support\ServiceProvider;
-use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\Blade;
+use Illuminate\Support\Facades\Config;
+use Illuminate\Support\Collection;
 use Dennykuo\AdminView\Commands;
 use Dennykuo\AdminView\Concerns\PackageSetting;
 
@@ -18,11 +19,14 @@ class AdminViewServiceProvider extends ServiceProvider
             $this->bootForConsole();
         }
 
-        // Load views
+        // Load views with new namespace
         $this->loadViewsFrom(__DIR__.'/../views', self::$viewNamespace);
 
+        // Add view components namespace
+        Blade::componentNamespace(__NAMESPACE__.'\\View\\Components', self::$viewNamespace);
+
         // 擴展 Collection
-        \Illuminate\Support\Collection::macro('recursive', function () {
+        Collection::macro('recursive', function () {
             return $this->map(function ($value) {
                 if (is_array($value) || is_object($value)) {
                     return collect($value)->recursive();

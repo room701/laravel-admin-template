@@ -38,7 +38,7 @@ function getComponents() {
             template: '#nav-item'
         },
 
-        'nav-set': {
+        'nav-dropdown': {
             props: {
                 name: {
                     type: String,
@@ -54,7 +54,7 @@ function getComponents() {
                     isOpen: this.open
                 }
             },
-            template: '#nav-set'
+            template: '#nav-dropdown'
         }
     }
 }
