@@ -1,12 +1,12 @@
 @props([
   'wrapperClass' => '',
   'tableClass' => '',
+  'isResponsive' => true,
 ])
 
-<div class="bg-white overflow-x-auto {{ $wrapperClass }}">
-  <div class="inline-block min-w-full overflow-hidden">
-    <table class="c-data-table {{ $tableClass }}">
-      {{ $slot }}
-    </table>
-  </div>
+<div class="{{ $wrapperClass }}">
+  <table class="data-table {{ $isResponsive ? 'is-responsive' : '' }} {{ $tableClass }}"
+  >
+    {{ $slot }}
+  </table>
 </div>

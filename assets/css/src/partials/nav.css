@@ -1,5 +1,5 @@
 .p-nav {
-    @apply flex flex-col fixed top-0 lg:top-14 left-0 z-20 h-screen overflow-x-hidden overflow-y-auto bg-white border-r w-9/12 lg:w-60 px-2.5 py-1.5 text-sm text-gray-600 transition origin-left transform -translate-x-full lg:translate-x-0;
+    @apply flex flex-col fixed top-0 lg:top-14 left-0 z-20 lg:z-18 h-screen overflow-x-hidden overflow-y-auto bg-white border-r w-9/12 lg:w-60 px-2.5 py-1.5 text-sm text-gray-600 transition origin-left transform -translate-x-full lg:translate-x-0;
 
     &.is-open {
         @apply translate-x-0;

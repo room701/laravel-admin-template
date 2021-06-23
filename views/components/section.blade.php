@@ -24,6 +24,8 @@
   }
 @endphp
 
-<div id="{{ $id ?? '' }}" class="c-section {{ $isForm ? 'c-setcion-form' : '' }} {{ $sizeClass }} {{ $class }}">
-  {{ $slot }}
-</div>
+<section class="-mx-4 lg:-mx-0">
+  <div id="{{ $id ?? '' }}" class="c-section {{ $isForm ? 'c-setcion-form' : '' }} {{ $sizeClass }} {{ $class }}">
+    {{ $slot }}
+  </div>
+</section>

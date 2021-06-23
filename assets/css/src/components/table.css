@@ -1,11 +1,40 @@
-.c-data-table {
-    @apply border-collapse border border-gray-200 min-w-full;
+.data-table {
+    @apply w-full table-fixed border-collapse border border-gray-200;
 
     th {
-        @apply px-5 py-3 border-b border-gray-200 text-center text-sm text-gray-400 font-normal;
+        @apply px-2 py-2 lg:px-4 lg:py-3 border-b border-gray-200 text-center text-sm font-normal text-gray-600 bg-gray-50;
     }
 
     td {
-        @apply px-5 py-4 border-b border-gray-200 text-center text-sm;
+        @apply px-2 py-2 lg:px-4 lg:py-4 lg:border-b border-gray-200 text-center text-sm;
     }
+
+    @media (max-width: 1022px) {
+        &.is-responsive {
+            @apply border-0;
+
+            tr:first-of-type {
+                @apply hidden;
+            }
+
+            tr:not(:first-of-type) {
+                @apply flex flex-col mb-8 bg-gray-50 p-1.5 border border-gray-100;
+            }
+
+            td {
+                @apply border-0 text-left py-1.5;
+            }
+
+            td[data-label] {
+                @apply flex;
+            }
+
+            td[data-label]::before {
+                @apply text-indigo-500 font-light min-w-max mr-6;
+                content: attr(data-label);
+            }
+        }
+    }
+
+
 }
