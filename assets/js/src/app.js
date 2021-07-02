@@ -26,3 +26,10 @@ document.body.addEventListener('click', (e) => {
     if (navVm.sidebar.isShow == true)
         window.helpers.toggleNavSidebar(false);
 });
+
+//
+// Init
+//
+document.addEventListener('DOMContentLoaded', () => {
+    window.helpers.csrfFieldAttribute();
+});

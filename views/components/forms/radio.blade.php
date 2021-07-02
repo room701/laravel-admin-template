@@ -1,7 +1,7 @@
 @props([
   'name',
   'label' => null,
-  'options' => [],
+  'options' => [], // ['value' => 'key']
   'checked' => null,
   'wrapperClass' => '',
   'inputClass' => '',
@@ -19,7 +19,7 @@
   @endif
 
   <div class="flex flex-row flex-wrap">
-    @foreach($options as $text => $value)
+    @foreach($options as $value => $text)
       <label class="mr-5">
         {!! Form::radio($name, $value, $checked == $value ? true : null, $attributes) !!}
         <span class="ml-1.5 cursor-pointer">{{ $text }}</span>

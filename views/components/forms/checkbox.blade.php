@@ -1,7 +1,7 @@
 @props([
   'name',
   'label' => null,
-  'options' => [],
+  'options' => [], // ['value' => 'key']
   'checked' => [],
   'wrapperClass' => '',
   'inputClass' => '',
@@ -19,7 +19,7 @@
   @endif
 
   <div class="flex flex-row flex-wrap">
-    @foreach($options as $text => $value)
+    @foreach($options as $value => $text)
       <label class="mr-5">
         @php
           $isChecked = false;

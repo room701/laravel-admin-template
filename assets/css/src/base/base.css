@@ -1,5 +1,5 @@
 @layer base {
-    [x-cloak] {
+    [v-cloak], [x-cloak] {
         display: none;
     }
 

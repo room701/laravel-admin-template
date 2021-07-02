@@ -2,6 +2,7 @@
   "name": "admin-template",
   "private": true,
   "dependencies": {
+    "htmx.org": "^1.4.1",
     "jquery": "^3.6.0",
     "kutty": "^0.5.1",
     "page": "^1.11.6",

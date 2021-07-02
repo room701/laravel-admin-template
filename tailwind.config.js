@@ -67,10 +67,10 @@ module.exports =
     extend: {
       colors: {
         primary: {
-          light: "#0869da", // For lighter primary color
-          DEFAULT: "#1a3ed6", // Normal primary color
-          dark: "#023eb9", // Used for hover, active, etc.
-        }
+          light: "#e2e9ff", // For lighter primary color
+          DEFAULT: "#515dcc", // Normal primary color
+          dark: "#5b31b3", // Used for hover, active, etc.
+        },
       },
       width: {
         '1/7': '14.2857143%',
@@ -96,7 +96,9 @@ module.exports =
         '8/9': '88.8888888%',
       },
       spacing: {
-        'default': '1.5rem',
+        'default': '1.25rem',
+        '18': '4.5rem',
+        '30': '7.5rem'
       }
     }
   },

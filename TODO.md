@@ -1,7 +1,6 @@
 ## TODO
 
-- alpines 簡化
-- 內框使用 iframe
+publish 範本
 
 ## 套件名稱參考
 

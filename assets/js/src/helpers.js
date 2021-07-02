@@ -13,6 +13,13 @@ window.helpers = {
 
     initDatepicker: () => {
         $('.js-datepicker').datepicker();
+    },
+
+    csrfFieldAttribute: () => {
+        let fields = document.querySelectorAll('input[type="hidden"]');
+        fields.forEach(function(field) {
+            field.setAttribute('hidden', true);
+        });
     }
 
 };

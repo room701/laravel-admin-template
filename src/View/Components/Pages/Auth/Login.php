@@ -10,13 +10,12 @@ class Login extends Component
     public $passwordResetUrl;
     public $heading;
 
-
     /**
      * Create a new component instance.
      *
      * @return void
      */
-    public function __construct($submitUrl, $passwordResetUrl, $heading = null)
+    public function __construct($submitUrl, $passwordResetUrl = null, $heading = null)
     {
         $this->submitUrl = $submitUrl;
         $this->passwordResetUrl = $passwordResetUrl;

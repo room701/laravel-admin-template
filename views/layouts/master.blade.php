@@ -6,9 +6,10 @@
   <title>{{ config('admin-view.name', '後台') }}</title>
 
   {{--  favicon  --}}
-  <link rel="icon" type="image/x-icon" href="{{ admin_asset('/img/favicon-icons/favicon.ico') }}">
-  <link rel="icon" type="image/png" sizes="32x32" href="{{ admin_asset('/img/favicon-icons/favicon-32x32.png') }}">
-  <link rel="icon" type="image/png" sizes="16x16" href="{{ admin_asset('/vendor/laravel-admin-template/img/favicon-icons/favicon-16x16.png') }}">
+  @forelse(config('admin-view.favicons') as $favicon)
+  <link rel="icon" type="{{ $favicon['type'] }}" sizes="{{ $favicon['size'] }}" href="{{ $favicon['path'] }}">
+  @empty
+  @endforelse
 
   {{--  stylesheets  --}}
   <link rel="stylesheet" href="{{ admin_asset('/fonts/icons/zwicon/zwicon.css') }}">
@@ -17,6 +18,7 @@
 
   {{--  scripts  --}}
   <script src="{{ admin_asset('/js/vendor/jquery/jquery.min.js') }}"></script>
+  <script src="{{ admin_asset('/js/vendor/htmx/htmx.min.js') }}"></script>
   <script src="{{ admin_asset('/js/vendor/vue/vue.js') }}"></script>
   <script type="module" defer src="{{ admin_asset_mix('/js/dist/app.js') }}"></script>
 

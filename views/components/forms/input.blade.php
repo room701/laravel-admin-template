@@ -14,12 +14,13 @@
   ];
 
   switch($type) {
-    case 'text':       $input = Form::text($name, $value, $attributes);     break;
-    case 'number':     $input = Form::number($name, $value, $attributes);   break;
-    case 'date':       $input = Form::date($name, $value, $attributes);     break;
-    case 'email':      $input = Form::email($name, $value, $attributes);    break;
-    case 'password':   $input = Form::password($name, $attributes);         break;
-    case 'file':       $input = Form::file($name, $attributes);             break;
+    case 'text':       $input = Form::text($name, $value, $attributes);       break;
+    case 'number':     $input = Form::number($name, $value, $attributes);     break;
+    case 'date':       $input = Form::date($name, $value, $attributes);       break;
+    case 'email':      $input = Form::email($name, $value, $attributes);      break;
+    case 'textarea':   $input = Form::textarea($name, $value, $attributes);   break;
+    case 'password':   $input = Form::password($name, $attributes);           break;
+    case 'file':       $input = Form::file($name, $attributes);               break;
   }
 @endphp
 
@@ -36,5 +37,7 @@
       <span class="flex items-center px-4 bg-gray-200 text-gray-500 text-sm rounded-r">{{ $append }}</span>
     </div>
   @endif
+
+  {{ $slot }}
 
 </div>

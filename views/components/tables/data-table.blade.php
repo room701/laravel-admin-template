@@ -4,7 +4,7 @@
   'isResponsive' => true,
 ])
 
-<div class="{{ $wrapperClass }}">
+<div class="{{ $wrapperClass }}" {{ $attributes }}>
   <table class="data-table {{ $isResponsive ? 'is-responsive' : '' }} {{ $tableClass }}"
   >
     {{ $slot }}
