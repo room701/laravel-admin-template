@@ -1,5 +1,5 @@
 {
-    "name": "dennykuo/laravel-admin-view",
+    "name": "room701/laravel-admin-view",
     "description": "後台",
     "require": {
         "spatie/yaml-front-matter": "^2.0",
