@@ -1,11 +1,11 @@
 <?php
 
-namespace Dennykuo\AdminView\Concerns;
+namespace Dennykuo\AdminFerry\Concerns;
 
 trait PackageSetting
 {
-    private static $viewNamespace = 'admin';
-    private static $assetsLinkSrcPath = 'vendor/room701/laravel-admin-view/assets';
-    private static $publishAssetsPath = 'vendor/laravel-admin-view';
-    private static $publishConfigName = 'admin-view';
+    private static $viewNamespace = 'admin-ferry';
+    private static $assetsLinkSrcPath = 'vendor/dennykuo/laravel-admin-ferry/assets';
+    private static $publishAssetsPath = 'vendor/laravel-admin-ferry';
+    private static $publishConfigName = 'admin-ferry';
 }

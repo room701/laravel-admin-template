@@ -1,1 +1,1 @@
-@include('admin::partials.content')
+@include('admin-ferry::partials.content')

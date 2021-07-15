@@ -1,6 +1,6 @@
 <?php
 
-namespace Dennykuo\AdminView\View\Components\Pages\Auth;
+namespace Dennykuo\AdminFerry\View\Components\Pages\Auth;
 
 use Illuminate\View\Component;
 
@@ -29,6 +29,6 @@ class Login extends Component
      */
     public function render()
     {
-        return view('admin::auth.login');
+        return view('admin-ferry::auth.login');
     }
 }

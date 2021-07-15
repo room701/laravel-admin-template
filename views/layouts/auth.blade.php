@@ -3,12 +3,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>{{ config('admin-view.name', '後台') }}</title>
+  <title>{{ config('admin-ferry.name', '後台') }}</title>
 
   {{--  favicon  --}}
   <link rel="icon" type="image/x-icon" href="{{ admin_asset('/img/favicon-icons/favicon.ico') }}">
   <link rel="icon" type="image/png" sizes="32x32" href="{{ admin_asset('/img/favicon-icons/favicon-32x32.png') }}">
-  <link rel="icon" type="image/png" sizes="16x16" href="{{ admin_asset('/vendor/laravel-admin-template/img/favicon-icons/favicon-16x16.png') }}">
+  <link rel="icon" type="image/png" sizes="16x16" href="{{ admin_asset('/vendor/laravel-admin-ferry/img/favicon-icons/favicon-16x16.png') }}">
 
   {{--  stylesheets  --}}
   <link rel="stylesheet" href="{{ admin_asset('/fonts/icons/zwicon/zwicon.css') }}">

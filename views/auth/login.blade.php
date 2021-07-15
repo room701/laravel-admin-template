@@ -1,4 +1,4 @@
-@extends('admin::layouts.auth')
+@extends('admin-ferry::layouts.auth')
 
 @section('content')
 
@@ -27,9 +27,10 @@
             </g>
           </svg>
         </div>
+
         <div class="text-2xl text-indigo-800 ml-2 font-medium">
           <h1 class="flex items-center space-x-2">
-            <span>{{ config('admin-view.name', '後台') }}</span>
+            <span>{{ config('admin-ferry.name', '後台') }}</span>
             <small class="text-gray-300">|</small>
             <strong class="text-indigo-500 font-light">登入</strong>
           </h1>
@@ -41,7 +42,7 @@
         {{-- <h2 class="text-center text-4xl text-indigo-900 font-semibold lg:text-left xl:text-5xl xl:text-bold">登入</h2> --}}
 
         @if ($errors->any())
-          <x-admin::alert.error-obvious :errors="$errors" wrapper-class="mb-10" />
+          <x-admin-ferry::alert.error-obvious :errors="$errors" wrapper-class="mb-10" />
         @endif
 
         <form action="{{ $submitUrl }}" method="POST">
@@ -58,15 +59,21 @@
             <div class="flex justify-between items-center">
               <div class="text-sm font-bold text-gray-500">密碼</div>
 
-              @if ($passwordResetUrl)
+              {{-- @if ($passwordResetUrl)
                 <div>
-                  <a href="{{ $passwordResetUrl }}" class="text-xs font-semibold text-indigo-600 hover:text-indigo-800
-                  cursor-pointer">忘記密碼</a>
+                  <a href="{{ $passwordResetUrl }}" class="text-xs font-semibold text-indigo-600 hover:text-indigo-800 cursor-pointer">忘記密碼</a>
                 </div>
-              @endif
+              @endif --}}
             </div>
             <input name="password" type="password" class="w-full text-lg px-0 py-1 border-0 border-b border-gray-300 focus:outline-none focus:border-indigo-500">
           </div>
+          @if ($passwordResetUrl)
+            <div class="mt-8">
+              <div class="flex justify-end">
+                <a href="{{ $passwordResetUrl }}" class="text-xs font-semibold text-indigo-600 hover:text-indigo-800 cursor-pointer">忘記密碼</a>
+              </div>
+            </div>
+          @endif
           <div class="mt-10">
             <button class="bg-indigo-500 text-gray-100 p-4 w-full rounded-full font-semibold focus:outline-none focus:shadow-outline hover:bg-indigo-600 shadow-md">
               登入

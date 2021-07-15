@@ -5,7 +5,7 @@
 <section id="content-container-wrapper" class="is-show flex-grow mt-14 lg:ml-60 px-4 py-4 pb-0 lg:px-6 lg:py-6 lg:pb-24">
 
   <main id="content-container" class="space-y-4 lg:space-y-default">
-    @includeWhen($viewParams->get('breadcrumb', null) !== false, 'admin::partials.breadcrumb')
+    @includeWhen($viewParams->get('breadcrumb', null) !== false, 'admin-ferry::partials.breadcrumb')
 
     @if ($title = \Arr::get($viewParams, 'page.name', null))
       <div class="w-max flex items-center">

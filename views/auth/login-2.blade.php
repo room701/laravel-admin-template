@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh-Hant-TW">
-@include('admin::partials.head')
+@include('admin-ferry::partials.head')
 
 <body class="text-gray-700 tracking-wider font-normal antialiased">
 

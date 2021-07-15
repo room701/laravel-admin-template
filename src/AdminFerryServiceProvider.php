@@ -1,15 +1,15 @@
 <?php
 
-namespace Dennykuo\AdminView;
+namespace Dennykuo\AdminFerry;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Collection;
-use Dennykuo\AdminView\Commands;
-use Dennykuo\AdminView\Concerns\PackageSetting;
+use Dennykuo\AdminFerry\Commands;
+use Dennykuo\AdminFerry\Concerns\PackageSetting;
 
-class AdminViewServiceProvider extends ServiceProvider
+class AdminFerryServiceProvider extends ServiceProvider
 {
     use PackageSetting;
 
@@ -39,7 +39,7 @@ class AdminViewServiceProvider extends ServiceProvider
 
     public function register()
     {
-        $this->mergeConfigFrom(__DIR__.'/config/admin-view.php', static::$publishConfigName);
+        $this->mergeConfigFrom(__DIR__.'/config/admin-ferry.php', static::$publishConfigName);
         // Set assets publish config
         Config::set(static::$publishConfigName . '.assets-path', static::$publishAssetsPath);
     }
@@ -60,13 +60,13 @@ class AdminViewServiceProvider extends ServiceProvider
         // 需要改成另外的資料夾位置，為使用者自己修改的資源了
         // $this->publishes([
         //     __DIR__.'/../assets' => public_path(static::$publishAssetsPath),
-        // ], 'laravel-admin-view:assets');
+        // ], 'laravel-admin-ferry:assets');
 
         // Publish configs
         $output = config_path(static::$publishConfigName . '.php');
         $this->publishes([
-            __DIR__.'/config/admin-view.php' => $output,
-        ], 'laravel-admin-view:config');
+            __DIR__.'/config/admin-ferry.php' => $output,
+        ], 'laravel-admin-ferry:config');
     }
 
 }

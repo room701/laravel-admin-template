@@ -6,7 +6,7 @@
 
   <button class="lg:hidden text-gray-700 text-3xl text-left p-3" onclick="window.helpers.toggleNavSidebar(false); event.stopPropagation();" type="button"><i class="zwicon-close"></i></button>
 
-  @foreach (config('admin-view.nav', null) as $name => $link)
+  @foreach (config('admin-ferry.nav', null) as $name => $link)
 
     {{-- 單層選單 --}}
     @if (is_string($link))

@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>{{ config('admin-view.name', '後台') }}</title>
+  <title>{{ config('admin-ferry.name', '後台') }}</title>
 
   {{--  favicon  --}}
-  @forelse(config('admin-view.favicons') as $favicon)
+  @forelse(config('admin-ferry.favicons') as $favicon)
   <link rel="icon" type="{{ $favicon['type'] }}" sizes="{{ $favicon['size'] }}" href="{{ $favicon['path'] }}">
   @empty
   @endforelse
@@ -27,15 +27,15 @@
 
 <body class="flex flex-col h-screen bg-gray-100 text-gray-600 tracking-wider font-normal antialiased">
 
-  @include('admin::partials.header')
+  @include('admin-ferry::partials.header')
 
-  @include('admin::partials.nav')
+  @include('admin-ferry::partials.nav')
 
-  @include('admin::partials.content')
+  @include('admin-ferry::partials.content')
 
   <button onclick="helpers.goTop()" class="p-unit-gotop" type="button"><i class="zwicon-arrow-up"></i></button>
 
-  @include('admin::partials.scripts')
+  @include('admin-ferry::partials.scripts')
 
 </body>
 </html>

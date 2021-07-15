@@ -11,6 +11,9 @@
   $attributes = $attributes->getAttributes() + [
     'class' => "form-radio {$inputClass}",
   ];
+
+  if ($checked == null)
+    $checked = array_key_first($options); // 設為第一個選項
 @endphp
 
 <div class="form-group {{ $wrapperClass }}">

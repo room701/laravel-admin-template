@@ -30,11 +30,11 @@
             }
 
             td[data-label] {
-                @apply flex;
+                @apply flex flex-col;
             }
 
             td[data-label]::before {
-                @apply text-indigo-500 font-light min-w-max mr-6;
+                @apply text-indigo-500 font-light min-w-max mr-6 mb-0.5;
                 content: attr(data-label);
             }
 

@@ -1,14 +1,14 @@
 ## Install
 
-``` composer require dennykuo/laravel-admin-view:dev-master ```
+``` composer require dennykuo/laravel-admin-ferry:dev-master ```
 
 若要連結本地 package，composer.json 中新增，路徑可能會有修改，options.symlink 為 link dir 方式
 
 ```
 "repositories": {
-    "dennykuo/laravel-admin-view": {
+    "dennykuo/laravel-admin-ferry": {
         "type": "path",
-        "url": "~/Dropbox/02-個人專案/laravel-admin-template/packages/dennykuo/laravel-admin-view",
+        "url": "~/Dropbox/02-個人專案/laravel-admin-template/packages/dennykuo/laravel-ferry-view",
         "options": {
             "symlink": true
         }
@@ -18,13 +18,13 @@
 
 ## Publish Config
 
-``` php artisan vendor:publish --tag=laravel-admin-view:config ```
+``` php artisan vendor:publish --tag=laravel-admin-ferry:config ```
 
 ## Publish/update assets
 
 套件的 assets 有更新都要再次發佈做更新
 
-``` php artisan laravel-admin-view:assets-publish ```
+``` php artisan laravel-admin-ferry:assets-publish ```
 
 ## view 使用方式
 
@@ -48,7 +48,7 @@ breadcrumb:
 
 view 中引用 blade components 的 nameapsce 為 x-admin，如下
 
-<x-admin::foo.bar />
+<x-admin-ferry::foo.bar />
 
 ## Icon font
 

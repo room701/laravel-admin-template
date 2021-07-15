@@ -1,5 +1,5 @@
 {
-    "name": "room701/laravel-admin-view",
+    "name": "dennykuo/laravel-admin-ferry",
     "description": "後台",
     "require": {
         "spatie/yaml-front-matter": "^2.0",
@@ -7,7 +7,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Dennykuo\\AdminView\\": "src/"
+            "Dennykuo\\AdminFerry\\": "src/"
         },
         "files": [
             "src/helpers.php"
@@ -15,13 +15,13 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "Dennykuo\\AdminView\\Test\\": "tests"
+            "Dennykuo\\AdminFerry\\Test\\": "tests"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Dennykuo\\AdminView\\AdminViewServiceProvider"
+                "Dennykuo\\AdminFerry\\AdminFerryServiceProvider"
             ]
         }
     }

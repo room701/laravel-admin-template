@@ -1,10 +1,10 @@
 <?php
 
-namespace Dennykuo\AdminView;
+namespace Dennykuo\AdminFerry;
 
 use Spatie\YamlFrontMatter\YamlFrontMatter;
 
-class AdminView
+class AdminFerry
 {
     /**
      * 處理內容 view，分析頁面的 YAML 變數及內容。視請求是否為 ａjax 做不同頁面外圍包裹後回應
@@ -16,9 +16,9 @@ class AdminView
     {
         $viewHTML = $view->toHtml();
         $viewParsed = self::parseView($viewHTML);
-        $viewParams = collect($viewParsed->params)->recursive(); // AdminViewServiceProvider 中有設定 Collection 擴展
+        $viewParams = collect($viewParsed->params)->recursive(); // AdminFerryServiceProvider 中有設定 Collection 擴展
         $viewContent = $viewParsed->content;
-        $viewWrapper = request()->ajax() ? 'admin::carrier-ajax' : 'admin::carrier';
+        $viewWrapper = request()->ajax() ? 'admin-ferry::carrier-ajax' : 'admin-ferry::carrier';
 
         return view($viewWrapper, compact('viewContent', 'viewParams'));
     }

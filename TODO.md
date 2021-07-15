@@ -8,7 +8,11 @@ publish 範本
 - shell
 - outline
 - ferry
-- broker  
+- broker
+
+## 套件參考
+- https://github.com/turbolinks/turbolinks
+- htmx
 
 ## 日期選擇器套件參考
 - https://vcalendar.io

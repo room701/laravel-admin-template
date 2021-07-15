@@ -1,6 +1,6 @@
 <?php
 
-use Dennykuo\AdminView\AdminView;
+use Dennykuo\AdminFerry\AdminFerry;
 
 if (! function_exists('adminView')) {
     /**
@@ -13,7 +13,7 @@ if (! function_exists('adminView')) {
      */
     function adminView(\Illuminate\View\View $view)
     {
-        return AdminView::make($view);
+        return AdminFerry::make($view);
     }
 }
 
@@ -27,7 +27,7 @@ if (! function_exists('admin_base_path')) {
 if (! function_exists('admin_asset')) {
     function admin_asset($path = null)
     {
-        return '/'. config('admin-view.assets-path') .'/'. ltrim($path, '/');
+        return '/'. config('admin-ferry.assets-path') .'/'. ltrim($path, '/');
     }
 }
 
