@@ -42,4 +42,19 @@
             background: #6179ee;
         }
     }
+
+    /* .form-prepend */
+    .form-prepend {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: stretch;
+        width: 100%;
+
+        .form-input {
+            border-top-left-radius: 0px;
+            border-bottom-left-radius: 0px;
+            flex: 1 1 auto;
+            width: 1px;
+        }
+    }
 }

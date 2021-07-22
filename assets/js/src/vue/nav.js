@@ -1,4 +1,4 @@
-window.navVm = new Vue({
+window.admin.navVm = new Vue({
     el: '#nav',
 
     data: {

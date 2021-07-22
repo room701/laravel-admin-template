@@ -127,7 +127,7 @@
 
 //     handlePageUI(url) {
 //         // page scroll to top;
-//         window.helpers.goTop(false);
+//         window.admin.helpers.goTop(false);
 
 //         // change alpine components data outside
 //         document.body.__x.$data.sidebar.isShow = false;

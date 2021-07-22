@@ -1,12 +1,12 @@
 //
-// Router
-//
-import Router from './router.js';
-
-//
 // Helpers
 //
 import './helpers.js';
+
+//
+// Router
+//
+import Router from './router.js';
 
 //
 // Nav Vue instance
@@ -23,13 +23,13 @@ import './vue/components-register.js';
 //
 // TODO: 改成 div 控制會比較好
 document.body.addEventListener('click', (e) => {
-    if (navVm.sidebar.isShow == true)
-        window.helpers.toggleNavSidebar(false);
+    if (window.admin.navVm.sidebar.isShow == true)
+        window.admin.helpers.toggleNavSidebar(false);
 });
 
 //
 // Init
 //
 document.addEventListener('DOMContentLoaded', () => {
-    window.helpers.csrfFieldAttribute();
+    window.admin.helpers.csrfFieldAttribute();
 });

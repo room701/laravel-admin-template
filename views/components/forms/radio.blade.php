@@ -1,8 +1,8 @@
-@props([
+  @props([
   'name',
   'label' => null,
   'options' => [], // ['value' => 'key']
-  'checked' => null,
+  'checked' => null, // value, null, false (不做任何預先選擇)
   'wrapperClass' => '',
   'inputClass' => '',
 ])
@@ -12,8 +12,9 @@
     'class' => "form-radio {$inputClass}",
   ];
 
-  if ($checked == null)
+  if ($checked === null) {
     $checked = array_key_first($options); // 設為第一個選項
+  }
 @endphp
 
 <div class="form-group {{ $wrapperClass }}">

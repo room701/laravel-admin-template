@@ -33,7 +33,7 @@
 
   @include('admin-ferry::partials.content')
 
-  <button onclick="helpers.goTop()" class="p-unit-gotop" type="button"><i class="zwicon-arrow-up"></i></button>
+  <button onclick="window.admin.helpers.goTop()" class="p-unit-gotop" type="button"><i class="zwicon-arrow-up"></i></button>
 
   @include('admin-ferry::partials.scripts')
 

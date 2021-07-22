@@ -5,6 +5,7 @@
   'value' => null,
   'wrapperClass' => '',
   'inputClass' => '',
+  'prepend' => null,
   'append' => null,
 ])
 
@@ -29,12 +30,17 @@
     <label>{{ $label }}</label>
   @endif
 
-  @if (! $append)
+  @if (! $prepend && ! $append)
     {!! $input !!}
-  @else
+  @elseif ($prepend)
+    <div class="form-prepend">
+      <span class="flex items-center px-3 bg-gray-200 text-gray-500 text-sm rounded-l">{{ $prepend }}</span>
+      {!! $input !!}
+    </div>
+  @elseif ($append)
     <div class="form-append">
       {!! $input !!}
-      <span class="flex items-center px-4 bg-gray-200 text-gray-500 text-sm rounded-r">{{ $append }}</span>
+      <span class="flex items-center px-3 bg-gray-200 text-gray-500 text-sm rounded-r">{{ $append }}</span>
     </div>
   @endif
 

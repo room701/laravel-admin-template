@@ -18,6 +18,8 @@
 
 ## Publish Config
 
+第一次運行時執行
+
 ``` php artisan vendor:publish --tag=laravel-admin-ferry:config ```
 
 ## Publish/update assets

@@ -4,7 +4,7 @@
      :class="{ 'is-open': sidebar.isShow }"
 >
 
-  <button class="lg:hidden text-gray-700 text-3xl text-left p-3" onclick="window.helpers.toggleNavSidebar(false); event.stopPropagation();" type="button"><i class="zwicon-close"></i></button>
+  <button class="lg:hidden text-gray-700 text-3xl text-left p-3" onclick="window.admin.helpers.toggleNavSidebar(false); event.stopPropagation();" type="button"><i class="zwicon-close"></i></button>
 
   @foreach (config('admin-ferry.nav', null) as $name => $link)
 
