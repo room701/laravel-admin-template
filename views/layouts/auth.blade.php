@@ -6,17 +6,14 @@
   <title>{{ config('admin-ferry.name', '後台') }}</title>
 
   {{--  favicon  --}}
-  <link rel="icon" type="image/x-icon" href="{{ admin_asset('/img/favicon-icons/favicon.ico') }}">
-  <link rel="icon" type="image/png" sizes="32x32" href="{{ admin_asset('/img/favicon-icons/favicon-32x32.png') }}">
-  <link rel="icon" type="image/png" sizes="16x16" href="{{ admin_asset('/vendor/laravel-admin-ferry/img/favicon-icons/favicon-16x16.png') }}">
+  @forelse(config('admin-ferry.favicons') as $favicon)
+    <link rel="icon" type="{{ $favicon['type'] }}" sizes="{{ $favicon['size'] }}" href="{{ $favicon['path'] }}">
+  @empty
+  @endforelse
 
   {{--  stylesheets  --}}
-  <link rel="stylesheet" href="{{ admin_asset('/fonts/icons/zwicon/zwicon.css') }}">
-  {{-- <link rel="stylesheet" href="{{ admin_asset_mix('/css/vendor/vendor.css') }}"> --}}
+  <link rel="stylesheet" href="{{ admin_asset_mix('/css/vendor/eva-icons/eva-icons.css') }}">
   <link rel="stylesheet" href="{{ admin_asset_mix('/css/dist/app.css') }}">
-
-  {{--  scripts  --}}
-  {{--  --}}
 
   @stack('head')
 </head>

@@ -2,6 +2,7 @@
   "name": "admin-template",
   "private": true,
   "dependencies": {
+    "eva-icons": "^1.1.3",
     "htmx.org": "^1.4.1",
     "jquery": "^3.6.0",
     "kutty": "^0.5.1",

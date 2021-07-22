@@ -35,7 +35,7 @@ mix.browserSync({
 
 let jsVendorDir = './assets/js/vendor';
 mix.copy('node_modules/jquery/dist', `${jsVendorDir}/jquery`);
-mix.copy('node_modules/htmx.org/dist/', `${jsVendorDir}/htmx`);
+mix.copy('node_modules/htmx.org/dist', `${jsVendorDir}/htmx`);
 mix.copy('node_modules/vue/dist', `${jsVendorDir}/vue`);
 mix.copy('node_modules/vue-ctk-date-time-picker/dist', `${jsVendorDir}/vue-ctk-date-time-picker`);
 
@@ -92,7 +92,9 @@ function processProductionCSS() {
 
 // Vendor CSS
 // --------------------
-// let cssVendorDir = './assets/css/vendor';
+let cssVendorDir = './assets/css/vendor';
+mix.copy('node_modules/eva-icons/style', `${cssVendorDir}/eva-icons`);
+
 // let cssVendorFile = `${cssVendorDir}/vendor.css`;
 // mix.combine(
 //     [

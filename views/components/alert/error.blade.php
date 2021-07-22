@@ -28,6 +28,6 @@
           class="-mr-1 flex-shrink-0 flex rounded-md sm:-mr-2 {{ $closeBtnClass }}"
           onclick="this.parentElement.remove();"
     >
-    <i class="zwicon-close text-2xl"></i>
+    <i class="eva eva-close-outline text-2xl"></i>
   </button>
 </div>

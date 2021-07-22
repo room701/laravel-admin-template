@@ -1,6 +1,6 @@
 {
     "/js/dist/app.js": "/js/dist/app.js?id=d16ed16e955e985f7f15",
-    "/css/dist/app.css": "/css/dist/app.css?id=4343807ccb3024add908",
+    "/css/dist/app.css": "/css/dist/app.css?id=486d9adf5bf86543140e",
     "/js/vendor/jquery/jquery.js": "/js/vendor/jquery/jquery.js?id=2849239b95f5a9a2aea3",
     "/js/vendor/jquery/jquery.min.js": "/js/vendor/jquery/jquery.min.js?id=8fb8fee4fcc3cc86ff6c",
     "/js/vendor/jquery/jquery.min.map": "/js/vendor/jquery/jquery.min.map?id=cd2202e685395dcb4135",
@@ -32,5 +32,6 @@
     "/js/vendor/vue-ctk-date-time-picker/vue-ctk-date-time-picker.umd.js": "/js/vendor/vue-ctk-date-time-picker/vue-ctk-date-time-picker.umd.js?id=862c0db30cbf20119603",
     "/js/vendor/vue-ctk-date-time-picker/vue-ctk-date-time-picker.umd.js.map": "/js/vendor/vue-ctk-date-time-picker/vue-ctk-date-time-picker.umd.js.map?id=ca082319b9a086380359",
     "/js/vendor/vue-ctk-date-time-picker/vue-ctk-date-time-picker.umd.min.js": "/js/vendor/vue-ctk-date-time-picker/vue-ctk-date-time-picker.umd.min.js?id=ae9c7bf33feb3e29a039",
-    "/js/vendor/vue-ctk-date-time-picker/vue-ctk-date-time-picker.umd.min.js.map": "/js/vendor/vue-ctk-date-time-picker/vue-ctk-date-time-picker.umd.min.js.map?id=3dc778518904feaf8e61"
+    "/js/vendor/vue-ctk-date-time-picker/vue-ctk-date-time-picker.umd.min.js.map": "/js/vendor/vue-ctk-date-time-picker/vue-ctk-date-time-picker.umd.min.js.map?id=3dc778518904feaf8e61",
+    "/css/vendor/eva-icons/eva-icons.css": "/css/vendor/eva-icons/eva-icons.css?id=eae1b34a3dc1c167a11f"
 }

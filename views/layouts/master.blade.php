@@ -7,13 +7,12 @@
 
   {{--  favicon  --}}
   @forelse(config('admin-ferry.favicons') as $favicon)
-  <link rel="icon" type="{{ $favicon['type'] }}" sizes="{{ $favicon['size'] }}" href="{{ $favicon['path'] }}">
+    <link rel="icon" type="{{ $favicon['type'] }}" sizes="{{ $favicon['size'] }}" href="{{ $favicon['path'] }}">
   @empty
   @endforelse
 
   {{--  stylesheets  --}}
-  <link rel="stylesheet" href="{{ admin_asset('/fonts/icons/zwicon/zwicon.css') }}">
-  {{-- <link rel="stylesheet" href="{{ admin_asset_mix('/css/vendor/vendor.css') }}"> --}}
+  <link rel="stylesheet" href="{{ admin_asset_mix('/css/vendor/eva-icons/eva-icons.css') }}">
   <link rel="stylesheet" href="{{ admin_asset_mix('/css/dist/app.css') }}">
 
   {{--  scripts  --}}
@@ -33,7 +32,7 @@
 
   @include('admin-ferry::partials.content')
 
-  <button onclick="window.admin.helpers.goTop()" class="p-unit-gotop" type="button"><i class="zwicon-arrow-up"></i></button>
+  <button onclick="window.admin.helpers.goTop()" class="p-unit-gotop" type="button"><i class="eva eva-arrow-upward-outline"></i></button>
 
   @include('admin-ferry::partials.scripts')
 

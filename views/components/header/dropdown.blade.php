@@ -10,7 +10,7 @@
 <input id="{{ $togglerId }}" type="checkbox" class="hidden">
 
 <div class="toolbar-dropdown relative {{ $wrapperClass }}">
-  <label for="{{ $togglerId }}" class="cursor-pointer {{ $iconClass }}">
+  <label for="{{ $togglerId }}" class="cursor-pointer flex items-center {{ $iconClass }}">
     {!! $slot !!}
   </label>
 

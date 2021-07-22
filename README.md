@@ -54,12 +54,6 @@ view 中引用 blade components 的 nameapsce 為 x-admin，如下
 
 ## Icon font
 
-含有兩套 icon font
-
-- zwicon：圖檔形式 https://www.zwicon.com/
-圖案細緻但久沒維護了，官方使用方式也有錯誤
-如 <i class="more-v"></i> 應為 <i class="zwicon-more-v"></i>
-可找替代或單純用 eva icons
-
 - eva icons：
-js、css 形式，https://akveo.github.io/eva-icons
+https://akveo.github.io/eva-icons
+分為 js、css 形式，目前使用 css 形式

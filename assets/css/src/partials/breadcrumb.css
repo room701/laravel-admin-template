@@ -2,16 +2,18 @@
     @apply flex flex-row flex-wrap items-center content-center whitespace-nowrap;
 
     .p-breadcrumb-item {
+        @apply flex items-center;
+
         &, a {
             @apply leading-none lg:text-lg !important;
         }
 
         & {
-            @apply font-normal text-gray-500;
+            @apply leading-none font-normal text-gray-500;
         }
 
         a {
-            @apply font-medium text-gray-700;
+            @apply leading-none font-medium text-gray-700;
         }
     }
 
