@@ -1,6 +1,11 @@
 {
   "name": "admin-template",
   "private": true,
+  "scripts": {
+    "mix": "npx mix",
+    "mix watch": "npx mix watch",
+    "mix vendor": "npx mix --mix-config=webpack.mix-vendor.js"
+  },
   "dependencies": {
     "eva-icons": "^1.1.3",
     "htmx.org": "^1.4.1",

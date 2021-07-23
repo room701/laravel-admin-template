@@ -11,6 +11,9 @@
 
         .form-input, .form-select {
             @apply text-gray-500;
+            min-height: 36px;
+            padding-top: 5px;
+            padding-bottom: 5px;
         }
 
         .form-checkbox + *,

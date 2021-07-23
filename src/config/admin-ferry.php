@@ -8,7 +8,7 @@ return [
 
     'nav-link-type' => 'route', // route or url
     'nav' => [
-        // '選單名稱' => 'route name', // 'route name' or 'url'
+        // 'link name' => 'route name' or 'url',
     ],
 
     'header-toolbar-view' => null, // view path, null
