@@ -1,6 +1,5 @@
 @props([
   'size' => 'full',
-  'id' => null,
   'class' => '',
   'isForm' => false,
 ])
@@ -24,8 +23,8 @@
   }
 @endphp
 
-<section class="-mx-4 lg:-mx-0">
-  <div id="{{ $id ?? '' }}" class="c-section {{ $isForm ? 'c-setcion-form' : '' }} {{ $sizeClass }} {{ $class }}">
+<section class="-mx-4 lg:-mx-0" {{ $attributes }}>
+  <div class="c-section {{ $isForm ? 'c-setcion-form' : '' }} {{ $sizeClass }} {{ $class }}">
     {{ $slot }}
   </div>
 </section>

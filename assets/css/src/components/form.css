@@ -11,7 +11,7 @@
 
         .form-input, .form-select {
             @apply text-gray-500;
-            min-height: 36px;
+            min-height: auto;
             padding-top: 5px;
             padding-bottom: 5px;
         }
