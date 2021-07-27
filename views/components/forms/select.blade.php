@@ -1,7 +1,7 @@
 @props([
   'name' => null,
   'label' => null,
-  'options' => [],
+  'options' => [], // ['value' => 'key']
   'value' => null,
   'wrapperClass' => '',
   'inputClass' => '',
