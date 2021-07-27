@@ -14,7 +14,7 @@
 @endphp
 
 <div class="form-group {{ $wrapperClass }}">
-  <label>{{ $label }}</label>
+  @if ($label) <label>{{ $label }}</label> @endif
   <label class="form-input cursor-pointer {{ $inputClass }}" for="{{ $id }}">
     <input id="{{ $id }}" name="{{ $name }}" type="file" class="hidden" {!! $attributesHTML !!}>
     <span class="block w-full truncate text-gray-500">選擇檔案</span>
