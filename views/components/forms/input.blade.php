@@ -17,7 +17,7 @@
   switch($type) {
     case 'text':       $input = Form::text($name, $value, $attributes);       break;
     case 'number':     $input = Form::number($name, $value, $attributes);     break;
-    case 'tel':        $input = Form::tel($name, $value, $attributes);     break;
+    case 'tel':        $input = Form::tel($name, $value, $attributes);        break;
     case 'date':       $input = Form::date($name, $value, $attributes);       break;
     case 'email':      $input = Form::email($name, $value, $attributes);      break;
     case 'textarea':   $input = Form::textarea($name, $value, $attributes);   break;

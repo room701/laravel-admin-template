@@ -9,8 +9,11 @@
     $homeLink = Route::has($homeLink) ? route($homeLink) : $homeLink;
   @endphp
 
-  <div class="p-brand absolute lg:static left-1/2 z-5 transform -translate-x-1/2 lg:translate-x-0 min-w-max text-base lg:text-xl tracking-wider text-center lg:text-left">
+  <div class="p-brand absolute lg:static flex items-center left-1/2 z-5 transform -translate-x-1/2 lg:translate-x-0 min-w-max text-base lg:text-xl tracking-wider text-center lg:text-left">
     <a href="{{ $homeLink }}" data-fetch-url class="p-brand-name">{{ config('admin-ferry.name', '後台') }}</a>
+    @if (! \App::environment('production'))
+      <span class="text-sm bg-red-400 text-white ml-2.5 px-2 py-1 rounded-full leading-none">測試</span>
+    @endif
   </div>
 
   {{-- header-toolbar --}}
