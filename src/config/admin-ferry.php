@@ -11,7 +11,7 @@ return [
         // 'link name' => 'route name' or 'url',
     ],
 
-    'header-scripts-view' => null, // view path, null
+    'scripts-view' => null, // view path, null
 
     'header-toolbar-view' => null, // view path, null
 
