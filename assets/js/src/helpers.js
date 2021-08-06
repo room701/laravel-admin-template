@@ -11,9 +11,11 @@ window.admin.helpers = {
         });
     },
 
-    notify: (message, type = 'success') => {
+    notify: (message, type = 'success', timeout = 2500) => {
         new Noty({
-            text: message
+            text: message,
+            type: type,
+            timeout: timeout
         }).show();
     }
 

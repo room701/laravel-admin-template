@@ -1,12 +1,11 @@
-window.admin = {};
-
+import './config.js';
 import './init.js';
 import './helpers.js';
 
 //
 // Router
 //
-import Router from './router.js';
+// import Router from './router.js';
 
 //
 // Nav Vue instance
