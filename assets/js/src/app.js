@@ -1,8 +1,6 @@
 window.admin = {};
 
-//
-// Helpers
-//
+import './init.js';
 import './helpers.js';
 
 //
