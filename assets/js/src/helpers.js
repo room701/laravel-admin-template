@@ -1,5 +1,3 @@
-window.admin = {};
-
 window.admin.helpers = {
 
     toggleNavSidebar: (open = true) => {
@@ -13,15 +11,10 @@ window.admin.helpers = {
         });
     },
 
-    initDatepicker: () => {
-        $('.js-datepicker').datepicker();
-    },
-
-    csrfFieldAttribute: () => {
-        let fields = document.querySelectorAll('input[type="hidden"]');
-        fields.forEach(function(field) {
-            field.setAttribute('hidden', true);
-        });
+    notify: (message, type = 'success') => {
+        new Noty({
+            text: message
+        }).show();
     }
 
 };

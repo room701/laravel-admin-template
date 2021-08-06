@@ -6,6 +6,7 @@ mix.setPublicPath('./assets'); // for mix-manifest.json publish
 // --------------------
 let jsVendorDir = './assets/js/vendor';
 mix.copy('node_modules/jquery/dist', `${jsVendorDir}/jquery`);
+mix.copy('node_modules/noty', `${jsVendorDir}/noty`);
 mix.copy('node_modules/htmx.org/dist', `${jsVendorDir}/htmx`);
 mix.copy('node_modules/vue/dist', `${jsVendorDir}/vue`);
 mix.copy('node_modules/vue-ctk-date-time-picker/dist', `${jsVendorDir}/vue-ctk-date-time-picker`);

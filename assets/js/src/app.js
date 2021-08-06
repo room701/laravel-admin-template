@@ -1,3 +1,5 @@
+window.admin = {};
+
 //
 // Helpers
 //
@@ -21,6 +23,8 @@ import './vue/components-register.js';
 //
 // Other
 //
+
+// 收起導覽列
 // TODO: 改成 div 控制會比較好
 document.body.addEventListener('click', (e) => {
     if (window.admin.navVm.sidebar.isShow == true)
@@ -31,5 +35,6 @@ document.body.addEventListener('click', (e) => {
 // Init
 //
 document.addEventListener('DOMContentLoaded', () => {
-    window.admin.helpers.csrfFieldAttribute();
+    window.admin.init.csrfFieldAttribute();
+    window.admin.init.initNotify();
 });
