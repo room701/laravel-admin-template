@@ -35,6 +35,7 @@
         :only-date="{{ $hasTime ? 'false' : 'true' }}"
         locale="zh_TW"
         button-now-translation="現在"
+        :auto-close="true"
         :no-label="true"
         :no-header="true"
       >
