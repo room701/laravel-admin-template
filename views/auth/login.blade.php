@@ -3,7 +3,7 @@
 @section('content')
   <div class="lg:flex items-center justify-center">
 
-    {{-- heading set --}}
+    {{-- heading set，小板面時隱藏 --}}
     <div class="hidden lg:flex flex-1 h-screen lg:w-1/2 items-center justify-center bg-gradient-to-b from-indigo-50 to-gray-100">
       <div class="max-w-xs transform duration-200 hover:scale-110 cursor-pointer">
         <h1 class="text-8xl text-indigo-600 font-extralight tracking-wider">{{ $heading }}</h1>
@@ -13,8 +13,9 @@
     <div class="w-full lg:w-1/2">
 
       {{-- logo set --}}
-      <div class="flex justify-center lg:justify-start items-center bg-indigo-100 lg:bg-white py-10 px-10 lg:max-w-lg mx-auto">
-        <div class="flex items-center">
+      <div class="flex justify-start items-center bg-indigo-100 lg:bg-white py-10 px-7 md:py-10 md:px-10 lg:max-w-lg mx-auto">
+
+        <div class="hidden md:flex items-center">
           <svg class="w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 225 225" style="enable-background:new 0 0 225 225;" xml:space="preserve">
             <style>
               .st0{fill:none;stroke:currentColor;stroke-width:20;stroke-linecap:round;stroke-miterlimit:3;}
@@ -27,17 +28,18 @@
           </svg>
         </div>
 
-        <div class="text-2xl text-indigo-800 ml-2 font-medium">
-          <h1 class="flex items-center space-x-2">
-            <span>{{ config('admin-ferry.name', '後台') }}</span>
-            <small class="text-gray-300">|</small>
-            <strong class="text-indigo-500 font-light">登入</strong>
+        <div class="text-2xl text-indigo-800 lg:ml-5 font-medium">
+          <h1 class="flex flex-col md:flex-row md:items-center md:space-x-3.5">
+            <span class="mb-2.5 md:mb-0">{{ config('admin-ferry.name', '後台') }}</span>
+            <small class="hidden md:inline-block text-gray-300">|</small>
+            <span class="text-indigo-500 font-light">登入</span>
           </h1>
         </div>
+
       </div>
 
       {{-- form set --}}
-      <div class="mt-24 lg:mt-14 mb-14 px-10 lg:max-w-lg mx-auto">
+      <div class="mt-14 md:mt-24 lg:mt-14 mb-14 px-10 lg:max-w-lg mx-auto">
         {{-- <h2 class="text-center text-4xl text-indigo-900 font-semibold lg:text-left xl:text-5xl xl:text-bold">登入</h2> --}}
 
         @if ($errors->any())
@@ -48,7 +50,7 @@
           <x-admin-ferry::alert.notify :message="session('status')" wrapper-class="mb-10" />
         @endif
 
-        <form action="{{ $submitUrl }}" method="POST">
+        <form action="{{ $submitUrl }}" method="POST" autocomplete="on">
 
           @csrf
 
@@ -56,14 +58,14 @@
 
           <div>
             <div class="text-sm font-semibold text-gray-500">Email</div>
-            <input name="email" type="email" value="{{ old('email') }}" class="w-full text-lg px-0 py-1 border-0 border-b border-gray-300 focus:outline-none focus:border-indigo-500" required>
+            <input name="email" type="email" value="{{ old('email') }}" class="w-full text-lg px-0 py-1 border-0 border-b border-gray-300 focus:outline-none focus:border-indigo-500" required autocomplete="on">
           </div>
 
           <div class="mt-8">
             <div class="flex justify-between items-center">
               <div class="text-sm font-semibold text-gray-500">密碼</div>
             </div>
-            <input name="password" type="password" class="w-full text-lg px-0 py-1 border-0 border-b border-gray-300 focus:outline-none focus:border-indigo-500" required>
+            <input name="password" type="password" class="w-full text-lg px-0 py-1 border-0 border-b border-gray-300 focus:outline-none focus:border-indigo-500" required autocomplete="on">
           </div>
 
           @if ($passwordResetUrl)
