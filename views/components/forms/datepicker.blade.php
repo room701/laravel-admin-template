@@ -58,7 +58,7 @@
     });
 
     function handleDatePickerInit(event) {
-      document.addEventListener(event, () => {
+      document.addEventListener(event, () {
         var elements = document.getElementsByTagName('vue-ctk-date-time-picker');
         elements = Array.prototype.slice.call(elements);
         elements.forEach(function(el) {
