@@ -53,7 +53,7 @@
 @once
   <script>
     // Vue Component standalone
-    ['DOMContentLoaded', 'htmx:afterSwap'].forEach(event) => {
+    ['DOMContentLoaded', 'htmx:afterSwap'].forEach((event) => {
       handleDatePickerInit(event);
     });
 
