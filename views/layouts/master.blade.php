@@ -15,7 +15,7 @@
   <link rel="stylesheet" href="{{ admin_asset('/css/vendor/eva-icons/eva-icons.css') }}">
   <link rel="stylesheet" href="{{ admin_asset('/js/vendor/noty/lib/noty.css') }}">
   <link rel="stylesheet" href="{{ admin_asset('/js/vendor/noty/lib/themes/sunset.css') }}">
-  <link rel="stylesheet" href="{{ admin_asset_mix('/css/dist/app.css') }}">
+  <link rel="stylesheet" href="{{ admin_asset_mix('/css/dist/app.css') }}?v={{ date('Ymd_hi') }}">
 
   {{--  scripts  --}}
   <script src="{{ admin_asset('/js/vendor/jquery/jquery.min.js') }}"></script>

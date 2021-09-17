@@ -53,21 +53,27 @@
 @once
   <script>
     // Vue Component standalone
-    document.addEventListener('DOMContentLoaded', (event) => {
-      var elements = document.getElementsByTagName('vue-ctk-date-time-picker');
-      elements = Array.prototype.slice.call(elements);
-      elements.forEach(function(el) {
-        // 取 input value
-        var date = el.children[0].getAttribute('value');
+    ['DOMContentLoaded', 'htmx:afterSwap'].forEach(event) => {
+      handleDatePickerInit(event);
+    });
 
-        new Vue({
-          el: el,
-          data: {
-            date: date
-          }
+    function handleDatePickerInit(event) {
+      document.addEventListener(event, () => {
+        var elements = document.getElementsByTagName('vue-ctk-date-time-picker');
+        elements = Array.prototype.slice.call(elements);
+        elements.forEach(function(el) {
+          // 取 input value
+          var date = el.children[0].getAttribute('value');
+
+          new Vue({
+            el: el,
+            data: {
+              date: date
+            }
+          });
         });
       });
-    });
+    }
   </script>
 @endonce
 @endif
