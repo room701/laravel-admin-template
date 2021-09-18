@@ -58,14 +58,15 @@
 
           <div>
             <div class="text-sm font-semibold text-gray-500">Email</div>
-            <input name="email" type="email" value="{{ old('email') }}" class="w-full text-lg px-0 py-1 border-0 border-b border-gray-300 focus:outline-none focus:border-indigo-500" required autocomplete="on">
+            <input name="email" type="email" value="{{ old('email') }}" class="w-full text-lg px-0 py-1 border-0 border-b border-gray-300 focus:outline-none focus:border-indigo-500" required autocomplete="email
+            ">
           </div>
 
           <div class="mt-8">
             <div class="flex justify-between items-center">
               <div class="text-sm font-semibold text-gray-500">密碼</div>
             </div>
-            <input name="password" type="password" class="w-full text-lg px-0 py-1 border-0 border-b border-gray-300 focus:outline-none focus:border-indigo-500" required autocomplete="on">
+            <input name="password" type="password" class="w-full text-lg px-0 py-1 border-0 border-b border-gray-300 focus:outline-none focus:border-indigo-500" required autocomplete="current-password">
           </div>
 
           @if ($passwordResetUrl)
