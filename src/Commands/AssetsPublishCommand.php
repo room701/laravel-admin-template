@@ -26,8 +26,8 @@ class AssetsPublishCommand extends Command
             File::makeDirectory($prependDir);
         }
 
-        // 先刪除目錄 (防止舊目錄存在，導致路徑錯誤)
-        File::deleteDirectory($publishAssetsPath);
+        // 先刪除目錄 link (防止舊目錄存在，導致路徑錯誤)，因是 link 所以使用 delete file 而非 delete directory
+        File::delete($publishAssetsPath);
 
         // 連結目錄
         system("ln -s {$assetsLinkSrcPath} {$publishAssetsPath}"); // ln -s {來源完整路徑} {目標路徑(以當前位置為基準)}
