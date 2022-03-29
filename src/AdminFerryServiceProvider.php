@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Collection;
 use Dennykuo\AdminFerry\Commands;
 use Dennykuo\AdminFerry\Concerns\PackageSetting;
+use Illuminate\Support\Facades\Artisan;
 
 class AdminFerryServiceProvider extends ServiceProvider
 {
@@ -15,6 +16,7 @@ class AdminFerryServiceProvider extends ServiceProvider
 
     public function boot()
     {
+        // If run in console
         if ($this->app->runningInConsole()) {
             $this->bootForConsole();
         }
@@ -35,11 +37,15 @@ class AdminFerryServiceProvider extends ServiceProvider
                 return $value;
             });
         });
+
+        // 檢查套件的 mix-manifest.json 是否存在，不存在則 publish
+        $this->checkMixManifestFile();
     }
 
     public function register()
     {
         $this->mergeConfigFrom(__DIR__.'/config/admin-ferry.php', static::$publishConfigName);
+
         // Set assets publish config
         Config::set(static::$publishConfigName . '.assets-path', static::$publishAssetsPath);
     }
@@ -69,4 +75,16 @@ class AdminFerryServiceProvider extends ServiceProvider
         ], 'laravel-admin-ferry:config');
     }
 
+    protected function checkMixManifestFile()
+    {
+        $manifestFile = public_path(admin_asset() . 'mix-manifest.json');
+
+        if (! file_exists($manifestFile)) {
+            $this->commands([
+                Commands\AssetsPublishCommand::class,
+            ]);
+
+            Artisan::call('laravel-admin-ferry:assets-publish');
+        }
+    }
 }

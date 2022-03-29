@@ -17,7 +17,7 @@ class AssetsPublishCommand extends Command
     public function handle()
     {
         $assetsLinkSrcPath = base_path(static::$assetsLinkSrcPath);
-        $publishAssetsPath = base_path(static::$publishAssetsPath);
+        $publishAssetsPath = public_path(static::$publishAssetsPath);
 
         // 創建目標目錄的上一層目錄 (ln 指令需要)
         $prependDir = \Str::beforeLast($publishAssetsPath, '/'); // ex: public/vendor
