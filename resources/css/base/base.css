@@ -1,4 +1,5 @@
 @layer base {
+    /* Vue.js or Alpine.js */
     [v-cloak], [x-cloak] {
         display: none;
     }

@@ -18,9 +18,8 @@ class AdminFerry
         $viewParsed = self::parseView($viewHTML);
         $viewParams = collect($viewParsed->params)->recursive(); // AdminFerryServiceProvider 中有設定 Collection 擴展
         $viewContent = $viewParsed->content;
-        $viewWrapper = request()->ajax() ? 'admin-ferry::carrier-ajax' : 'admin-ferry::carrier';
 
-        return view()->make($viewWrapper, compact('viewContent', 'viewParams'));
+        return view()->make('admin-ferry::carrier', compact('viewContent', 'viewParams'));
     }
 
     protected static function parseView(string $viewHTML)

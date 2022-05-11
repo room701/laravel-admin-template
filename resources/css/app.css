@@ -12,7 +12,6 @@
 @import "./components/form";
 @import "./components/button";
 @import "./components/dropdown";
-@import "./components/loader";
 
 @import "./partials/header";
 @import "./partials/nav";

@@ -6,7 +6,7 @@ import '../css/app.css';
 //
 // Import JS Vendor
 //
-
+import './vendor.js';
 
 //
 // Import JS
@@ -14,11 +14,6 @@ import '../css/app.css';
 import './config.js';
 import './init.js';
 import './helpers.js';
-
-//
-// Router
-//
-// import Router from './router.js';
 
 //
 // Nav Vue instance

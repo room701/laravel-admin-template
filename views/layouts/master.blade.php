@@ -13,6 +13,7 @@
   @endforelse
 
   @production
+     {{-- vite production mode --}}
     @php
       $assetsPath = public_path('vendor/laravel-admin-ferry');
       $manifest = json_decode(file_get_contents(
@@ -27,21 +28,12 @@
     <script type="module" src="http://localhost:3000/resources/js/app.js"></script>
   @endproduction
 
-  {{--  stylesheets  --}}
-  {{-- <link rel="stylesheet" href="{{ admin_asset('/js/vendor/noty/lib/themes/sunset.css') }}"> --}}
-  {{-- <link rel="stylesheet" href="{{ admin_asset_mix('/css/dist/app.css') }}?v={{ date('Ymd_hi') }}"> --}}
-
-  {{--  scripts  --}}
-  {{-- <script src="{{ admin_asset('/js/vendor/jquery/jquery.min.js') }}"></script>
-  <script src="{{ admin_asset('/js/vendor/noty/lib/noty.min.js') }}"></script>
-  <script src="{{ admin_asset('/js/vendor/htmx/htmx.min.js') }}"></script>
-  <script src="{{ admin_asset('/js/vendor/vue/vue.js') }}"></script>
-  <script type="module" defer src="{{ admin_asset_mix('/js/dist/app.js') }}"></script> --}}
-
   @stack('head')
 </head>
 
 <body class="flex flex-col h-screen bg-gray-100 text-gray-600 tracking-wider font-normal antialiased">
+
+  @include('admin-ferry::partials.loader')
 
   @include('admin-ferry::partials.header')
 

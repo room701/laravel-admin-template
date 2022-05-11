@@ -1,6 +1,4 @@
-import { createApp } from 'vue/dist/vue.esm-bundler.js';
-
-window.admin.navVm = createApp({
+window.admin.navVm = Vue.createApp({
     data() {
         return {
             currentUrl: window.location.origin + window.location.pathname,

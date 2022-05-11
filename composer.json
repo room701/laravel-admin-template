@@ -1,5 +1,6 @@
 {
     "name": "dennykuo/laravel-admin-ferry",
+    "version": "dev-vite",
     "description": "後台",
     "require": {
         "spatie/yaml-front-matter": "^2.0",

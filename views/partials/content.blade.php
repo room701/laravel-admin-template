@@ -1,7 +1,3 @@
-<div id="loader" class="loader-wrapper flex justify-center items-center mt-14 lg:ml-52">
-  <div class="loader ease-linear rounded-full border-4 border-t-4 border-gray-300 h-9 w-9"></div>
-</div>
-
 <section id="content-container-wrapper" class="is-show flex-grow mt-14 lg:ml-52 px-4 py-4 pb-0 lg:px-6 lg:py-6 lg:pb-24">
 
   <main id="content-container" class="space-y-4 lg:space-y-default">
