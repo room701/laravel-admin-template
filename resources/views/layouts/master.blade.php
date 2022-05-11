@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+  <!DOCTYPE html>
 <html lang="zh-Hant-TW">
 <head>
   <meta charset="utf-8">
@@ -12,7 +12,7 @@
   @empty
   @endforelse
 
-@production
+  @production
     {{-- vite production mode --}}
     @php
       $assetsPath = public_path('vendor/laravel-admin-ferry');

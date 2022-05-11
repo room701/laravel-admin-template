@@ -13,7 +13,7 @@
   @endforelse
 
   @production
-     {{-- vite production mode --}}
+    {{-- vite production mode --}}
     @php
       $assetsPath = public_path('vendor/laravel-admin-ferry');
       $manifest = json_decode(file_get_contents(
@@ -32,6 +32,8 @@
 </head>
 
 <body class="text-gray-600 tracking-wider font-normal antialiased">
+
+  @include('admin-ferry::partials.loader')
 
   @yield('content')
 
