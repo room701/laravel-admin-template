@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
   <title>{{ config('admin-ferry.name', '後台') }}</title>
 
   {{--  favicon  --}}
@@ -11,18 +12,31 @@
   @empty
   @endforelse
 
+  @production
+    @php
+      $assetsPath = public_path('vendor/laravel-admin-ferry');
+      $manifest = json_decode(file_get_contents(
+        public_path($assetsPath . '/manifest.json')
+      ));
+    @endphp
+    <script type="module" src="{{ $assetsPath }}{{ $manifest['resources/js/app.js']['file'] }}"></script>
+    <link rel="stylesheet" href="{{ $assetsPath }}{{ $manifest['resources/js/app.js']['css'][0] }}" />
+  @else
+    {{-- vite dev mode --}}
+    <script type="module" src="http://localhost:3000/@vite/client"></script>
+    <script type="module" src="http://localhost:3000/resources/js/app.js"></script>
+  @endproduction
+
   {{--  stylesheets  --}}
-  <link rel="stylesheet" href="{{ admin_asset('/css/vendor/eva-icons/eva-icons.css') }}">
-  <link rel="stylesheet" href="{{ admin_asset('/js/vendor/noty/lib/noty.css') }}">
-  <link rel="stylesheet" href="{{ admin_asset('/js/vendor/noty/lib/themes/sunset.css') }}">
-  <link rel="stylesheet" href="{{ admin_asset_mix('/css/dist/app.css') }}?v={{ date('Ymd_hi') }}">
+  {{-- <link rel="stylesheet" href="{{ admin_asset('/js/vendor/noty/lib/themes/sunset.css') }}"> --}}
+  {{-- <link rel="stylesheet" href="{{ admin_asset_mix('/css/dist/app.css') }}?v={{ date('Ymd_hi') }}"> --}}
 
   {{--  scripts  --}}
-  <script src="{{ admin_asset('/js/vendor/jquery/jquery.min.js') }}"></script>
+  {{-- <script src="{{ admin_asset('/js/vendor/jquery/jquery.min.js') }}"></script>
   <script src="{{ admin_asset('/js/vendor/noty/lib/noty.min.js') }}"></script>
   <script src="{{ admin_asset('/js/vendor/htmx/htmx.min.js') }}"></script>
   <script src="{{ admin_asset('/js/vendor/vue/vue.js') }}"></script>
-  <script type="module" defer src="{{ admin_asset_mix('/js/dist/app.js') }}"></script>
+  <script type="module" defer src="{{ admin_asset_mix('/js/dist/app.js') }}"></script> --}}
 
   @stack('head')
 </head>

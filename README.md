@@ -1,14 +1,31 @@
+# V1 版本依賴
+
+- Frontend
+    - Builder: Vite or Laravel Vite | Vite
+    - Framework: Vue or Alpine
+    - CSS Framework: WindyCSS or Tailwind | Tailwind
+    - AJAX: HTMX or Inertia or livewire | livewire
+    - ICON: Fontawasome or eva-icons | Fontawasome
+- PHP:
+    - yaml: spatie/yaml-front-matter
+    - form: laravelcollective/html or protonemedia/laravel-form-components
+
+考量 components 要使用 blade 還是 Vue
+
+----------------------------------------------------------
+
 ## Install
 
 ``` composer require dennykuo/laravel-admin-ferry:dev-master ```
 
-若要連結本地 package，composer.json 中新增，路徑可能會有修改，options.symlink 為 link dir 方式
+若要連結本地 package 做開發及測試時，在 composer.json 中新增下列 repositories 設定，
+options.symlink 為 true 表示 link dir 的方式引入
 
 ```
 "repositories": {
     "dennykuo/laravel-admin-ferry": {
         "type": "path",
-        "url": "~/Dropbox/02-個人專案/laravel-admin-template/packages/dennykuo/laravel-ferry-view",
+        "url": "~/{path}/dennykuo/laravel-ferry-view",
         "options": {
             "symlink": true
         }
@@ -57,3 +74,32 @@ view 中引用 blade components 的 nameapsce 為 x-admin，如下
 - eva icons：
 https://akveo.github.io/eva-icons
 分為 js、css 形式，目前使用 css 形式
+
+## TODO
+
+publish 範本
+
+## 套件名稱參考
+
+- skeleton
+- shell
+- outline
+- ferry
+- broker
+
+## 套件參考
+- https://github.com/turbolinks/turbolinks
+- htmx
+
+## 日期選擇器套件參考
+- https://vcalendar.io
+- https://github.com/chronotruck/vue-ctk-date-time-picker
+- https://github.com/weifeiyue/vue-datepicker-local
+- https://github.com/mengxiong10/vue2-datepicker
+- https://github.com/t1m0n/air-datepicker
+    日期範圍需要輸入 js Date 格式，稍不便，作者很久沒維護了
+- https://github.com/uxsolutions/bootstrap-datepicker
+- https://github.com/qiuyaofan/datepicker
+- https://mcdatepicker.netlify.app
+- https://github.com/livelybone/vue-datepicker
+- https://mymth.github.io/vanillajs-datepicker

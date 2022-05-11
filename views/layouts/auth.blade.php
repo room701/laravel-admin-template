@@ -12,7 +12,7 @@
   @endforelse
 
   {{--  stylesheets  --}}
-  <link rel="stylesheet" href="{{ admin_asset('/css/vendor/eva-icons/eva-icons.css') }}">
+  {{-- <link rel="stylesheet" href="{{ admin_asset('/css/vendor/eva-icons/eva-icons.css') }}"> --}}
   <link rel="stylesheet" href="{{ admin_asset_mix('/css/dist/app.css') }}">
 
   @stack('head')

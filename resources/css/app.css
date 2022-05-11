@@ -1,0 +1,21 @@
+@import "tailwindcss/base";
+@import "tailwindcss/utilities";
+@import "tailwindcss/components";
+
+@import "./vendor";
+
+@import "./base/fonts";
+@import "./base/base";
+
+@import "./components/table";
+@import "./components/section";
+@import "./components/form";
+@import "./components/button";
+@import "./components/dropdown";
+@import "./components/loader";
+
+@import "./partials/header";
+@import "./partials/nav";
+@import "./partials/unit";
+@import "./partials/breadcrumb";
+@import "./partials/content-container";

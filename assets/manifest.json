@@ -1,0 +1,10 @@
+{
+  "resources/js/app.js": {
+    "file": "dist/app.7a5aa829.js",
+    "src": "resources/js/app.js",
+    "isEntry": true,
+    "css": [
+      "dist/app.94317b34.css"
+    ]
+  }
+}

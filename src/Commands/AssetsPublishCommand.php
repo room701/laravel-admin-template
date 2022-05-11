@@ -21,7 +21,6 @@ class AssetsPublishCommand extends Command
 
         // 創建目標目錄的上一層目錄 (ln 指令需要)
         $prependDir = \Str::beforeLast($publishAssetsPath, '/'); // ex: public/vendor
-
         if (! File::isDirectory($prependDir)) {
             File::makeDirectory($prependDir);
         }

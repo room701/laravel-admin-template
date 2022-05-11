@@ -20,23 +20,36 @@ if (! function_exists('adminView')) {
 if (! function_exists('admin_base_path')) {
     function admin_base_path($path = null)
     {
-        return __DIR__.'/../'. ltrim($path, '/');
+        $basePath = __DIR__.'/../';
+
+        if ($path === null) {
+            return $basePath;
+        }
+
+        return $basePath . ltrim($path, '/');
     }
 }
 
 if (! function_exists('admin_asset')) {
     function admin_asset($path = null)
     {
-        return '/'. config('admin-ferry.assets-path') .'/'. ltrim($path, '/');
+        $assetsPath = config('admin-ferry.assets-path', public_path('vendor/laravel-admin-ferry'));
+        $assetsPath = '/'. $assetsPath .'/';
+
+        if ($path === null) {
+            return $assetsPath;
+        }
+
+        return $assetsPath . ltrim($path, '/');
     }
 }
 
-if (! function_exists('admin_asset_mix')) {
-    function admin_asset_mix($path = null)
-    {
-        $manifestDirectory = trim(admin_asset(), '/');
-        $path = ltrim($path, '/');
+// if (! function_exists('admin_asset_mix')) {
+//     function admin_asset_mix($path = null)
+//     {
+//         $manifestDirectory = trim(admin_asset(), '/');
+//         $path = ltrim($path, '/');
 
-        return mix($path, $manifestDirectory);
-    }
-}
+//         return mix($path, $manifestDirectory);
+//     }
+// }

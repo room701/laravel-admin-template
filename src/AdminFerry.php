@@ -20,7 +20,7 @@ class AdminFerry
         $viewContent = $viewParsed->content;
         $viewWrapper = request()->ajax() ? 'admin-ferry::carrier-ajax' : 'admin-ferry::carrier';
 
-        return view($viewWrapper, compact('viewContent', 'viewParams'));
+        return view()->make($viewWrapper, compact('viewContent', 'viewParams'));
     }
 
     protected static function parseView(string $viewHTML)
