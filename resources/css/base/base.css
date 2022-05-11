@@ -9,6 +9,7 @@
     }
 
     html, body {
+        @apply font-sans;
         -ms-overflow-style: -ms-autohiding-scrollbar;
     }
 

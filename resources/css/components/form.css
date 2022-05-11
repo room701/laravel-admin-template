@@ -1,4 +1,8 @@
 @layer components {
+    %form-input-style {
+       @apply border-gray-300/80 font-sans;
+    }
+
     .c-setcion-form form {
         @apply space-y-5;
     }
@@ -13,13 +17,14 @@
         }
 
         .form-input, .form-select {
-            @apply block w-full text-gray-500 leading-none border border-gray-400/70 rounded px-2.5 py-2;
+            @extend %form-input-style;
+            @apply block w-full text-gray-500 leading-none tracking-wide border rounded px-2.5 py-2;
         }
 
         .form-checkbox + *,
         .form-radio + *
         {
-            @apply text-sm;
+            @apply text-[15px] leading-none;
         }
     }
 
@@ -42,7 +47,7 @@
         }
 
         input:checked ~ .bar {
-            background: #6179ee;
+            @apply bg-blue-600;
         }
     }
 
@@ -54,7 +59,8 @@
         width: 100%;
 
         span {
-            @apply flex items-center px-3 bg-gray-100 text-gray-500 text-sm border border-gray-400/70;
+            @extend %form-input-style;
+            @apply flex items-center px-3 bg-gray-100 text-gray-500 text-sm border;
         }
     }
 

@@ -12,8 +12,8 @@
   @empty
   @endforelse
 
-  @production
-     {{-- vite production mode --}}
+@production
+    {{-- vite production mode --}}
     @php
       $assetsPath = public_path('vendor/laravel-admin-ferry');
       $manifest = json_decode(file_get_contents(
@@ -27,6 +27,9 @@
     <script type="module" src="http://localhost:3000/@vite/client"></script>
     <script type="module" src="http://localhost:3000/resources/js/app.js"></script>
   @endproduction
+
+  {{-- Fontawasome --}}
+  <link rel="stylesheet" href="/vendor/laravel-admin-ferry/static/fonts/fontawasome/@fortawesome/fontawesome-free/css/all.min.css">
 
   @stack('head')
 </head>

@@ -13,7 +13,7 @@
         }
 
         a {
-            @apply leading-none font-medium text-gray-700;
+            @apply leading-none font-normal text-indigo-500;
         }
     }
 
@@ -28,7 +28,7 @@
     &.p-breadcrumb-sm {
         .p-breadcrumb-item {
             &, a {
-                @apply text-xs lg:text-base !important;
+                @apply text-xs lg:text-sm !important;
             }
         }
 
