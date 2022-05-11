@@ -1,10 +1,27 @@
 {
   "resources/js/app.js": {
-    "file": "app.4bb851d8.js",
+    "file": "app.1423db9d.js",
     "src": "resources/js/app.js",
     "isEntry": true,
+    "imports": [
+      "_helpers.1d5cd520.js"
+    ],
     "css": [
-      "app.d5716ccf.css"
+      "app.94317b34.css"
+    ]
+  },
+  "resources/js/auth.js": {
+    "file": "auth.4600b083.js",
+    "src": "resources/js/auth.js",
+    "isEntry": true,
+    "imports": [
+      "_helpers.1d5cd520.js"
+    ]
+  },
+  "_helpers.1d5cd520.js": {
+    "file": "helpers.1d5cd520.js",
+    "css": [
+      "helpers.ad374c89.css"
     ]
   }
 }
