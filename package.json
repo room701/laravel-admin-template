@@ -12,7 +12,8 @@
         "jquery": "^3.6.0",
         "noty": "*",
         "page": "^1.11.6",
-        "vue": "^2.6.12",
+        "vanillajs-datepicker": "^1.2.0",
+        "vue": "^3.2.25",
         "vue-ctk-date-time-picker": "^2.5.0"
     },
     "devDependencies": {
@@ -25,7 +26,6 @@
         "postcss-import": "^14.1.0",
         "rollup-plugin-folder-input": "^1.0.1",
         "tailwindcss": "^3.0.24",
-        "vite": "^2.8.0",
-        "vue": "^3.2.25"
+        "vite": "^2.8.0"
     }
 }
