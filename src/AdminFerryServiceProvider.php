@@ -22,7 +22,7 @@ class AdminFerryServiceProvider extends ServiceProvider
         }
 
         // Load views with new namespace
-        $this->loadViewsFrom(__DIR__.'/../resources/views', self::$viewNamespace);
+        $this->loadViewsFrom(__DIR__.'/../views', self::$viewNamespace);
 
         // Add view components namespace
         Blade::componentNamespace(__NAMESPACE__.'\\View\\Components', self::$viewNamespace);
