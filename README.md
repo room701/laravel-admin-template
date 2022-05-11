@@ -92,6 +92,8 @@ publish 範本
 - htmx
 
 ## 日期選擇器套件參考
+- https://mymth.github.io/vanillajs-datepicker
+- https://icehaunter.github.io/vue3-datepicker/
 - https://vcalendar.io
 - https://github.com/chronotruck/vue-ctk-date-time-picker
 - https://github.com/weifeiyue/vue-datepicker-local
@@ -102,4 +104,3 @@ publish 範本
 - https://github.com/qiuyaofan/datepicker
 - https://mcdatepicker.netlify.app
 - https://github.com/livelybone/vue-datepicker
-- https://mymth.github.io/vanillajs-datepicker

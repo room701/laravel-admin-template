@@ -65,12 +65,15 @@
           // 取 input value
           var date = el.children[0].getAttribute('value');
 
-          new Vue({
-            el: el,
-            data: {
-              date: date
+          Vue.createApp({
+            data() {
+              return {
+                data: {
+                  date: date
+                }
+              }
             }
-          });
+          }).mount(el);
         });
       });
     }

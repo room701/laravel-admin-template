@@ -14,3 +14,7 @@ window.Vue = { createApp: createApp };
 // Noty
 import Noty from 'noty';
 window.Noty = Noty;
+
+// vanillajs-datepicker
+// import { Datepicker } from 'vanillajs-datepicker';
+// window.Datepicker = Datepicker;
