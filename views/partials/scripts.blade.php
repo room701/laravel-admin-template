@@ -1,3 +1,5 @@
 @stack('scripts')
 
-@includeIf(config('admin-ferry.scripts-view'))
+@if (config('admin-ferry.scripts-view'))
+  @include(config('admin-ferry.scripts-view'))
+@endif
