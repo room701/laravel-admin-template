@@ -16,5 +16,7 @@ import Noty from 'noty';
 window.Noty = Noty;
 
 // vanillajs-datepicker
-// import { Datepicker } from 'vanillajs-datepicker';
-// window.Datepicker = Datepicker;
+import { Datepicker } from 'vanillajs-datepicker';
+import zhTW from 'vanillajs-datepicker/locales/zh-TW';
+Object.assign(Datepicker.locales, zhTW);
+window.Datepicker = Datepicker;

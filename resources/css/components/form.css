@@ -5,15 +5,15 @@
 
     /* .form-group */
     .form-group {
+        @apply block w-full;
+
         > label:first-of-type:not([for]) {
-            @apply inline-block mb-2.5 text-gray-500 text-opacity-80 font-medium text-sm pb-1 border-b border-indigo-300 border-opacity-75;
+            @apply inline-block mb-1 text-gray-500 font-medium text-sm leading-none pb-1;
+            /* @apply: ; border-b border-indigo-300 border-opacity-75; */
         }
 
         .form-input, .form-select {
-            @apply text-gray-500;
-            min-height: auto;
-            padding-top: 5px;
-            padding-bottom: 5px;
+            @apply block w-full text-gray-500 leading-none border border-gray-400/70 rounded px-2.5 py-2;
         }
 
         .form-checkbox + *,
@@ -46,16 +46,35 @@
         }
     }
 
-    /* .form-prepend */
-    .form-prepend {
+    /* .form-prepend & .form-append */
+    .form-prepend, .form-append {
         display: flex;
         flex-wrap: wrap;
         align-items: stretch;
         width: 100%;
 
+        span {
+            @apply flex items-center px-3 bg-gray-100 text-gray-500 text-sm border border-gray-400/70;
+        }
+    }
+
+    .form-prepend {
+        span {
+            @apply rounded-l border-r-0;
+        }
         .form-input {
-            border-top-left-radius: 0px;
-            border-bottom-left-radius: 0px;
+            @apply !rounded-l-none border-l-gray-400/50;
+            flex: 1 1 auto;
+            width: 1px;
+        }
+    }
+
+    .form-append {
+        span {
+            @apply rounded-r border-l-0;
+        }
+        .form-input {
+            @apply !rounded-r-none border-r-gray-400/50;
             flex: 1 1 auto;
             width: 1px;
         }

@@ -10,6 +10,7 @@
 ])
 
 @php
+  // 因 Form 套件要傳入屬性陣列，不可用 $attributes->class()->merge() 方式處底
   $attributes = $attributes->getAttributes() + [
     'class' => "form-input {$inputClass}",
   ];
@@ -35,13 +36,13 @@
     {!! $input !!}
   @elseif ($prepend)
     <div class="form-prepend">
-      <span class="flex items-center px-3 bg-gray-200 text-gray-500 text-sm rounded-l">{{ $prepend }}</span>
+      <span>{{ $prepend }}</span>
       {!! $input !!}
     </div>
   @elseif ($append)
     <div class="form-append">
       {!! $input !!}
-      <span class="flex items-center px-3 bg-gray-200 text-gray-500 text-sm rounded-r">{{ $append }}</span>
+      <span>{{ $append }}</span>
     </div>
   @endif
 

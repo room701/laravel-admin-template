@@ -1,7 +1,7 @@
 module.exports = {
     content: [
         './resources/js/**/*.{vue,js,ts}',
-        './views/**/*.blade.php'
+        './resources/views/**/*.blade.php'
     ],
     theme: {
         contziner: {
