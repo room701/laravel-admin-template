@@ -9,11 +9,11 @@ import '../css/app.css';
 import './vendor.js';
 
 //
-// Import JS
+// Import common JS
 //
-import './config.js';
-import './init.js';
-import './helpers.js';
+import './common/config.js';
+import './common/init.js';
+import './common/helpers.js';
 
 //
 // Nav Vue instance
