@@ -20,12 +20,13 @@
         file_get_contents(public_path($assetsDistPath) . '/manifest.json')
       , true);
     @endphp
-    <script type="module" src="{{ $assetsDistPath }}/{{ $manifest['index.html']['file'] }}"></script>
     <link rel="stylesheet" href="{{ $assetsDistPath }}/{{ $manifest['index.html']['css'][0] }}" />
+    <script type="module" src="{{ $assetsDistPath }}/{{ $manifest['index.html']['file'] }}"></script>
   @else
     {{-- vite dev mode --}}
     <script type="module" src="http://localhost:3000/@vite/client"></script>
-    <script type="module" src="http://localhost:3000/index.html"></script>
+    <link rel="stylesheet" href="http://localhost:3000/resources/css/app.css" />
+    <script type="module" src="http://localhost:3000/resources/js/app.js"></script>
   @endif
 
   {{-- Fontawasome --}}
