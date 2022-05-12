@@ -12,7 +12,7 @@
         @apply block w-full;
 
         > label:first-of-type:not([for]) {
-            @apply inline-block mb-1 text-gray-500 font-medium text-sm leading-none pb-1;
+            @apply inline-block h-10 mb-1 text-gray-500 font-medium text-sm leading-none pb-1;
             /* @apply: ; border-b border-indigo-300 border-opacity-75; */
         }
 
