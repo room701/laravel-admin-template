@@ -58,9 +58,9 @@ class AdminFerryServiceProvider extends ServiceProvider
     protected function bootForConsole()
     {
         // Artisan commands
-        // $this->commands([
-        //     Commands\AssetsPublishCommand::class,
-        // ]);
+        $this->commands([
+            Commands\AssetsPublishCommand::class,
+        ]);
 
         // Publish assets
         // 需要改成另外的資料夾位置，為使用者自己修改的資源了
