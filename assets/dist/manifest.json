@@ -5,6 +5,9 @@
     "isEntry": true,
     "imports": [
       "_helpers.28a71139.js"
+    ],
+    "css": [
+      "app.94317b34.css"
     ]
   },
   "resources/js/auth.js": {
@@ -16,6 +19,9 @@
     ]
   },
   "_helpers.28a71139.js": {
-    "file": "helpers.28a71139.js"
+    "file": "helpers.28a71139.js",
+    "css": [
+      "helpers.1780b5a1.css"
+    ]
   }
 }
