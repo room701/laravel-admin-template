@@ -12,13 +12,13 @@
         @apply block w-full;
 
         > label:first-of-type:not([for]) {
-            @apply inline-block h-10 mb-1 text-gray-500 font-medium text-sm leading-none pb-1;
+            @apply inline-block mb-1 text-gray-500 font-medium text-sm leading-none pb-1;
             /* @apply: ; border-b border-indigo-300 border-opacity-75; */
         }
 
         .form-input, .form-select {
             @extend %form-input-style;
-            @apply block w-full text-gray-500 leading-none tracking-wide border rounded px-2.5 py-2;
+            @apply block min-h-[38px] w-full text-gray-500 leading-none tracking-wide border rounded px-2.5 py-2; /* min-h-[38px] 為保證  input file 中的替代 label 同高 */
         }
 
         .form-checkbox + *,
