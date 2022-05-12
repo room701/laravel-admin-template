@@ -15,13 +15,13 @@
   @if(! env('IS_VITE_DEV'))
     {{-- vite production mode --}}
     @php
-      $assetsPath = '/vendor/laravel-admin-ferry';
+      $assetsDistPath = '/vendor/laravel-admin-ferry/dist';
       $manifest = json_decode(
-        file_get_contents(public_path($assetsPath) . '/manifest.json')
+        file_get_contents(public_path($assetsDistPath) . '/manifest.json')
       , true);
     @endphp
-    <script type="module" src="{{ $assetsPath }}/{{ $manifest['resources/js/app.js']['file'] }}"></script>
-    <link rel="stylesheet" href="{{ $assetsPath }}/{{ $manifest['resources/js/app.js']['css'][0] }}" />
+    <script type="module" src="{{ $assetsDistPath }}/{{ $manifest['resources/js/app.js']['file'] }}"></script>
+    <link rel="stylesheet" href="{{ $assetsDistPath }}/{{ $manifest['resources/js/app.js']['css'][0] }}" />
   @else
     {{-- vite dev mode --}}
     <script type="module" src="http://localhost:3000/@vite/client"></script>
