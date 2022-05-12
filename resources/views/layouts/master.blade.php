@@ -1,4 +1,4 @@
-  <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="zh-Hant-TW">
 <head>
   <meta charset="utf-8">
@@ -12,21 +12,21 @@
   @empty
   @endforelse
 
-  @production
+  @if(! env('IS_VITE_DEV'))
     {{-- vite production mode --}}
     @php
-      $assetsPath = public_path('vendor/laravel-admin-ferry');
-      $manifest = json_decode(file_get_contents(
-        public_path($assetsPath . '/manifest.json')
-      ));
+      $assetsPath = '/vendor/laravel-admin-ferry';
+      $manifest = json_decode(
+        file_get_contents(public_path($assetsPath) . '/manifest.json')
+      , true);
     @endphp
-    <script type="module" src="{{ $assetsPath }}{{ $manifest['resources/js/app.js']['file'] }}"></script>
-    <link rel="stylesheet" href="{{ $assetsPath }}{{ $manifest['resources/js/app.js']['css'][0] }}" />
+    <script type="module" src="{{ $assetsPath }}/{{ $manifest['resources/js/app.js']['file'] }}"></script>
+    <link rel="stylesheet" href="{{ $assetsPath }}/{{ $manifest['resources/js/app.js']['css'][0] }}" />
   @else
     {{-- vite dev mode --}}
     <script type="module" src="http://localhost:3000/@vite/client"></script>
     <script type="module" src="http://localhost:3000/resources/js/app.js"></script>
-  @endproduction
+  @endif
 
   {{-- Fontawasome --}}
   <link rel="stylesheet" href="/vendor/laravel-admin-ferry/static/fonts/fontawasome/@fortawesome/fontawesome-free/css/all.min.css">
