@@ -8,9 +8,7 @@
 ])
 
 @php
-  $attributes = $attributes->getAttributes() + [
-    'class' => "form-radio {$inputClass}",
-  ];
+  $attributes = $attributes->class(["form-radio {$inputClass}"])->getAttributes();
 
   if ($checked === null) {
     $checked = array_key_first($options); // 設為第一個選項

@@ -1,3 +1,5 @@
+{{-- 日期&時間選單，因只有 vue2 版本，暫時改用其他方式替代 --}}
+
 @props([
   'isVueModel' => false, // 同一的 vue vm 裡不可混用不同設定
   'name' => null,
@@ -10,10 +12,9 @@
 ])
 
 @php
-  $attributes = $attributes->getAttributes() + [
-    'class' => "form-input {$inputClass}",
-    'autocomplete' => 'off',
-  ];
+  $attributes = $attributes->class(["form-input {$inputClass}"])
+                           ->merge(['autocomplete' => 'off'])
+                           ->getAttributes();
 
   $input = Form::text($name, $value, $attributes);
 @endphp

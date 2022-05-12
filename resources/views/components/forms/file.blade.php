@@ -7,6 +7,7 @@
 ])
 
 @php
+  // 因不同其他 input 是由 Laravel Form 套件產生，所以需手動組合 attributes
   $attributesHTML = '';
   foreach ($attributes as $attribute => $value) {
     $attributesHTML .= " {$attribute}=\"{$value}\"";

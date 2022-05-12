@@ -8,9 +8,7 @@
 ])
 
 @php
-  $attributes = $attributes->getAttributes() + [
-    'class' => "form-checkbox {$inputClass}",
-  ];
+  $attributes = $attributes->class(["form-checkbox {$inputClass}"])->getAttributes();
 @endphp
 
 <div class="form-group {{ $wrapperClass }}">

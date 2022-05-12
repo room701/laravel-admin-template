@@ -8,9 +8,7 @@
 ])
 
 @php
-  $attributes = $attributes->getAttributes() + [
-    'class' => "form-select {$inputClass}",
-  ];
+  $attributes = $attributes->class(["form-select {$inputClass}"])->getAttributes();
 @endphp
 
 <div class="form-group {{ $wrapperClass }}">

@@ -8,10 +8,9 @@
 ])
 
 @php
-  $attributes = $attributes->getAttributes() + [
-    'id' => "toggle-{$name}",
-    'class' => 'hidden',
-  ];
+  $attributes = $attributes->class(['hidden'])
+                           ->merge(['id' => "toggle-{$name}"])
+                           ->getAttributes();
 
   $checked = $checked == $value ? true : null
 @endphp

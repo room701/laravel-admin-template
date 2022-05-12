@@ -10,10 +10,8 @@
 ])
 
 @php
-  // 因 Form 套件要傳入屬性陣列，不可用 $attributes->class()->merge() 方式處底
-  $attributes = $attributes->getAttributes() + [
-    'class' => "form-input {$inputClass}",
-  ];
+  // 因 Form 套件要傳入屬性陣列，使用 getAttributes() 取得屬性陣列
+  $attributes = $attributes->class(["form-input {$inputClass}"])->getAttributes();
 
   switch($type) {
     case 'text':       $input = Form::text($name, $value, $attributes);       break;

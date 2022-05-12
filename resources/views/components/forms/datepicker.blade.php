@@ -8,10 +8,9 @@
 ])
 
 @php
-  $attributes = $attributes->getAttributes() + [
-    'class' => "js-datepicker form-input {$inputClass}",
-    'autocomplete' => 'off',
-  ];
+  $attributes = $attributes->class(["js-datepicker form-input {$inputClass}"])
+                           ->merge(['autocomplete' => 'off'])
+                           ->getAttributes();
 
   $input = Form::text($name, $value, $attributes);
 @endphp
