@@ -19,6 +19,7 @@ export default defineConfig({
     assetsDir: '', // vite 輸出資料夾，相對於 outDir，專案省略讓 static 資料夾不會被清空及覆蓋
     emptyOutDir: true,
     sourcemap: true,
+    cssCodeSplit: false,
     assetsInlineLimit: 0 // 多少容量的資源編碼為 base64
   },
   publicDir: false
