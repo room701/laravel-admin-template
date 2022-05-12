@@ -1,9 +1,4 @@
 //
-// Import CSS
-//
-import '../css/app.css';
-
-//
 // Import JS Vendor
 //
 import './vendor.js';

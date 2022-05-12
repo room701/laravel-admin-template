@@ -12,42 +12,20 @@
   @empty
   @endforelse
 
-  @if(! env('IS_VITE_DEV'))
+  @if (! env('IS_VITE_DEV'))
+    {{-- vite production mode --}}
     @php
       $assetsDistPath = '/vendor/laravel-admin-ferry/dist';
       $manifest = json_decode(
         file_get_contents(public_path($assetsDistPath) . '/manifest.json')
       , true);
     @endphp
-    <script type="module" src="{{ $assetsDistPath }}/{{ $manifest['resources/js/app.js']['file'] }}"></script>
-    <link rel="stylesheet" href="{{ $assetsDistPath }}/{{ $manifest['resources/js/app.js']['css'][0] }}" />
-
-    {{-- vite production mode --}}
-    {{-- @php
-      $assetsDistPath = '/vendor/laravel-admin-ferry/dist';
-      $manifest = json_decode(
-        file_get_contents(public_path($assetsDistPath) . '/manifest.json')
-      , true);
-
-      $mainScript = $manifest['resources/js/app.js'];
-      $mainScriptFile = $mainScript['file']; // 單一檔案
-      $imports = $mainScript['imports']; // array
-      $styles = $mainScript['css']; // array
-    @endphp
-
-    <script type="module" src="{{ $assetsDistPath }}/{{ $mainScript['file'] }}"></script>
-
-    @foreach ($imports as $import)
-      <script type="module" src="{{ $assetsDistPath }}/{{ $import }}"></script>
-    @endforeach
-
-    @foreach ($styles as $style)
-      <link rel="stylesheet" href="{{ $assetsDistPath }}/{{ $style }}" />
-    @endforeach --}}
+    <script type="module" src="{{ $assetsDistPath }}/{{ $manifest['index.html']['file'] }}"></script>
+    <link rel="stylesheet" href="{{ $assetsDistPath }}/{{ $manifest['index.html']['css'][0] }}" />
   @else
     {{-- vite dev mode --}}
     <script type="module" src="http://localhost:3000/@vite/client"></script>
-    <script type="module" src="http://localhost:3000/resources/js/app.js"></script>
+    <script type="module" src="http://localhost:3000/index.html"></script>
   @endif
 
   {{-- Fontawasome --}}

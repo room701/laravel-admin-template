@@ -12,7 +12,7 @@
   @empty
   @endforelse
 
-  @if(! env('IS_VITE_DEV'))
+  @if (! env('IS_VITE_DEV'))
     {{-- vite production mode --}}
     @php
       $assetsDistPath = '/vendor/laravel-admin-ferry/dist';
@@ -20,12 +20,12 @@
         file_get_contents(public_path($assetsDistPath) . '/manifest.json')
       , true);
     @endphp
-    <script type="module" src="{{ $assetsDistPath }}/{{ $manifest['resources/js/auth.js']['file'] }}"></script>
-    <link rel="stylesheet" href="{{ $assetsDistPath }}/{{ $manifest['resources/js/auth.js']['css'][0] }}" />
+    <script type="module" src="{{ $assetsDistPath }}/{{ $manifest['index.html']['file'] }}"></script>
+    <link rel="stylesheet" href="{{ $assetsDistPath }}/{{ $manifest['index.html']['css'][0] }}" />
   @else
     {{-- vite dev mode --}}
     <script type="module" src="http://localhost:3000/@vite/client"></script>
-    <script type="module" src="http://localhost:3000/resources/js/auth.js"></script>
+    <script type="module" src="http://localhost:3000/index.html"></script>
   @endif
 
   @stack('head')
