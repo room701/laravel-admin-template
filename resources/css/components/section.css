@@ -1,7 +1,9 @@
-.c-section {
-    @apply w-full p-4 lg:p-6 border-t border-b lg:border border-gray-200 bg-white shadow-sm mx-auto space-y-default;
+@layer components {
+    .c-section {
+        @apply w-full p-4 lg:p-6 border-t border-b lg:border border-gray-200 bg-white shadow-sm mx-auto space-y-default;
 
-    &.c-setcion-form {
-        @apply pb-0;
+        &.c-setcion-form {
+            @apply pb-0;
+        }
     }
 }
