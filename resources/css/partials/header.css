@@ -18,14 +18,36 @@
             @apply text-sm bg-red-400 text-white ml-2.5 px-2 py-1 rounded-full leading-none;
         }
     }
+}
 
-    .ferry-header-toobar {
-        @apply flex flex-wrap content-center text-gray-700 space-x-3;
+.ferry-header-toolbar {
+    @apply flex flex-wrap items-center text-gray-700 space-x-5 align-middle;
 
-        input.hidden:checked + .ferry-toolbar-dropdown {
-            & > .hidden {
-                display: block;
-            }
+    .toolbar-dropdown-toggler { @apply hidden; }
+
+    .toolbar-dropdown-toggler:checked + .ferry-toolbar-dropdown {
+        & > .ferry-toolbar-dropdown-close-trigger,
+        & > .ferry-toolbar-dropdown-submenu {
+            display: block;
+        }
+    }
+
+    .ferry-toolbar-dropdown {
+        @apply relative;
+
+        .ferry-toolbar-dropdown-name {
+            @apply cursor-pointer flex items-center;
+        }
+
+        .ferry-toolbar-dropdown-close-trigger {
+            @apply hidden fixed inset-0 h-full w-full z-10;
+        }
+
+        .ferry-toolbar-dropdown-submenu {
+            @apply hidden absolute z-20 top-[36px] right-0 w-48 bg-white border border-gray-100/90 shadow;
+        }
+        .ferry-toolbar-dropdown-submenu-item {
+            @apply block px-5 py-3 text-sm text-gray-600 hover:bg-blue-500/80 hover:text-white
         }
     }
 }

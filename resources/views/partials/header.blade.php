@@ -16,7 +16,7 @@
     @endif
   </div>
 
-  {{-- header-toolbar --}}
+  {{-- ferry-header-toolbar --}}
   <div class="ferry-header-toolbar">
     @includeIf(config('admin-ferry.header-toolbar-view'))
   </div>

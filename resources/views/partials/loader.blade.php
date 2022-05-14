@@ -1,3 +1,7 @@
+{{--
+  Loader 將 html、CSS、JS 合併放置，除了加速 render 外，也方便其他專案套用
+--}}
+
 <div class="js-ferry-loader ferry-loader">
   <div class="ferry-loader-inner">
     <svg class="circular" viewBox="25 25 50 50">
