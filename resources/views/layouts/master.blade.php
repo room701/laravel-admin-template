@@ -17,7 +17,7 @@
   @stack('head')
 </head>
 
-<body class="flex flex-col h-screen bg-gray-100 text-gray-600 tracking-wider font-normal antialiased">
+<body>
 
   @include('admin-ferry::partials.loader')
 
@@ -27,7 +27,7 @@
 
   @include('admin-ferry::partials.content')
 
-  <button onclick="window.admin.helpers.goTop()" class="p-unit-gotop" type="button"><i class="eva eva-arrow-upward-outline"></i></button>
+  <button onclick="window.admin.helpers.goTop()" class="c-gotop" type="button"><i class="eva eva-arrow-upward-outline"></i></button>
 
   @include('admin-ferry::partials.scripts')
 

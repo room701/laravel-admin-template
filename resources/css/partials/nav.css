@@ -1,11 +1,15 @@
-.p-nav {
+.ferry-nav {
     @apply flex flex-col fixed top-0 lg:top-14 left-0 z-20 lg:z-18 h-screen overflow-x-hidden overflow-y-auto bg-white border-r w-9/12 lg:w-52 px-2.5 py-2.5 text-gray-500 transition origin-left transform -translate-x-full lg:translate-x-0 space-y-1;
 
     &.is-open {
         @apply translate-x-0;
     }
 
-    .p-nav-item {
+    .ferry-nav-close {
+        @apply lg:hidden text-gray-700 text-3xl text-left p-3;
+    }
+
+    .ferry-nav-item {
         @apply flex justify-between items-center px-3.5 py-3 transition cursor-pointer hover:bg-indigo-400 hover:text-white;
 
         &.is-active {
@@ -13,29 +17,28 @@
         }
     }
 
-    .p-nav-dropdown {
-        .p-nav-item-append-icon {
+    .ferry-nav-dropdown {
+        .ferry-nav-item-append-icon {
             @apply w-4 h-4 ml-2 transform;
         }
 
-        .p-nav-submenu {
+        .ferry-nav-submenu {
             @apply hidden transition transform mb-1;
 
-            .p-nav-item {
+            .ferry-nav-item {
                 @apply ml-4;
             }
         }
 
         &.is-open {
-            .p-nav-item-append-icon {
+            .ferry-nav-item-append-icon {
                 @apply rotate-90;
             }
 
-            .p-nav-submenu {
+            .ferry-nav-submenu {
                 @apply block;
             }
         }
-
     }
 
 }

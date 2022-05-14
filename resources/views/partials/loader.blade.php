@@ -1,5 +1,5 @@
-<div class="js-loader-wrapper loader-wrapper">
-  <div class="loader">
+<div class="js-ferry-loader ferry-loader">
+  <div class="ferry-loader-inner">
     <svg class="circular" viewBox="25 25 50 50">
       <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="3" stroke-miterlimit="10"/>
     </svg>
@@ -7,7 +7,7 @@
 </div>
 
 <style>
-  .loader-wrapper {
+  .ferry-loader {
     position: fixed;
     z-index: 9999;
     top: 0;
@@ -22,23 +22,23 @@
     will-change: auto;
   }
 
-  .loader-wrapper.is-off {
+  .ferry-loader.is-off {
     opacity: 0;
   }
 
-  .loader {
+  .ferry-loader-inner {
     position: relative;
     margin: 0 auto;
     width: 48px;
   }
 
-  .loader:before {
+  .ferry-loader:before {
     content: "";
     display: block;
     padding-top: 100%;
   }
 
-  .circular {
+  .ferry-loader .circular {
     -webkit-animation: rotate 2s linear infinite;
             animation: rotate 2s linear infinite;
     height: 100%;
@@ -52,7 +52,7 @@
     margin: auto;
   }
 
-  .path {
+  .ferry-loader .path {
     stroke-dasharray: 1, 200;
     stroke-dashoffset: 0;
     -webkit-animation: dash 1.5s ease-in-out infinite, color 6s ease-in-out infinite;
@@ -131,7 +131,7 @@
 
 <script>
   window.addEventListener('load', function(event) {
-    let loader = document.querySelector('.js-loader-wrapper');
+    let loader = document.querySelector('.js-ferry-loader');
     loader.classList.add('is-off');
     setTimeout(() => {
       loader.remove();

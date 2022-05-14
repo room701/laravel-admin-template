@@ -9,7 +9,7 @@
 
 <input id="{{ $togglerId }}" type="checkbox" class="hidden">
 
-<div class="toolbar-dropdown relative {{ $wrapperClass }}">
+<div class="ferry-toolbar-dropdown relative {{ $wrapperClass }}">
   <label for="{{ $togglerId }}" class="cursor-pointer flex items-center {{ $iconClass }}">
     {!! $slot !!}
   </label>

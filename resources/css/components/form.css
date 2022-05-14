@@ -1,6 +1,7 @@
 @layer components {
     %form-input-style {
-       @apply border-gray-300/80 font-sans;
+       @apply border-gray-300/80;
+       @extend %global-font; /* 覆蓋 tailwwind@tailwindcss/forms 的字體設定 */
     }
 
     .c-setcion-form form {
@@ -18,7 +19,7 @@
 
         .form-input, .form-select {
             @extend %form-input-style;
-            @apply block min-h-[38px] w-full text-gray-500 leading-none tracking-wide border rounded px-2.5 py-2; /* min-h-[38px] 為保證  input file 中的替代 label 同高 */
+            @apply block min-h-[34px] w-full text-gray-500 leading-none tracking-wide border rounded px-2 py-1.5; /* min-h-[38px] 為保證  input file 中的替代 label 同高 */
         }
 
         .form-checkbox + *,

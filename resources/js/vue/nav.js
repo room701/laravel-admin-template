@@ -14,11 +14,11 @@ window.admin.navVm = Vue.createApp({
     },
 
     components: getComponents()
-}).mount('#nav');
+}).mount('#vue-ferry-nav');
 
 function getComponents() {
     return {
-        'nav-item': {
+        'ferry-nav-item': {
             props: ['name', 'href'],
 
             data() {
@@ -35,10 +35,10 @@ function getComponents() {
                 }
             },
 
-            template: '#nav-item'
+            template: '#ferry-nav-item-template'
         },
 
-        'nav-dropdown': {
+        'ferry-nav-dropdown': {
             props: {
                 name: {
                     type: String,
@@ -54,7 +54,7 @@ function getComponents() {
                     isOpen: this.open
                 }
             },
-            template: '#nav-dropdown'
+            template: '#ferry-nav-dropdown-template'
         }
     }
 }

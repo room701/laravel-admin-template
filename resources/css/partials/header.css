@@ -1,13 +1,27 @@
-#header {
-    .p-brand {
-        .p-brand-name {
-            display: inline-block;
+.ferry-header {
+    @apply flex items-center justify-between w-full h-[62px] fixed top-0 left-0 z-19 lg:z-25 px-4 lg:px-5;
+    @apply bg-white border-b border-solid border-gray-200 shadow-sm lg:shadow;
+
+    .ferry-nav-toggler {
+        @apply lg:hidden flex items-center text-gray-500 text-2xl;
+    }
+
+    .ferry-brand {
+        @apply absolute lg:static flex items-center left-1/2 z-5 transform -translate-x-1/2 lg:translate-x-0 min-w-max;
+        @apply text-base lg:text-xl tracking-wider text-center lg:text-left;
+
+        .ferry-brand-name {
+            @apply inline-block;
         }
     }
 
-    input.hidden:checked + .toolbar-dropdown {
-        & > .hidden {
-            display: block;
+    .ferry-header-toobar {
+        @apply flex flex-wrap content-center text-gray-700 space-x-3;
+
+        input.hidden:checked + .ferry-toolbar-dropdown {
+            & > .hidden {
+                display: block;
+            }
         }
     }
 }

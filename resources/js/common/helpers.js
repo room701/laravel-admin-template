@@ -1,7 +1,7 @@
 window.admin.helpers = {
 
     toggleNavSidebar: (open = true) => {
-        Vue.set(window.admin.navVm.sidebar, 'isShow', open);
+        window.admin.navVm.sidebar.isShow = open;
     },
 
     goTop: (smooth = true) => {
