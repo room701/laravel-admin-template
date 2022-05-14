@@ -12,7 +12,7 @@
     #ferry-content-container {
         @apply space-y-4 lg:space-y-default;
 
-        .ferry-content-title {
+        .ferry-content-title-set {
             @apply w-max flex items-center;
 
             .ferry-content-title-border {
