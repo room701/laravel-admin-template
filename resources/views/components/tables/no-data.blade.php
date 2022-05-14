@@ -3,6 +3,6 @@
   'wrapperClass' => '',
 ])
 
-<div class="pt-14 pb-20 text-center {{ $wrapperClass }}">
-  <h2 class="text-4xl font-light text-gray-400 mb-5">{{ $content }}</h2>
+<div class="table-no-data {{ $wrapperClass }}">
+  <h2 class="table-no-data-text">{{ $content }}</h2>
 </div>

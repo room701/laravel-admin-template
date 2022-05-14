@@ -48,6 +48,13 @@
                 }
             }
         }
+    } /* /.data-table */
 
+    .table-no-data {
+        @apply pt-14 pb-20 text-center;
+
+        .table-nodata-text {
+            @apply text-4xl font-light text-gray-400 mb-5;
+        }
     }
 }

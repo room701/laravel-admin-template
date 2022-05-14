@@ -5,7 +5,7 @@
 @import "./vendor";
 
 @import "./base/extend";
-@import "./base/fonts";
+@import "./base/font";
 @import "./base/base";
 
 @import "./components/table";

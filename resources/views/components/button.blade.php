@@ -5,15 +5,23 @@
 ])
 
 @php
-  $class = 'rounded text-center leading-none' . ' '; // 留意後方空格
+  $class = 'btn' . ' '; // 留意後方空格
 
   switch ($size) {
-    case 'md':
-      $class .= 'px-3 py-1.5';
+    case 'xs':
+      $class .= 'btn-xs';
       break;
 
     case 'sm':
-      $class .= 'px-3 py-1.5 text-sm';
+      $class .= 'btn-sm';
+      break;
+
+    case 'md':
+      $class .= 'btn-md';
+      break;
+
+    case 'lg':
+      $class .= 'btn-lg';
       break;
   }
 
@@ -21,11 +29,11 @@
 
   switch ($color) {
     case 'blue':
-      $class .= 'bg-blue-500 text-white';
+      $class .= 'btn-blue';
       break;
 
     case 'red':
-      $class .= 'bg-red-500 text-white';
+      $class .= 'btn-red';
       break;
   }
 @endphp

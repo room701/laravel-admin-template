@@ -8,6 +8,6 @@
   </div>
   <div class="ferry-search-form">
     <input placeholder="Search" {{ $attributes->class(['form-input'])->merge() }}>
-    <button type="button">查詢</button>
+    <x-admin-ferry::button tag="button" type="button">查詢</x-admin-ferry::button>
   </div>
 </div>
