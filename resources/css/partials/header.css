@@ -6,12 +6,16 @@
         @apply lg:hidden flex items-center text-gray-500 text-2xl;
     }
 
-    .ferry-brand {
+    .ferry-header-brand {
         @apply absolute lg:static flex items-center left-1/2 z-5 transform -translate-x-1/2 lg:translate-x-0 min-w-max;
         @apply text-base lg:text-xl tracking-wider text-center lg:text-left;
 
-        .ferry-brand-name {
+        .ferry-header-brand-name {
             @apply inline-block;
+        }
+
+        .ferry-for-test {
+            @apply text-sm bg-red-400 text-white ml-2.5 px-2 py-1 rounded-full leading-none;
         }
     }
 

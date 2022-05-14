@@ -1,3 +1,26 @@
-.c-gotop {
+.ferry-gotop {
     @apply fixed bottom-8 right-8 z-50 inline-flex items-center justify-center w-10 h-10 rounded-full border border-gray-100 bg-gray-50 bg-opacity-75 hover:bg-blue-300 hover:bg-opacity-100 hover:text-white text-gray-400 shadow-sm text-center text-xl leading-none transition-all duration-200;
+}
+
+/* .form-icon */
+.ferry-search {
+    @apply w-full md:w-[300px] relative;
+
+    .ferry-search-icon {
+        @apply absolute inset-y-0 inline-flex items-center justify-center w-[2.5rem];
+        @apply pointer-events-none;
+    }
+
+    .ferry-search-form {
+        @apply flex space-x-1.5;
+
+        .form-input {
+            @extend %form-input-style;
+            @apply border border-solid border-indigo-400/70 pl-[2.5rem];
+        }
+
+        button {
+            @apply flex-none rounded text-center leading-none px-4 py-1.5 bg-blue-500 text-white;
+        }
+    }
 }

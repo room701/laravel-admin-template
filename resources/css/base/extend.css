@@ -1,0 +1,9 @@
+%global-font {
+    @apply tracking-wider font-normal antialiased;
+    font-family: 'Segoe UI', Roboto, "Helvetica", "Arial", "PingFang TC", "黑體-繁", "微軟正黑體", sans-serif;
+}
+
+%form-input-style {
+    @apply border-gray-300/80;
+    @extend %global-font; /* 覆蓋 tailwwind@tailwindcss/forms 的字體設定 */
+ }

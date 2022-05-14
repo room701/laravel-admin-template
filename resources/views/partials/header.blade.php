@@ -9,10 +9,10 @@
     $homeLink = Route::has($homeLink) ? route($homeLink) : $homeLink;
   @endphp
 
-  <div class="ferry-brand">
-    <a href="{{ $homeLink }}" data-fetch-url class="ferry-brand-name">{{ config('admin-ferry.name', '後台') }}</a>
+  <div class="ferry-header-brand">
+    <a href="{{ $homeLink }}" data-fetch-url class="ferry-header-brand-name">{{ config('admin-ferry.name', '後台') }}</a>
     @if (! \App::environment('production'))
-      <span class="text-sm bg-red-400 text-white ml-2.5 px-2 py-1 rounded-full leading-none">測試</span>
+      <span class="ferry-for-test">測試</span>
     @endif
   </div>
 

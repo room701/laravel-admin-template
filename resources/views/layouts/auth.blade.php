@@ -23,5 +23,7 @@
 
   @yield('content')
 
+  @include('admin-ferry::partials.scripts')
+
 </body>
 </html>

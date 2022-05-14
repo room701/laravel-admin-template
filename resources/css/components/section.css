@@ -1,9 +1,16 @@
 @layer components {
-    .c-section {
+    .ferry-section-wrapper {
+        @apply -mx-4 lg:-mx-0;
+    }
+
+    .ferry-section {
         @apply w-full p-4 lg:p-6 border-t border-b lg:border border-gray-200 bg-white shadow-sm mx-auto space-y-default;
 
-        &.c-setcion-form {
-            @apply pb-0;
-        }
+        &.ferry-section-form { @apply pb-0; }
+
+        &.ferry-section-full { @apply w-full; }
+        &.ferry-section-md   { @apply w-full md:w-6/7 lg:w-4/5 lg:max-w-xl; }
+        &.ferry-section-lg   { @apply w-full md:w-9/10 lg:w-8/9 lg:max-w-5xl; }
+        &.ferry-section-xl   { @apply w-full md:w-11/12 lg:w-10/12 lg:max-w-7xl; }
     }
 }

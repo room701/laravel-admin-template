@@ -1,30 +1,31 @@
 @props([
   'size' => 'full',
-  'class' => '',
   'isForm' => false,
 ])
 
 @php
   switch($size) {
     case 'full':
-      $sizeClass = 'w-full';
+      $sizeClass = 'ferry-section-full';
       break;
     case 'md':
-      $sizeClass = 'w-full md:w-6/7 lg:w-4/5 lg:max-w-xl';
+      $sizeClass = 'ferry-section-md';
       break;
     case 'lg':
-      $sizeClass = 'w-full md:w-9/10 lg:w-8/9 lg:max-w-5xl';
+      $sizeClass = 'ferry-section-lg';
       break;
     case 'xl':
-      $sizeClass = 'w-full md:w-11/12 lg:w-10/12 lg:max-w-7xl';
+      $sizeClass = 'ferry-section-xl';
       break;
     default:
       $sizeClass = '';
   }
 @endphp
 
-<section class="-mx-4 lg:-mx-0" {{ $attributes }}>
-  <div class="c-section {{ $isForm ? 'c-setcion-form' : '' }} {{ $sizeClass }} {{ $class }}">
+<section class="ferry-section-wrapper">
+
+  <div @class(['ferry-section', 'ferry-section-form' => $isForm, $sizeClass]) {{ $attributes->merge([]) }}>
     {{ $slot }}
   </div>
+
 </section>

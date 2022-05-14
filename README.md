@@ -1,3 +1,12 @@
+# 開發備註
+
+使用 Vite (非 Laravel Vite 集成) 作為資源編譯，因此使用套件的主程式可以自由使用 Vite 或 Laravel Vite。
+
+考量使用套件的主程式可能也會使用 TailwindCSS 或 WindiCSS，為防止樣式衝突，
+套件的 TailwindCSS 樣式都不寫在 tag class 上，只做 CSS class 命名。
+
+----------------------------------------------------------
+
 # V1 版本依賴
 
 - Frontend

@@ -27,7 +27,7 @@
 
   @include('admin-ferry::partials.content')
 
-  <button onclick="window.admin.helpers.goTop()" class="c-gotop" type="button"><i class="eva eva-arrow-upward-outline"></i></button>
+  <button onclick="window.admin.helpers.goTop()" class="ferry-gotop" type="button"><i class="eva eva-arrow-upward-outline"></i></button>
 
   @include('admin-ferry::partials.scripts')
 

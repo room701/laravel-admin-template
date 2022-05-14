@@ -4,8 +4,8 @@
 
 //     constructor() {
 //         this.elementIds = {
-//             containerWrapper: 'content-container-wrapper',
-//             container: 'content-container',
+//             containerWrapper: 'ferry-content-container-wrapper',
+//             container: 'ferry-content-container',
 //             loader: 'loader'
 //         };
 //         this.container = this.getContainer();
@@ -60,7 +60,7 @@
 //         .then((html) => {
 //             let parser = new DOMParser();
 //             let content = parser.parseFromString(html, 'text/html')
-//                                 .getElementById('content-container');
+//                                 .getElementById('ferry-content-container');
 
 //             new Promise((resolve) => {
 //                 this.container.replaceWith(content);

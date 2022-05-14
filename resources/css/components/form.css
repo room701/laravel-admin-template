@@ -1,10 +1,5 @@
 @layer components {
-    %form-input-style {
-       @apply border-gray-300/80;
-       @extend %global-font; /* 覆蓋 tailwwind@tailwindcss/forms 的字體設定 */
-    }
-
-    .c-setcion-form form {
+    .ferry-setcion-form form {
         @apply space-y-5;
     }
 
@@ -16,29 +11,17 @@
             @apply inline-block mb-1 text-gray-500 font-medium text-sm leading-none pb-1;
             /* @apply: ; border-b border-indigo-300 border-opacity-75; */
         }
-
-        .form-input, .form-select {
-            @extend %form-input-style;
-            @apply block min-h-[34px] w-full text-gray-500 leading-none tracking-wide border rounded px-2 py-1.5; /* min-h-[38px] 為保證  input file 中的替代 label 同高 */
-        }
-
-        .form-checkbox + *,
-        .form-radio + *
-        {
-            @apply text-[15px] leading-none;
-        }
     }
 
-    /* .form-icon */
-    .form-icon {
-        .form-input {
-            padding-left: 3rem;
-        }
+    .form-input, .form-select {
+        @extend %form-input-style;
+        @apply block min-h-[34px] w-full text-gray-500 leading-none tracking-wide border rounded px-2 py-1.5; /* min-h-[38px] 為保證  input file 中的替代 label 同高 */
+    }
 
-        i, .icon {
-            pointer-events: none;
-            @apply absolute flex items-center h-full pl-4 text-gray-700 text-xl;
-        }
+    .form-checkbox + *,
+    .form-radio + *
+    {
+        @apply text-[15px] leading-none;
     }
 
     /* .form-toggle */

@@ -4,6 +4,7 @@
 
 @import "./vendor";
 
+@import "./base/extend";
 @import "./base/fonts";
 @import "./base/base";
 
