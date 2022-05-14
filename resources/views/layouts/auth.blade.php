@@ -17,7 +17,7 @@
   @stack('head')
 </head>
 
-<body class="text-gray-600 tracking-wider font-normal antialiased">
+<body>
 
   @include('admin-ferry::partials.loader')
 

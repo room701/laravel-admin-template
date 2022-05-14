@@ -1,18 +1,19 @@
 @extends('admin-ferry::layouts.auth')
 
 @section('content')
-  <div class="lg:flex items-center justify-center">
+  <section class="lg:flex items-center justify-center bg-white">
 
-    {{-- heading set，小板面時隱藏 --}}
+    {{-- Heading set，小板面時隱藏 --}}
     <div class="hidden lg:flex flex-1 h-screen lg:w-1/2 items-center justify-center bg-gradient-to-b from-indigo-50 to-gray-100">
       <div class="max-w-xs transform duration-200 hover:scale-110 cursor-pointer">
         <h1 class="text-8xl text-indigo-600 font-extralight tracking-wider">{{ $heading }}</h1>
       </div>
     </div>
 
+    {{-- Logo & 登入欄位 --}}
     <div class="w-full lg:w-1/2">
 
-      {{-- logo set --}}
+      {{-- Logo set --}}
       <div class="flex justify-start items-center bg-indigo-100 lg:bg-white py-10 px-7 md:py-10 md:px-10 lg:max-w-lg mx-auto">
 
         <div class="hidden md:flex items-center">
@@ -90,5 +91,5 @@
 
     </div>
 
-  </div>
+  </section>
 @endsection

@@ -9,8 +9,8 @@
     }
 
     html, body {
-        @apply flex flex-col h-screen bg-gray-100 text-gray-600;
         @extend %global-font;
+        @apply flex flex-col h-screen bg-gray-100 text-gray-600;
         -ms-overflow-style: -ms-autohiding-scrollbar;
     }
 

@@ -1,10 +1,10 @@
 {
-  "index.html": {
-    "file": "app.95602dfe.js",
-    "src": "index.html",
+  "app.html": {
+    "file": "app.48d4cb58.js",
+    "src": "app.html",
     "isEntry": true,
     "css": [
-      "app.6194d9b3.css"
+      "app.7c6401b6.css"
     ]
   }
 }

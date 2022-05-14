@@ -1,20 +1,22 @@
-window.admin.navVm = Vue.createApp({
-    data() {
-        return {
-            currentUrl: window.location.origin + window.location.pathname,
-            sidebar: {
-                isShow: false,
-                active: null
+if (document.querySelector('#vue-ferry-nav')) {
+    window.admin.navVm = Vue.createApp({
+        data() {
+            return {
+                currentUrl: window.location.origin + window.location.pathname,
+                sidebar: {
+                    isShow: false,
+                    active: null
+                }
             }
-        }
-    },
+        },
 
-    watch: {
-        'sidebar.isShow': () => { document.body.classList.toggle('overflow-hidden'); }
-    },
+        watch: {
+            'sidebar.isShow': () => { document.body.classList.toggle('overflow-hidden'); }
+        },
 
-    components: getComponents()
-}).mount('#vue-ferry-nav');
+        components: getComponents()
+    }).mount('#vue-ferry-nav');
+}
 
 function getComponents() {
     return {
@@ -24,7 +26,7 @@ function getComponents() {
             data() {
                 return {
                     isActive: this.$root.currentUrl == this.href
-                              || this.$root.sidebar.active ==  this.href
+                            || this.$root.sidebar.active ==  this.href
                 }
             },
 

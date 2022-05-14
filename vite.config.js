@@ -10,8 +10,7 @@ export default defineConfig({
   build: {
     rollupOptions: {
       input: {
-        app: 'index.html',
-        // style: './resources/css/app.css',
+        app: 'app.html',
       },
     },
     manifest: true,

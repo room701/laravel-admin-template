@@ -12,8 +12,8 @@
     $manifest = json_decode(file_get_contents($assetsBuildPath.'/manifest.json'), true);
   @endphp
 
-  <link rel="stylesheet" href="{{ $assetsBuildUri }}/{{ $manifest['index.html']['css'][0] }}" />
-  <script type="module" src="{{ $assetsBuildUri }}/{{ $manifest['index.html']['file'] }}"></script>
+  <link rel="stylesheet" href="{{ $assetsBuildUri }}/{{ $manifest['app.html']['css'][0] }}" />
+  <script type="module" src="{{ $assetsBuildUri }}/{{ $manifest['app.html']['file'] }}"></script>
 @else
   {{-- vite dev mode --}}
   <script type="module" src="http://localhost:3000/@vite/client"></script>
