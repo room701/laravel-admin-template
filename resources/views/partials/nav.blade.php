@@ -7,7 +7,9 @@
     <button class="ferry-nav-close"
             onclick="window.admin.helpers.toggleNavSidebar(false); event.stopPropagation();"
             type="button"
-    ><i class="eva eva-close-outline"></i>ccc</button>
+    >
+      <i class="fa-solid fa-xmark"></i>
+    </button>
 
     @foreach (config('admin-ferry.nav', null) as $name => $link)
 
