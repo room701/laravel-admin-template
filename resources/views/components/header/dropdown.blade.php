@@ -2,7 +2,6 @@
   'items' => [ //array
     // ['name' => '修改資料', 'link' => '/', 'new-page' => true],
   ],
-  'iconClass' => '',
   'wrapperClass' => '',
   'togglerId' => 'toolbar-dropdown-toggler-' . bin2hex(random_bytes(4)),
 ])
@@ -10,7 +9,7 @@
 <input id="{{ $togglerId }}" class="toolbar-dropdown-toggler" type="checkbox">
 
 <div class="ferry-toolbar-dropdown {{ $wrapperClass }}">
-  <label for="{{ $togglerId }}" class="ferry-toolbar-dropdown-name {{ $iconClass }}">
+  <label for="{{ $togglerId }}" class="ferry-toolbar-dropdown-name">
     {!! $slot !!}
   </label>
 
