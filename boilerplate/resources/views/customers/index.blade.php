@@ -11,7 +11,7 @@ breadcrumb: null
   @endif
 
   @if ($errors->any())
-    <x-admin::alert.error-obvious :errors="$errors" />
+    <x-admin::alert.error :errors="$errors" />
   @endif
 
   <div class="flex justify-end">

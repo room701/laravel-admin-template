@@ -44,7 +44,7 @@
         {{-- <h2 class="text-center text-4xl text-indigo-900 font-semibold lg:text-left xl:text-5xl xl:text-bold">登入</h2> --}}
 
         @if ($errors->any())
-          <x-admin-ferry::alert.error-obvious :errors="$errors" wrapper-class="mb-10" />
+          <x-admin-ferry::alert.error :errors="$errors" wrapper-class="mb-10" />
         @endif
 
         @if (session()->has('status'))
