@@ -6,7 +6,7 @@
 
   @php
     $homeLink = config('admin-ferry.home');
-    $homeLink = Route::has($homeLink) ? route($homeLink) : $homeLink;
+    $homeLink = \Route::has($homeLink) ? route($homeLink) : $homeLink;
   @endphp
 
   <div class="ferry-header-brand">
