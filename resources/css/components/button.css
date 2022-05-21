@@ -4,10 +4,11 @@
 
         &.btn-xs { @apply px-2 py-1 text-xs; }
         &.btn-sm { @apply px-3 py-1.5 text-sm; }
-        &.btn-md { @apply px-3 py-1.5; }
-        &.btn-lg { @apply px-3.5 py-2 text-lg; }
+        &.btn-md { @apply px-4 py-2; }
+        &.btn-lg { @apply px-5 py-3 text-lg; }
 
         &.btn-blue { @apply bg-blue-500 text-white; }
         &.btn-red  { @apply bg-red-500 text-white; }
+        &.btn-gray  { @apply bg-gray-700 text-white; }
     }
 }

@@ -35,6 +35,10 @@
     case 'red':
       $class .= 'btn-red';
       break;
+
+    case 'gray':
+      $class .= 'btn-gray';
+      break;
   }
 @endphp
 
