@@ -4,7 +4,7 @@
 
 {{-- 如果外部主程式有安蛛 laravel vite 時 (php 中有 vite() 此 function)，
   只套用 laravel vite 嵌入的 tag，因下方 dev mode 中 @vite tag 會有作用上的衝突 --}}
-@if (! env('IS_VITE_DEV') || function_exists('vite'))
+@if (! env('ADMIN_FERRY_VITE_DEV') || function_exists('vite'))
   {{-- vite production mode --}}
   @php
     $assetsBuildUri = $assetsDir.'/dist'; // 頁面連結用
