@@ -25,21 +25,8 @@
       break;
   }
 
-  $class .= ' '; // 留意後方空格
-
-  switch ($color) {
-    case 'blue':
-      $class .= 'btn-blue';
-      break;
-
-    case 'red':
-      $class .= 'btn-red';
-      break;
-
-    case 'gray':
-      $class .= 'btn-gray';
-      break;
-  }
+  // 顏色
+  $class .= ' ' . "btn-{$color}"; // 空格分隔
 @endphp
 
 <{{ $tag }} {{ $attributes->class([$class])->merge() }}>{{ $slot }}</{{ $tag }}>
