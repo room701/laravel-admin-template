@@ -14,7 +14,7 @@
     - Framework: Vue or Alpine
     - CSS Framework: WindyCSS or Tailwind | Tailwind
     - AJAX: HTMX or Inertia or livewire | livewire
-    - ICON: Fontawasome or eva-icons | Fontawasome
+    - ICON: Fontawasome or eva-icons or css.gg | Fontawasome
 - PHP:
     - yaml: spatie/yaml-front-matter
     - form: laravelcollective/html or protonemedia/laravel-form-components
@@ -77,12 +77,6 @@ breadcrumb:
 view 中引用 blade components 的 nameapsce 為 x-admin，如下
 
 <x-admin-ferry::foo.bar />
-
-## Icon font
-
-- eva icons：
-https://akveo.github.io/eva-icons
-分為 js、css 形式，目前使用 css 形式
 
 ## TODO
 

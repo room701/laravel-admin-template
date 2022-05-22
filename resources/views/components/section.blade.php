@@ -24,7 +24,7 @@
 
 <section class="ferry-section-wrapper">
 
-  <div @class(['ferry-section', 'ferry-section-form' => $isForm, $sizeClass]) {{ $attributes->merge([]) }}>
+  <div {{ $attributes->class(['ferry-section', 'ferry-section-form' => $isForm, $sizeClass])->merge([]) }}>
     {{ $slot }}
   </div>
 
