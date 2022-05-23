@@ -42,6 +42,8 @@ options.symlink 為 true 表示 link dir 的方式引入
 },
 ```
 
+----------------------------------------------------------
+
 ## Publish Config
 
 第一次運行時執行
@@ -53,6 +55,8 @@ options.symlink 為 true 表示 link dir 的方式引入
 套件的 assets 有更新都要再次發佈做更新
 
 ``` php artisan laravel-admin-ferry:assets-publish ```
+
+----------------------------------------------------------
 
 ## view 使用方式
 
@@ -78,9 +82,7 @@ view 中引用 blade components 的 nameapsce 為 x-admin，如下
 
 <x-admin-ferry::foo.bar />
 
-## TODO
-
-publish 範本
+----------------------------------------------------------
 
 ## 套件名稱參考
 

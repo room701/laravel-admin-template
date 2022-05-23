@@ -1,10 +1,10 @@
 @layer components {
     .btn {
-        @apply rounded text-center leading-none;
+        @apply inline-block rounded text-center leading-none;
 
         &.btn-xs { @apply px-2 py-1 text-xs; }
         &.btn-sm { @apply px-3 py-1.5 text-sm; }
-        &.btn-md { @apply px-4 py-2; }
+        &.btn-md { @apply px-4 py-2 text-[15px]; }
         &.btn-lg { @apply px-5 py-3 text-lg; }
 
         &.btn-blue { @apply bg-blue-500 text-white; }
