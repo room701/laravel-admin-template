@@ -1,10 +1,12 @@
 {
-  "app.html": {
-    "file": "app.32fea977.js",
-    "src": "app.html",
+  "resources/css/app.css": {
+    "file": "app-9ac573f2.css",
     "isEntry": true,
-    "css": [
-      "app.5f120dff.css"
-    ]
+    "src": "resources/css/app.css"
+  },
+  "resources/js/app.js": {
+    "file": "app-2f3497ed.js",
+    "isEntry": true,
+    "src": "resources/js/app.js"
   }
 }

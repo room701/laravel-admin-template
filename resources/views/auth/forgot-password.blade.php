@@ -6,7 +6,7 @@
     @csrf
 
     <div>
-      <div class="text-sm font-semibold text-gray-500">重設密碼</div>
+      <div class="text-sm font-semibold text-gray-500">請輸入登入信箱，重設密碼</div>
       <input name="email" type="email" value="{{ old('email') }}" placeholder="輸入登入信箱"
             class="w-full text-lg px-0 py-1 border-0 border-b border-gray-300 focus:outline-none focus:border-indigo-500 placeholder-gray-400"
             required

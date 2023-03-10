@@ -7,11 +7,13 @@ export default defineConfig({
   plugins: [
     vue()
   ],
+  publicDir: false,
+  css: {
+    devSourcemap: true // dev 狀態下，不使用 sourcemap，因找不到檔案
+  },
   build: {
     rollupOptions: {
-      input: {
-        app: 'app.html',
-      },
+      input: ['/resources/css/app.css', '/resources/js/app.js']
     },
     manifest: true,
     outDir: './assets/dist', // vite 輸出路徑，相對於 root
@@ -19,6 +21,5 @@ export default defineConfig({
     emptyOutDir: true,
     sourcemap: true,
     assetsInlineLimit: 0 // 多少容量的資源編碼為 base64
-  },
-  publicDir: false
+  }
 })

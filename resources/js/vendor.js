@@ -4,8 +4,8 @@ window.$ = jquery;
 window.jQuery = jquery;
 
 // htmx
+import htmx from 'htmx.org';
 window.htmx = htmx;
-import 'htmx.org';
 
 // Vue
 import { createApp } from 'vue/dist/vue.esm-bundler.js';
@@ -18,5 +18,5 @@ window.Noty = Noty;
 // vanillajs-datepicker
 import { Datepicker } from 'vanillajs-datepicker';
 import zhTW from 'vanillajs-datepicker/locales/zh-TW';
-Object.assign(Datepicker.locales, zhTW);
+Object.assign(Datepicker.locales, zhTW); // 設定語系
 window.Datepicker = Datepicker;
