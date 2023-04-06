@@ -1,5 +1,5 @@
 #ferry-content-container-wrapper {
-    @apply flex-grow mt-14 lg:ml-52 px-4 py-4 pb-0 lg:px-6 lg:py-6 lg:pb-24;
+    @apply flex-grow mt-[var(--header-height)] lg:ml-[var(--nav-lg-width)] px-4 py-4 pb-0 lg:px-6 lg:py-6 lg:pb-24;
 
     will-change: auto;
     transition: opacity 320ms;

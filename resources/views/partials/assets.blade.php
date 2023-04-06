@@ -3,7 +3,7 @@
   $viteDevServer = 'http://127.0.0.1:5173';
 @endphp
 
-{{-- 如果宿主有安裝 laravel vite 時 (php 中有 vite() 此 function)，
+{{-- 如果宿主有安裝 laravel vite 時 (php 中有 vite 此 function)，
   只套用 laravel vite 嵌入的 tag，因下方 dev mode 中 @vite tag 會有作用上的衝突 --}}
 @if (! env('ADMIN_FERRY_VITE_DEV', false) || function_exists('vite'))
 
@@ -21,10 +21,7 @@
 
   {{-- vite dev mode --}}
   <script type="module" src="{{ $viteDevServer }}/@@vite/client"></script>{{-- vite 中的 @vite 會與宿主中 laravel vite 衝突，需要多加一個 @ 為跳脫字元 --}}
-  <link rel="stylesheet" href="{{ $viteDevServer }}/resources/css/app.css" />
+  <link rel="stylesheet" href="{{ $viteDevServer }}/resources/css/app.css">
   <script type="module" src="{{ $viteDevServer }}/resources/js/app.js"></script>
 
 @endif
-
-{{-- Fontawasome --}}
-<link rel="stylesheet" href="{{ $assetsDir }}/static/fonts/fontawasome/@fortawesome/fontawesome-free/css/all.min.css">

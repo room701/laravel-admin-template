@@ -1,6 +1,7 @@
 @import "./tailwind";
 @import "./vendor";
 
+@import "./base/variable";
 @import "./base/extend";
 @import "./base/font";
 @import "./base/base";
@@ -11,6 +12,7 @@
 @import "./components/button";
 @import "./components/dropdown";
 @import "./components/unit";
+@import "./components/alert";
 
 @import "./partials/header";
 @import "./partials/nav";

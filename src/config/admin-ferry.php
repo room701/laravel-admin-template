@@ -8,7 +8,8 @@ return [
 
     'nav-link-type' => 'route', // route or url
     'nav' => [
-        // 'link name' => 'route name' or 'url',
+        // 'link name' => 'route name' or 'url', <- 連結
+        // 'label' => null, <- 分類提示
     ],
 
     'scripts-view' => null, // view path, null

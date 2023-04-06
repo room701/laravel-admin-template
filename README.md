@@ -1,7 +1,7 @@
 # TODO
 
+宿主無法使用未使用的 tailwind class 樣式，解決方式：宿主使用 cdn，但此套件的 tailwind class 必須加上前綴
 文字編輯器
-
 publish 範本
 
 # Branchs
@@ -24,8 +24,8 @@ vite: 原 Laravel Vite 改為原生 Vite，讓宿主程式可以自由選擇使�
 - Frontend
     - 前端建構工具: Vite or Laravel Vite | 目前使用 Vite
     - Framework: Vue or Alpine | 目前使用 Vue
-    - CSS Framework: WindyCSS or Tailwind | 目前使用 Tailwind
-    - ICON: Fontawasome or eva-icons or css.gg | 目前使用 Fontawasome
+    - CSS Framework: WindyCSS or Tailwind or unocss | 目前使用 Tailwind
+    - ICON: Fontawasome or css.gg or eva-icons (久未更新) | 目前使用 Fontawasome 及 css.gg
     - AJAX event: HTMX or Inertia or livewire
 - PHP:
     - yaml: spatie/yaml-front-matter

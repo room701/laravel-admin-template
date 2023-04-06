@@ -1,20 +1,39 @@
+.ferry-nav-mask {
+    @apply absolute h-screen w-screen bg-gray-700 bg-opacity-5 z-19;
+    @apply transition duration-500;
+
+    backdrop-filter: blur(2px);
+}
+
 .ferry-nav {
-    @apply flex flex-col fixed top-0 lg:top-14 left-0 z-20 lg:z-18 h-screen overflow-x-hidden overflow-y-auto bg-white border-r w-9/12 lg:w-52 px-2.5 py-2.5 text-gray-500 transition origin-left transform -translate-x-full lg:translate-x-0 space-y-1;
+    @apply flex flex-col fixed top-0 lg:top-14 left-0 z-20 lg:z-18 h-screen overflow-x-hidden overflow-y-auto w-9/12 lg:w-[var(--nav-lg-width)] px-2.5 py-2.5 transition origin-left transform -translate-x-full lg:translate-x-0 space-y-1;
+    @apply bg-white text-gray-700;
+    @apply border-r border-gray-200/70 lg:border-gray-100 shadow-sm lg:shadow-none;
+    @apply text-base;
 
     &.is-open {
         @apply translate-x-0;
     }
 
     .ferry-nav-close {
-        @apply lg:hidden text-gray-700 text-3xl text-left p-3;
+        @apply lg:hidden text-gray-600 text-3xl text-left p-2.5 -ml-2;
     }
 
     .ferry-nav-item {
-        @apply flex justify-between items-center px-3.5 py-3 transition cursor-pointer hover:bg-indigo-400 hover:text-white;
+        @apply flex justify-between items-center transition duration-300 cursor-pointer;
+        @apply hover:bg-blue-500 hover:text-white;
+        @apply px-4 py-3 lg:py-1.5;
 
         &.is-active {
-            @apply text-gray-800 bg-gray-200;
+            @apply text-gray-500 bg-gray-300/50;
         }
+    }
+
+    .ferry-nav-label {
+        @apply px-0.5 pt-2 pb-0.5;
+        /* @apply bg-amber-100; */
+        /* @apply border-t border-gray-100; */
+        @apply text-[13.7px] text-stone-500/60 font-semibold;
     }
 
     .ferry-nav-dropdown {
@@ -23,14 +42,20 @@
         }
 
         .ferry-nav-submenu {
-            @apply hidden transition transform mb-1;
+            @apply hidden transition transform space-y-1 my-1;
 
             .ferry-nav-item {
-                @apply ml-4;
+                @apply mx-2.5 text-sm;
             }
         }
 
         &.is-open {
+            @apply bg-gray-100/80;
+
+            > .ferry-nav-item {
+                @apply bg-blue-500/80 text-white;
+            }
+
             .ferry-nav-item-append-icon {
                 @apply rotate-90;
             }

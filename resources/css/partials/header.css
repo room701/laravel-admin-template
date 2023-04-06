@@ -1,6 +1,7 @@
 .ferry-header {
-    @apply flex items-center justify-between w-full h-[62px] fixed top-0 left-0 z-19 lg:z-25 px-4 lg:px-5;
-    @apply bg-white border-b border-solid border-gray-200 shadow-sm lg:shadow;
+    @apply flex items-center justify-between w-full h-[var(--header-height)] fixed top-0 left-0 z-19 lg:z-25 px-4 lg:px-5;
+    @apply bg-white border-b border-b-gray-200 lg:border-b-gray-100/50 shadow;
+    /* @apply lg:border-t-2 border-t-blue-500; */
 
     .ferry-nav-toggler {
         @apply lg:hidden flex items-center text-gray-500 text-2xl;

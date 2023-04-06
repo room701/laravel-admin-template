@@ -5,17 +5,27 @@
 
     /* .form-group */
     .form-group {
-        @apply block w-full py-1.5;
+        @apply block w-full py-2.5;
 
-        > label:first-of-type:not([for]) {
+        &:first-of-type {
+            @apply pt-0;
+        }
+    }
+
+    /* .form-group label */
+    .form-group > label {
+        &:first-of-type:not([for]) {
             @apply inline-block mb-1 text-gray-700 font-semibold text-[15px] leading-none pb-1;
-            /* @apply: ; border-b border-indigo-300 border-opacity-75; */
         }
     }
 
     .form-input, .form-select {
         @extend %form-input-style;
-        @apply block min-h-[32px] w-full text-gray-500 leading-none tracking-wide border rounded px-2 py-1.5; /* min-h-[38px] 為保證  input file 中的替代 label 同高 */
+        @apply block min-h-[32px] w-full text-gray-500 leading-none tracking-wide border rounded px-2.5 py-2; /* min-h-[38px] 為保證  input file 中的替代 label 同高 */
+    }
+
+    .form-input:focus, .form-textarea:focus, .form-select:focus, .form-multiselect:focus {
+        @extend %form-input-style;
     }
 
     .form-checkbox + *,
@@ -71,6 +81,11 @@
     }
 
     .ferry-form-submit {
-        @apply flex justify-center bg-gradient-to-r from-gray-100/70 to-slate-200/60 -mx-6 px-6 py-[26px] mt-2
+        @apply flex justify-center bg-gradient-to-r from-gray-100/30 to-slate-200/30 -mx-6 px-6 py-[26px] mt-2;
+
+        .ferry-form-submit-button {
+            @apply w-full max-w-xs bg-gradient-to-r from-blue-500 to-indigo-500 px-5 py-3.5 text-white rounded;
+            @apply transition duration-300 hover:from-blue-600 hover:to-blue-700;
+        }
     }
 }

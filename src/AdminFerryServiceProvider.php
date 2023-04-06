@@ -60,6 +60,7 @@ class AdminFerryServiceProvider extends ServiceProvider
         // Artisan commands
         $this->commands([
             Commands\AssetsPublishCommand::class,
+            Commands\MakeTemplateCommand::class,
         ]);
 
         // Publish assets

@@ -10,7 +10,9 @@
 
     html, body {
         @extend %global-font;
-        @apply flex flex-col h-screen bg-gray-100 text-gray-600;
+        @apply flex flex-col h-screen;
+        @apply bg-gray-100/40 text-gray-600;
+
         -ms-overflow-style: -ms-autohiding-scrollbar;
     }
 

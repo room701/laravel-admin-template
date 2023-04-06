@@ -15,7 +15,7 @@
 
   {{-- 關閉用遮罩 --}}
   <div class="ferry-toolbar-dropdown-close-trigger"
-       onclick="document.getElementById('{{ $togglerId }}').checked = false;"
+    onclick="document.getElementById('{{ $togglerId }}').checked = false;"
   ></div>
 
   {{-- 子選單外框 --}}

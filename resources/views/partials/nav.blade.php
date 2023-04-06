@@ -1,17 +1,26 @@
 <templat id="vue-ferry-nav">
+
+  <div class="ferry-nav-mask" v-show="sidebar.isShow"></div>
+
   <nav @click.stop
-      class="ferry-nav"
-      :class="{ 'is-open': sidebar.isShow }"
+       class="ferry-nav"
+       :class="{ 'is-open': sidebar.isShow }"
   >
 
     <button class="ferry-nav-close"
             onclick="window.admin.helpers.toggleNavSidebar(false); event.stopPropagation();"
             type="button"
     >
-      <i class="fa-solid fa-xmark"></i>
+      {{-- <i class="fa-solid fa-xmark"></i> --}}
+      <svg width="32px" height="32px" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#707070"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC" stroke-width="0.128"></g><g id="SVGRepo_iconCarrier"><line x1="8" y1="8" x2="24" y2="24"></line><line x1="24" y1="8" x2="8" y2="24"></line></g></svg>
     </button>
 
     @foreach (config('admin-ferry.nav', null) as $name => $link)
+
+      {{-- 分類提示，非連結或雙層選單 --}}
+      @if (is_null($link))
+         <div class="ferry-nav-label">{{ $name }}</div>
+      @endif
 
       {{-- 單層選單 --}}
       @if (is_string($link))
