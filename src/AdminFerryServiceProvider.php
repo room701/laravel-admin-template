@@ -73,7 +73,7 @@ class AdminFerryServiceProvider extends ServiceProvider
         $output = config_path(static::$publishConfigName . '.php');
         $this->publishes([
             __DIR__.'/config/admin-ferry.php' => $output,
-        ], 'laravel-admin-ferry:config');
+        ], 'laravel-admin-ferry-config');
     }
 
     protected function checkMixManifestFile()

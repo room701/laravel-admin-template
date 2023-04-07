@@ -5,7 +5,11 @@
 
   @if ($viewParams->get('breadcrumb', null))
     @foreach ($viewParams->get('breadcrumb') as $page => $url)
-      <li class="ferry-breadcrumb-item"><a href="{{ $url }}" data-fetch-url>{{ $page }}</a></li>
+      @if ($url)
+        <li class="ferry-breadcrumb-item"><a href="{{ $url }}" data-fetch-url>{{ $page }}</a></li>
+      @else
+        <li class="ferry-breadcrumb-item">{{ $page }}</li>
+      @endif
     @endforeach
   @endif
 

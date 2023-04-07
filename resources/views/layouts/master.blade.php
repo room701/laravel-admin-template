@@ -15,6 +15,9 @@
   @include('admin-ferry::partials.assets')
 
   @stack('head')
+
+  @include('admin-ferry::partials.scripts')
+
 </head>
 
 <body>
@@ -28,8 +31,6 @@
   @include('admin-ferry::partials.content')
 
   <button onclick="window.admin.helpers.goTop()" class="ferry-gotop" type="button"><i class="fa-solid fa-arrow-up"></i></button>
-
-  @include('admin-ferry::partials.scripts')
 
 </body>
 </html>
