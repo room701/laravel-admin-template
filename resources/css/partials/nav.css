@@ -45,16 +45,16 @@
             @apply hidden transition transform space-y-1 my-1;
 
             .ferry-nav-item {
-                @apply mx-2.5 text-sm;
+                @apply ml-3 text-sm;
             }
         }
 
         &.is-open {
-            @apply bg-gray-100/80;
+            /* @apply bg-gray-100/80;
 
             > .ferry-nav-item {
                 @apply bg-blue-500/80 text-white;
-            }
+            } */
 
             .ferry-nav-item-append-icon {
                 @apply rotate-90;

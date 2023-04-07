@@ -9,7 +9,7 @@
 
   {{-- vite production mode --}}
   @php
-    $assetsBuildUri = $assetsDir.'/dist'; // 頁面連結用
+    $assetsBuildUri = $assetsDir; // 頁面連結用
     $assetsBuildPath = public_path($assetsBuildUri); // 抓取檔案用
     $manifest = json_decode(file_get_contents($assetsBuildPath.'/manifest.json'), true);
   @endphp

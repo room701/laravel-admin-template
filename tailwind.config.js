@@ -5,26 +5,26 @@ module.exports = {
         './resources/views/**/*.blade.php'
     ],
     safelist: [
-        {
-            pattern: /bg-+/,
-            variants: ['hover'],
-        },
-        {
-            pattern: /text-+/,
-            variants: ['hover'],
-        },
-        {
-            pattern: /w-+/,
-            variants: ['hover'],
-        },
-        {
-            pattern: /min-w-+/,
-            variants: ['hover'],
-        },
-        {
-            pattern: /max-w-+/,
-            variants: ['hover'],
-        }
+        // {
+        //     pattern: /bg-+/,
+        //     variants: ['hover'],
+        // },
+        // {
+        //     pattern: /text-+/,
+        //     variants: ['hover'],
+        // },
+        // {
+        //     pattern: /w-+/,
+        //     variants: ['hover'],
+        // },
+        // {
+        //     pattern: /min-w-+/,
+        //     variants: ['hover'],
+        // },
+        // {
+        //     pattern: /max-w-+/,
+        //     variants: ['hover'],
+        // }
     ],
     theme: {
         contziner: {

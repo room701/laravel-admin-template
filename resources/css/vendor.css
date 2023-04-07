@@ -1,4 +1,4 @@
-/* fontawasome */
+/* fontawasome @因需要一起引入字型檔，在母程式的路徑不同，也可改用 link 方式引入，目前則是用 vite assetsInline 方式解決路徑問題 */
 @import "../../node_modules/@fortawesome/fontawesome-free/css/all.min.css";
 
 /* css.gg */

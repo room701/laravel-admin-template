@@ -78,7 +78,7 @@ class AdminFerryServiceProvider extends ServiceProvider
 
     protected function checkMixManifestFile()
     {
-        $manifestFile = public_path(admin_asset() . 'dist/manifest.json');
+        $manifestFile = public_path(admin_asset() . '/manifest.json');
 
         if (! file_exists($manifestFile)) {
             $this->commands([
