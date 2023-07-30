@@ -60,7 +60,7 @@ options.symlink 為 true 表示 link dir 的方式引入
 
 第一次運行時執行
 
-``` php artisan vendor:publish --tag=laravel-admin-ferry:config ```
+``` php artisan vendor:publish --tag=laravel-admin-ferry-config ```
 
 ## Publish/update assets
 
