@@ -20,13 +20,13 @@
   <div class="ferry-header-toolbar">
     @includeIf(config('admin-ferry.header-toolbar-view'))
 
-    <x-admin-ferry::header.dropdown icon-class="text-2xl" :items="
-      [
-        ['name' => '登出', 'link' => '/'],
-      ]
-    ">
-      <i class="fa-regular fa-user"></i>
-    </x-admin::header.dropdown>
+{{--    <x-admin-ferry::header.dropdown icon-class="text-2xl" :items="--}}
+{{--      [--}}
+{{--        ['name' => '登出', 'link' => '/'],--}}
+{{--      ]--}}
+{{--    ">--}}
+{{--      <i class="fa-regular fa-user"></i>--}}
+{{--    </x-admin::header.dropdown>--}}
   </div>
 
 </header>
