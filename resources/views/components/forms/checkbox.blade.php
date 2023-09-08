@@ -5,6 +5,7 @@
   'checked' => [],
   'wrapperClass' => '',
   'inputClass' => '',
+  'listType' => 'row', // row || col
 ])
 
 @php
@@ -16,7 +17,7 @@
     <label>{{ $label }}</label>
   @endif
 
-  <div class="flex flex-row flex-wrap">
+  <div class="flex flex-wrap {{ $listType == 'row' ? 'flex-row' : 'flex-col' }}">
     @foreach($options as $value => $text)
       <label class="mr-5">
         @php
