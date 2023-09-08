@@ -4,7 +4,7 @@
   'closeBtnClass' => '',
 ])
 
-@if ($errors)
+@if (is_string($errors) || count($errors->all()))
 <div class="flex items-center bg-red-50 border-t-4 border-red-600 px-4 py-4 text-red-600 font-semibold shadow-sm {{ $wrapperClass }}">
   <div class="w-full flex items-center">
     {{-- <svg class="h-8 w-8 text-red-600 mr-6 cursor-pointer" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
