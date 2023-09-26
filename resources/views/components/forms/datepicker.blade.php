@@ -12,7 +12,7 @@
                            ->merge(['autocomplete' => 'off'])
                            ->getAttributes();
 
-  $input = Form::text($name, $value, $attributes);
+  $input = html()->input('text', $name, $value)->attributes($attributes);
 @endphp
 
 <div class="form-group {{ $wrapperClass }}">

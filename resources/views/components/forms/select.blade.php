@@ -16,5 +16,5 @@
     <label>{{ $label }}</label>
   @endif
 
-  {!! Form::select($name, $options, $value, $attributes) !!}
+  {!! html()->select($name, $options, $value)->attributes($attributes) !!}
 </div>

@@ -3,7 +3,7 @@
     "description": "後台",
     "require": {
         "spatie/yaml-front-matter": "^2.0",
-        "laravelcollective/html": "^6.4"
+        "spatie/laravel-html": "^3.2"
     },
     "autoload": {
         "psr-4": {

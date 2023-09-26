@@ -14,6 +14,13 @@ class AdminFerryServiceProvider extends ServiceProvider
 {
     use PackageSetting;
 
+    public function provides(): array
+    {
+        return [
+            Spatie\Html\HtmlServiceProvider::class,
+        ];
+    }
+
     public function boot()
     {
         // If run in console

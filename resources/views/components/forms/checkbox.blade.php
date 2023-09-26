@@ -28,7 +28,7 @@
             $isChecked = $value == $checked;
           }
         @endphp
-        {!! Form::checkbox($name, $value, $isChecked ? true : null, $attributes) !!}
+        {!! html()->checkbox($name, $isChecked ? true : null, $value)->attributes($attributes) !!}
         <span class="ml-1.5 cursor-pointer">{{ $text }}</span>
       </label>
     @endforeach

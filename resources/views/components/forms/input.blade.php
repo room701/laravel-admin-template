@@ -13,15 +13,10 @@
   // 因 Form 套件要傳入屬性陣列，使用 getAttributes() 取得屬性陣列
   $attributes = $attributes->class(["form-input {$inputClass}"])->getAttributes();
 
-  switch($type) {
-    case 'text':       $input = Form::text($name, $value, $attributes);       break;
-    case 'number':     $input = Form::number($name, $value, $attributes);     break;
-    case 'tel':        $input = Form::tel($name, $value, $attributes);        break;
-    case 'date':       $input = Form::date($name, $value, $attributes);       break;
-    case 'email':      $input = Form::email($name, $value, $attributes);      break;
-    case 'textarea':   $input = Form::textarea($name, $value, $attributes);   break;
-    case 'password':   $input = Form::password($name, $attributes);           break;
-    case 'file':       $input = Form::file($name, $attributes);               break;
+  if ($type === 'textarea') {
+    $input = html()->textarea($name, $value)->attributes($attributes);
+  } else {
+    $input = html()->input($type, $name, $value)->attributes($attributes);
   }
 @endphp
 

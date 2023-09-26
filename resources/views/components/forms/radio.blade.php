@@ -23,7 +23,7 @@
   <div class="flex flex-row flex-wrap">
     @foreach($options as $value => $text)
       <label class="mr-5">
-        {!! Form::radio($name, $value, $checked == $value ? true : null, $attributes) !!}
+        {!! html()->radio($name, $checked == $value ? true : null, $value)->attributes($attributes) !!}
         <span class="ml-1.5 cursor-pointer">{{ $text }}</span>
       </label>
     @endforeach
