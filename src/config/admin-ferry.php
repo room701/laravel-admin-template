@@ -3,7 +3,7 @@
 return [
     'name' => '後台',
 
-    'home-link-type' => 'route', // route or url
+    'home-link-type' => 'url', // route or url
     'home' => '/',
 
     'nav-link-type' => 'route', // route or url

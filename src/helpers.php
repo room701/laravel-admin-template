@@ -43,13 +43,3 @@ if (! function_exists('admin_asset')) {
         return $assetsPath . ltrim($path, '/');
     }
 }
-
-// if (! function_exists('admin_asset_mix')) {
-//     function admin_asset_mix($path = null)
-//     {
-//         $manifestDirectory = trim(admin_asset(), '/');
-//         $path = ltrim($path, '/');
-
-//         return mix($path, $manifestDirectory);
-//     }
-// }
