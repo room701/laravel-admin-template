@@ -9,7 +9,7 @@ breadcrumb:
 
   <x-admin-ferry::alert.error :errors="$errors" />
 
-  {!! Form::model($post, []) !!}
+  {!! html()->modelForm($post, 'POST', [])->open() !!}
 
     <x-admin-ferry::forms.input label="標題" name="" />
 
@@ -33,6 +33,6 @@ breadcrumb:
 
     <x-admin-ferry::forms.submit text="儲存" />
 
-  {!! Form::close() !!}
+  {!! html()->closeModelForm() !!}
 
 </x-admin-ferry::section>
