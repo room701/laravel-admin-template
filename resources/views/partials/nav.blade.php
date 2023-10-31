@@ -19,7 +19,7 @@
 
       {{-- 分類提示，非連結或雙層選單 --}}
       @if (is_null($link))
-         <div class="ferry-nav-label">{{ $name }}</div>
+        <div class="ferry-nav-label">{{ $name }}</div>
       @endif
 
       {{-- 單層選單 --}}

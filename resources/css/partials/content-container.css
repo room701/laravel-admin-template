@@ -13,7 +13,7 @@
         @apply space-y-4 lg:space-y-default;
 
         .ferry-content-title-set {
-            @apply w-max flex items-center;
+            @apply w-max flex items-center !mb-6;
 
             .ferry-content-title-border {
                 @apply border-t border-indigo-600 w-6 lg:w-10 h-0 mr-5 lg:mr-7 lg:ml-1.5;

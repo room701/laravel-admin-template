@@ -1,6 +1,7 @@
 <section id="ferry-content-container-wrapper" class="is-show">
 
   <main id="ferry-content-container">
+
     @includeWhen($viewParams->get('breadcrumb', null) !== false, 'admin-ferry::partials.breadcrumb')
 
     @if ($title = \Arr::get($viewParams, 'page.name', null))
@@ -11,6 +12,7 @@
     @endif
 
     {!! $viewContent !!}
+
   </main>
 
 </section>

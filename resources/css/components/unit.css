@@ -1,9 +1,10 @@
 /* .ferry-gotop */
 .ferry-gotop {
-    @apply fixed bottom-8 right-8 z-15 inline-flex items-center justify-center w-10 h-10 rounded-full;
-    @apply border border-gray-300/60 !bg-white bg-opacity-90;
-    @apply text-gray-400 shadow-md text-center text-xl leading-none transition-all duration-500;
-    @apply hover:bg-blue-500 hover:text-white hover:border-transparent;
+    @apply fixed bottom-5 right-5 md:bottom-7 md:right-7 z-15 inline-flex items-center justify-center rounded-full;
+    @apply w-8 h-8 md:w-9 md:h-9;
+    @apply border border-gray-300/60 bg-white bg-opacity-90;
+    @apply text-gray-400 shadow-md text-center text-base md:text-lg leading-none transition-all duration-500;
+    @apply hover:bg-indigo-500 hover:text-white hover:border-transparent;
 }
 
 /* .ferry-search */

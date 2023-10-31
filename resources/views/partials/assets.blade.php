@@ -1,6 +1,6 @@
 @php
   $assetsDir = '/vendor/laravel-admin-ferry'; // 頁面連結用
-  $viteDevServer = 'http://127.0.0.1:5180';
+  $viteDevServer = 'http://localhost:5180';
 @endphp
 
 {{-- 如果宿主有安裝 laravel vite 時 (php 中有 vite 此 function)，
