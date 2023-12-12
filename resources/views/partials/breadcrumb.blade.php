@@ -1,11 +1,12 @@
+@php
+  $homeUrl = config('admin-ferry.home-link-type', 'url') == 'url'
+           ? config('admin-ferry.home', '/')
+           : route(config('admin-ferry.home'));
+@endphp
+
 @if (URL::current() != $homeUrl)
 <ul class="ferry-breadcrumb ferry-breadcrumb-sm">
   <li class="ferry-breadcrumb-item">
-    @php
-      $homeUrl = config('admin-ferry.home-link-type', 'url') == 'url'
-               ? config('admin-ferry.home', '/')
-               : route(config('admin-ferry.home'));
-    @endphp
     <a href="{{ $homeUrl }}" data-fetch-url class="flex items-center"><i class="fa-solid fa-house text-gray-500"></i></a>
   </li>
 
