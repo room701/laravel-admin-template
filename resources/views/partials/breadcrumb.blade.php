@@ -4,7 +4,7 @@
            : route(config('admin-ferry.home'));
 @endphp
 
-@if (URL::current() != $homeUrl)
+@if (request()->path() != $homeUrl)
 <ul class="ferry-breadcrumb ferry-breadcrumb-sm">
   <li class="ferry-breadcrumb-item">
     <a href="{{ $homeUrl }}" data-fetch-url class="flex items-center"><i class="fa-solid fa-house text-gray-500"></i></a>
