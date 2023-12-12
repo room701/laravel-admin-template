@@ -1,3 +1,4 @@
+@if (URL::current() != $homeUrl)
 <ul class="ferry-breadcrumb ferry-breadcrumb-sm">
   <li class="ferry-breadcrumb-item">
     @php
@@ -20,3 +21,4 @@
 
   <li class="ferry-breadcrumb-item">{{ \Arr::get($viewParams, 'page.name', '') }}</li>
 </ul>
+@endif
