@@ -1,6 +1,7 @@
 @props([
   'size' => 'full',
   'isForm' => false,
+  'wrapperClass' => null,
 ])
 
 @php
@@ -22,7 +23,7 @@
   }
 @endphp
 
-<section class="ferry-section-wrapper">
+<section class="ferry-section-wrapper {{ $wrapperClass }}">
 
   <div {{ $attributes->class(['ferry-section', 'ferry-section-form' => $isForm, $sizeClass])->merge([]) }}>
     {{ $slot }}
