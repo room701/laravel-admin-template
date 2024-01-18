@@ -1,9 +1,10 @@
 @props([
-  'message' => '',
+  'messages' => null,
   'wrapperClass' => '',
   'closeBtnClass' => '',
 ])
 
+@if ($message)
 <div class="ferry-alert {{ $wrapperClass }}">
   <div class="w-full flex items-center">
 
@@ -29,3 +30,4 @@
   </button>
 
 </div>
+@endif
