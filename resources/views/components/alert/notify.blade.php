@@ -4,17 +4,17 @@
   'closeBtnClass' => '',
 ])
 
-@if ($message)
+@if ($messages)
 <div class="ferry-alert {{ $wrapperClass }}">
   <div class="w-full flex items-center">
 
     <i class="fa-solid fa-circle-check mr-4 fa-xl"></i>
 
-    @if (is_string($message))
-      {{ $message }}
+    @if (is_string($messages))
+      {{ $messages }}
     @else
       <ul class="list-disc list-inside">
-        @foreach ($message as $item)
+        @foreach ($messages as $item)
           <li>{{ $item }}</li>
         @endforeach
       </ul>
