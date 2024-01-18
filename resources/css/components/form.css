@@ -28,6 +28,11 @@
         @extend %form-input-style;
     }
 
+    .form-input[disabled],
+    .form-input[readonly] {
+        @apply bg-gray-100/70 border-gray-200;
+    }
+
     .form-checkbox + *,
     .form-radio + *
     {
