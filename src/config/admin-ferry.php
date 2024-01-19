@@ -6,6 +6,7 @@ return [
     'home-link-type' => 'url', // route or url
     'home' => '/',
 
+    'nav-view' => null, // view path, null
     'nav-link-type' => 'route', // route or url
     'nav' => [
         // 'link name' => 'route name' or 'url', <- 連結
