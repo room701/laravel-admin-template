@@ -15,8 +15,11 @@
       <svg width="32px" height="32px" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#707070"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC" stroke-width="0.128"></g><g id="SVGRepo_iconCarrier"><line x1="8" y1="8" x2="24" y2="24"></line><line x1="24" y1="8" x2="8" y2="24"></line></g></svg>
     </button>
 
-    @foreach (config('admin-ferry.nav', null) as $name => $link)
+    {{-- 若有指定的 nav view，直接引入 --}}
+    @includeIf(config('admin-ferry.nav-view'))
 
+    {{-- 引入 config 中 admin-ferry.nav 項目 --}}
+    @foreach (config('admin-ferry.nav', null) as $name => $link)
       {{-- 分類提示，非連結或雙層選單 --}}
       @if (is_null($link))
         <div class="ferry-nav-label">{{ $name }}</div>
@@ -37,7 +40,6 @@
           @endforeach
         </ferry-nav-dropdown>
       @endif
-
     @endforeach
 
   </nav>
