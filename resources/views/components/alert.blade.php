@@ -13,7 +13,7 @@
       break;
 
     case 'error':
-      $iconClass = 'fa-circle-xmark';
+      $iconClass = 'fa-circle-exclamation';
       $wrapperDefaultClass = 'error';
       break;
 
@@ -21,30 +21,39 @@
       $iconClass = 'fa-circle-exclamation';
       $wrapperDefaultClass = 'info';
   }
+
+  // 若為 content 為 Illuminate\Support\ViewErrorBag 時
+  if ($content instanceof Illuminate\Support\ViewErrorBag) {
+    $content = $content->all();
+  }
 @endphp
 
-<div class="ferry-alert {{ $wrapperDefaultClass }} {{ $wrapperClass }}">
-  <div class="w-full flex items-center">
+@if ($content)
+  <div class="ferry-alert {{ $wrapperDefaultClass }} {{ $wrapperClass }}">
+    <div class="w-full flex items-center">
 
-    <i class="fa-solid {{ $iconClass }} mr-4 fa-xl"></i>
+      <i class="fa-solid {{ $iconClass }} mr-4 fa-xl"></i>
 
-    @if (is_string($content))
-      {{ $content }}
-    @else
-      <ul class="list-disc list-inside">
-        @foreach ($content as $item)
-          <li>{{ $item }}</li>
-        @endforeach
-      </ul>
-    @endif
+      @if (is_string($content))
+        {{ $content }}
+      @elseif (is_array($content) && count($content) === 1)
+        {{ $content[0] }}
+      @elseif (is_array($content))
+        <ul>
+          @foreach ($content as $item)
+            <li class="leading-7">{{ $item }}</li>
+          @endforeach
+        </ul>
+      @endif
+
+    </div>
+
+    <button type="button"
+            class="flex-shrink-0 flex rounded-md {{ $closeBtnClass }}"
+            onclick="this.parentElement.remove();"
+      >
+      <i class="fa-solid fa-xmark fa-xl"></i>
+    </button>
 
   </div>
-
-  <button type="button"
-          class="flex-shrink-0 flex rounded-md {{ $closeBtnClass }}"
-          onclick="this.parentElement.remove();"
-    >
-    <i class="fa-solid fa-xmark fa-xl"></i>
-  </button>
-
-</div>
+@endif

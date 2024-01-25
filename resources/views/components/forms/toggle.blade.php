@@ -8,6 +8,11 @@
 ])
 
 @php
+  // 此元件不能有 required 屬性，因會有缺值的狀況導致表單無法成功驗證並送出，所以刪除此屬性
+  if ($attributes->has('required')) {
+    $attributes = $attributes->except('required');
+  }
+
   $attributes = $attributes->class(['hidden'])
                            ->merge(['id' => "toggle-{$name}"])
                            ->getAttributes();

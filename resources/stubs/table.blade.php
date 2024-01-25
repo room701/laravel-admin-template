@@ -9,6 +9,10 @@ breadcrumb:
 
   <x-admin-ferry::search />
 
+  <div class="flex justify-end !mb-5">
+    <x-admin-ferry::button href="#">新增</x-admin-ferry::button>
+  </div>
+
   <x-admin-ferry::tables.data-table is-responsive>
     <tr>
       <th>編號</th>

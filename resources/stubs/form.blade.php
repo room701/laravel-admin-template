@@ -1,6 +1,11 @@
+@php
+  $isCreate = request()->route()->getActionMethod() == 'action'
+              || Str::endsWith(request()->path(), 'create');
+@endphp
+
 ---
 page:
-  name: 表單頁面
+  name: {{ $isCreate ? '新增' : '修改' }}表單
 breadcrumb:
   列表: '/'
 ---
@@ -9,7 +14,11 @@ breadcrumb:
 
   <x-admin-ferry::alert.error :errors="$errors" />
 
-  {!! html()->modelForm($post, 'POST', [])->open() !!}
+  @if ($isCreate)
+    {!! html()->form('POST', [])->open() !!}
+  @else
+    {!! html()->modelForm($post, 'POST', [])->open() !!}
+  @endif
 
     <x-admin-ferry::forms.input label="標題" name="" />
 
@@ -33,6 +42,10 @@ breadcrumb:
 
     <x-admin-ferry::forms.submit text="儲存" />
 
-  {!! html()->closeModelForm() !!}
+  @if ($isCreate)
+    {!! html()->form()->close() !!}
+  @else
+    {!! html()->closeModelForm() !!}
+  @endif
 
 </x-admin-ferry::section>
