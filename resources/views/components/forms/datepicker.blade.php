@@ -22,6 +22,8 @@
 
   {!! $input !!}
 
+  {!! $slot !!}
+
 </div>
 
 @once

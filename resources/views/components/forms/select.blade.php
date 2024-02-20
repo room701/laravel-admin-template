@@ -17,4 +17,6 @@
   @endif
 
   {!! html()->select($name, $options, $value)->attributes($attributes) !!}
+
+  {!! $slot !!}
 </div>

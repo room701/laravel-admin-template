@@ -11,6 +11,11 @@ import './common/init.js';
 import './common/helpers.js';
 
 //
+// Import components JS
+//
+import './components/modal.js';
+
+//
 // Nav Vue instance
 //
 import './vue/nav.js';

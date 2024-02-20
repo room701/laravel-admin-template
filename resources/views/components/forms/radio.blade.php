@@ -28,4 +28,6 @@
       </label>
     @endforeach
   </div>
+
+  {!! $slot !!}
 </div>

@@ -8,20 +8,22 @@
 .ferry-nav {
     @apply flex flex-col fixed top-0 lg:top-16 bottom-0 left-0 z-20 lg:z-18 overflow-x-hidden overflow-y-auto;
     @apply w-9/12 lg:w-[var(--nav-lg-width)] px-3 pt-2.5 pb-8;
-    @apply transition origin-left transform -translate-x-full lg:translate-x-0 space-y-1;
+    @apply transition origin-left transform -translate-x-full lg:translate-x-0 space-y-[3px];
     @apply bg-white text-gray-700;
     @apply border-r border-gray-200/70 lg:border-gray-100 shadow-sm lg:shadow-none;
-    @apply text-base !leading-[1.075rem];
+    @apply text-[14.8px] !leading-[1.07rem];
 
     .ferry-nav-item {
-        @apply flex justify-between items-center cursor-pointer rounded;
-        @apply px-4 py-3 lg:py-2.5;
+        @apply cursor-pointer rounded;
+        @apply px-4 py-3 lg:py-2;
         @apply hover:bg-blue-500 hover:text-white;
         @apply transition duration-300;
 
         &.is-active {
-            @apply bg-gradient-to-r from-slate-200/40 to-slate-200/70 text-gray-500;
-            @apply hover:bg-transparent;
+            /*@apply bg-gradient-to-r from-blue-300/40 to-blue-300/50;*/
+            @apply bg-blue-300/30;
+            @apply text-blue-700;
+            /*@apply hover:bg-transparent;*/
         }
     }
 
@@ -34,10 +36,10 @@
     }
 
     .ferry-nav-label {
-        @apply px-0.5 pt-2 pb-0.5;
+        @apply px-0.5 pt-2 pb-1.5;
         /* @apply bg-amber-100; */
         /* @apply border-t border-gray-100; */
-        @apply text-[13px] text-indigo-700/60 font-normal;
+        @apply text-[13.5px] text-indigo-700/70 font-normal;
     }
 
     .ferry-nav-dropdown {

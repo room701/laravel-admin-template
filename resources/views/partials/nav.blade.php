@@ -52,6 +52,8 @@
      class="ferry-nav-item"
      :class="{ 'is-active': isActive }"
   >
+    <slot></slot>
+
     @{{ name }}
   </a>
 </script>

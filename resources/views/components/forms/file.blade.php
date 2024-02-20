@@ -20,6 +20,8 @@
     <input id="{{ $id }}" name="{{ $name }}" type="file" class="hidden" {!! $attributesHTML !!}>
     <span class="block w-full truncate text-gray-500">選擇檔案</span>
   </label>
+
+  {!! $slot !!}
 </div>
 
 <script>
