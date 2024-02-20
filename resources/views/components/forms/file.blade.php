@@ -21,7 +21,9 @@
     <span class="block w-full truncate text-gray-500">選擇檔案</span>
   </label>
 
-  {!! $slot !!}
+  <div class="mt-2.5">
+    {!! $slot !!}
+  </div>
 </div>
 
 <script>

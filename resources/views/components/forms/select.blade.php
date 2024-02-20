@@ -18,5 +18,7 @@
 
   {!! html()->select($name, $options, $value)->attributes($attributes) !!}
 
-  {!! $slot !!}
+  <div class="mt-2.5">
+    {!! $slot !!}
+  </div>
 </div>

@@ -22,7 +22,9 @@
 
   {!! $input !!}
 
-  {!! $slot !!}
+  <div class="mt-2.5">
+    {!! $slot !!}
+  </div>
 
 </div>
 
