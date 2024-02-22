@@ -1,4 +1,5 @@
 @props([
+  'id' => null,
   'name' => null,
   'label' => null,
   'hasTime' => false,
@@ -12,7 +13,7 @@
                            ->merge(['autocomplete' => 'off'])
                            ->getAttributes();
 
-  $input = html()->input('text', $name, $value)->attributes($attributes);
+  $input = html()->input('text', $name, $value)->attributes($attributes)->id($id);
 @endphp
 
 <div class="form-group {{ $wrapperClass }}">
@@ -22,9 +23,11 @@
 
   {!! $input !!}
 
-  <div class="mt-2.5">
-    {!! $slot !!}
-  </div>
+  @if ($slot->isNotEmpty())
+    <div class="mt-1.5">
+      {!! $slot !!}
+    </div>
+  @endif
 
 </div>
 

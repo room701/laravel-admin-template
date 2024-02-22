@@ -1,4 +1,5 @@
 @props([
+  'id' => null,
   'name' => null,
   'label' => null,
   'options' => [], // ['value' => 'key']
@@ -16,9 +17,11 @@
     <label>{{ $label }}</label>
   @endif
 
-  {!! html()->select($name, $options, $value)->attributes($attributes) !!}
+  {!! html()->select($name, $options, $value)->attributes($attributes)->id($id) !!}
 
-  <div class="mt-2.5">
-    {!! $slot !!}
-  </div>
+  @if ($slot->isNotEmpty())
+    <div class="mt-1.5">
+      {!! $slot !!}
+    </div>
+  @endif
 </div>

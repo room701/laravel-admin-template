@@ -1,4 +1,5 @@
   @props([
+  'id' => null,
   'name' => null,
   'label' => null,
   'options' => [], // ['value' => 'key']
@@ -23,7 +24,7 @@
   <div class="flex flex-row flex-wrap">
     @foreach($options as $value => $text)
       <label class="mr-5">
-        {!! html()->radio($name, $checked == $value ? true : null, $value)->attributes($attributes) !!}
+        {!! html()->radio($name, $checked == $value ? true : null, $value)->attributes($attributes)->id($id) !!}
         <span class="ml-1.5 cursor-pointer">{{ $text }}</span>
       </label>
     @endforeach

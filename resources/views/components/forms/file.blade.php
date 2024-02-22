@@ -21,9 +21,11 @@
     <span class="block w-full truncate text-gray-500">選擇檔案</span>
   </label>
 
-  <div class="mt-2.5">
-    {!! $slot !!}
-  </div>
+  @if ($slot->isNotEmpty())
+    <div class="mt-1.5">
+      {!! $slot !!}
+    </div>
+  @endif
 </div>
 
 <script>

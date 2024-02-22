@@ -1,4 +1,5 @@
 @props([
+  'id' => null,
   'name' => null,
   'label' => null,
   'options' => [], // ['value' => 'key']
@@ -28,11 +29,11 @@
             $isChecked = $value == $checked;
           }
         @endphp
-        {!! html()->checkbox($name, $isChecked ? true : null, $value)->attributes($attributes) !!}
+        {!! html()->checkbox($name, $isChecked ? true : null, $value)->attributes($attributes)->id($id) !!}
         <span class="ml-1.5 cursor-pointer">{{ $text }}</span>
       </label>
     @endforeach
   </div>
-    
+
   {!! $slot !!}
 </div>

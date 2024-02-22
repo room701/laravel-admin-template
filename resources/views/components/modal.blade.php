@@ -70,7 +70,7 @@
               @endif
 
               {{-- 內容 --}}
-              @if ($slot)
+              @if ($slot->isNotEmpty())
                 <div @class(['mt-5' => ! empty($title), 'text-gray-500'])>
                   @if ($contentAllowHtml)
                     {!! $slot !!}
