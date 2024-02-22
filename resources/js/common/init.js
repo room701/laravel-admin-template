@@ -11,7 +11,7 @@ window.admin.init = {
         // 套件通用設定
         Noty.overrideDefaults({
             layout: 'topRight',
-            theme: 'sunset'
+            theme: 'sunset' // 修改的話，記得改 resources/css/vendor.css 中的對應
         });
     }
 

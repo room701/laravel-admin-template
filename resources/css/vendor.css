@@ -6,7 +6,7 @@
 
 /* noty */
 @import "../../node_modules/noty/lib/noty.css";
-@import "../../node_modules/noty/lib/themes/metroui.css";
+@import "../../node_modules/noty/lib/themes/sunset.css";
 
 /* vanillajs-datepicker */
 @import "../../node_modules/vanillajs-datepicker/dist/css/datepicker.min.css";
