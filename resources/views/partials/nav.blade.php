@@ -54,7 +54,10 @@
   >
     <slot></slot>
 
-    @{{ name }}
+    <span>
+      <slot name="prefix"></slot>
+      @{{ name }}
+    </span>
   </a>
 </script>
 
