@@ -50,7 +50,7 @@
 
         .ferry-nav-submenu {
             @apply h-0 overflow-hidden; /* 展開效果會因下一個選單項目而有不連續感，先取消 */
-            @apply space-y-1 my-1;
+            @apply space-y-1 my-0;
 
             .ferry-nav-item {
                 @apply ml-3 text-sm;
@@ -69,7 +69,7 @@
             }
 
             .ferry-nav-submenu {
-                @apply h-full;
+                @apply h-full my-1;
             }
         }
     }
