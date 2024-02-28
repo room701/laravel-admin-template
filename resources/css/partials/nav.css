@@ -7,8 +7,9 @@
 
 .ferry-nav {
     @apply flex flex-col fixed top-0 lg:top-16 bottom-0 left-0 z-20 lg:z-18 overflow-x-hidden overflow-y-auto;
-    @apply w-9/12 lg:w-[var(--nav-lg-width)] px-3 pt-2.5 pb-8;
-    @apply transition-all origin-left transform lg:translate-x-0 space-y-[3px];
+    @apply w-9/12 lg:w-[var(--nav-lg-width)] px-3 pt-2.5 pb-8 space-y-[3px];
+    @apply transition-all origin-left transform;
+    @apply -translate-x-full lg:translate-x-0; /* 手機上展開與否所用 */
     @apply bg-white text-gray-700;
     @apply border-r border-gray-200/70 lg:border-gray-100 shadow-sm lg:shadow-none;
     @apply text-[14.8px] !leading-[1.07rem];
