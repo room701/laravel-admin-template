@@ -43,9 +43,6 @@
           <x-admin-ferry::alert type="notify" :content="session('status')" wrapper-class="mb-10" />
         @endif
 
-
-
-
         @yield('form')
 
         {{-- <div class="mt-12 text-sm font-semibold text-gray-700 text-center">

@@ -44,11 +44,13 @@
         {{-- <h2 class="text-center text-4xl text-indigo-900 font-semibold lg:text-left xl:text-5xl xl:text-bold">登入</h2> --}}
 
         @if ($errors->any())
-          <x-admin-ferry::alert.error :errors="$errors" wrapper-class="mb-10" />
+          {{-- <x-admin-ferry::alert.error :errors="$errors" wrapper-class="mb-10" /> --}}
+          <x-admin-ferry::alert type="error" :content="$errors" wrapper-class="mb-10" />
         @endif
 
         @if (session()->has('status'))
-          <x-admin-ferry::alert.notify :message="session('status')" wrapper-class="mb-10" />
+          {{-- <x-admin-ferry::alert.notify :message="session('status')" wrapper-class="mb-10" /> --}}
+          <x-admin-ferry::alert type="notify" :content="session('status')" wrapper-class="mb-10" />
         @endif
 
         <form action="{{ $submitUrl }}" method="POST" autocomplete="on">
