@@ -86,8 +86,9 @@
         {{-- 動作按鈕 --}}
         @if ($hasFooter)
           <div class="bg-gray-100/90 px-4 py-4 sm:flex sm:flex-row-reverse sm:px-6">
-            <button type="button" class="js-modal-callback inline-flex w-full sm:w-auto justify-center rounded-md px-3 py-2 text-sm font-semibold text-white shadow-sm !bg-red-400 hover:!bg-red-500 sm:ml-3">{{ $confirmBtnText }}</button>
-            <button type="button" class="js-modal-close inline-flex w-full sm:w-auto mt-3 sm:mt-0 justify-center rounded-md !bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50">
+            <button type="button" class="js-modal-callback inline-flex w-full sm:w-auto justify-center rounded-md px-1.5 py-3 font-semibold text-white shadow-sm !bg-red-400 hover:!bg-red-500 sm:ml-3">{{ $confirmBtnText }}</button>
+
+            <button type="button" class="js-modal-close inline-flex w-full sm:w-auto mt-3 sm:mt-0 md:mt-0justify-center rounded-md !bg-white px-1.5 py-3 font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50">
               {{ $cancelBtnText }}</button>
           </div>
         @endif
