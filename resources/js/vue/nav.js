@@ -24,7 +24,6 @@ function getComponents() {
             props: ['name', 'href'],
 
             data() {
-                console.log(this.$root.currentUrl, this.href)
                 return {
                     isActive: this.$root.currentUrl === this.href
                               || this.$root.currentUrl === this.href + '/'
