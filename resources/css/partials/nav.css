@@ -54,7 +54,7 @@
             @apply space-y-1 my-0;
 
             .ferry-nav-item {
-                @apply ml-3 text-sm;
+                @apply ml-3;
             }
         }
 

@@ -24,11 +24,18 @@ function getComponents() {
             props: ['name', 'href'],
 
             data() {
+                console.log(this.$root.currentUrl, this.href)
                 return {
                     isActive: this.$root.currentUrl === this.href
-                              || this.$root.currentUrl.startsWith(this.href + '/') // 針對該單元的相關內頁
+                              || this.$root.currentUrl === this.href + '/'
                               || this.$root.currentUrl === this.href + '/' // 針對首頁
                               || this.$root.sidebar.active === this.href
+                              || (
+                                  // 針對該單元的相關內頁
+                                  this.href !== location.origin
+                                  &&
+                                  this.$root.currentUrl.startsWith(this.href + '/')
+                                 )
 
                 }
             },
