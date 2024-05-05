@@ -30,8 +30,8 @@
         {{-- </div> --}}
 
         <div class="_lg:ml-5">
-          <h1 class="flex flex-col _md:flex-row _md:items-center _md:space-x-3.5 text-2xl leading-4 text-indigo-800 font-medium">
-            <span class="mb-3 md:mb-5">{{ config('admin-ferry.name', config('app.name', '後台')) }}</span>
+          <h1 class="flex flex-col _md:flex-row _md:items-center _md:space-x-3.5 text-3xl leading-4 text-indigo-800 font-medium">
+            <span class="mb-3 md:mb-4">{{ config('admin-ferry.name', config('app.name', '後台')) }}</span>
             {{-- <small class="hidden md:inline-block text-gray-300">|</small> --}}
             <span class="text-lg text-indigo-500 font-light">使用者登入</span>
           </h1>
