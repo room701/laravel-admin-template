@@ -16,24 +16,24 @@
       {{-- Logo set --}}
       <div class="flex justify-start items-center bg-indigo-100 lg:bg-white py-10 px-7 md:py-10 md:px-10 lg:max-w-lg mx-auto">
 
-        <div class="hidden md:flex items-center">
-          <svg class="w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 225 225" style="enable-background:new 0 0 225 225;" xml:space="preserve">
-            <style>
-              .st0{fill:none;stroke:currentColor;stroke-width:20;stroke-linecap:round;stroke-miterlimit:3;}
-            </style>
-            <g transform="matrix( 1, 0, 0, 1, 0,0)">
-              <g>
-                <path id="Layer0_0_1_STROKES" class="st0" d="M173.8,151.5l13.6-13.6 M35.4,89.9l29.1-29 M89.4,34.9v1 M137.4,187.9l-0.6-0.4     M36.6,138.7l0.2-0.2 M56.1,169.1l27.7-27.6 M63.8,111.5l74.3-74.4 M87.1,188.1L187.6,87.6 M110.8,114.5l57.8-57.8"/>
-              </g>
-            </g>
-          </svg>
-        </div>
+        {{-- <div class="hidden md:flex items-center"> --}}
+        {{--   <svg class="w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 225 225" style="enable-background:new 0 0 225 225;" xml:space="preserve"> --}}
+        {{--     <style> --}}
+        {{--       .st0{fill:none;stroke:currentColor;stroke-width:20;stroke-linecap:round;stroke-miterlimit:3;} --}}
+        {{--     </style> --}}
+        {{--     <g transform="matrix( 1, 0, 0, 1, 0,0)"> --}}
+        {{--       <g> --}}
+        {{--         <path id="Layer0_0_1_STROKES" class="st0" d="M173.8,151.5l13.6-13.6 M35.4,89.9l29.1-29 M89.4,34.9v1 M137.4,187.9l-0.6-0.4     M36.6,138.7l0.2-0.2 M56.1,169.1l27.7-27.6 M63.8,111.5l74.3-74.4 M87.1,188.1L187.6,87.6 M110.8,114.5l57.8-57.8"/> --}}
+        {{--       </g> --}}
+        {{--     </g> --}}
+        {{--   </svg> --}}
+        {{-- </div> --}}
 
-        <div class="text-2xl text-indigo-800 lg:ml-5 font-medium">
-          <h1 class="flex flex-col md:flex-row md:items-center md:space-x-3.5">
-            <span class="mb-2.5 md:mb-0">{{ config('admin-ferry.name', '後台') }}</span>
-            <small class="hidden md:inline-block text-gray-300">|</small>
-            <span class="text-indigo-500 font-light">登入</span>
+        <div class="_lg:ml-5">
+          <h1 class="flex flex-col _md:flex-row _md:items-center _md:space-x-3.5 text-2xl leading-none text-indigo-800 font-medium">
+            <span class="mb-3 md:mb-4">{{ config('admin-ferry.name', config('app.name', '後台')) }}</span>
+            {{-- <small class="hidden md:inline-block text-gray-300">|</small> --}}
+            <span class="text-indigo-500 font-light">使用者登入</span>
           </h1>
         </div>
 

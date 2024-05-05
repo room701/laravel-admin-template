@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <title>{{ config('admin-ferry.name', '後台') }}</title>
+  <title>{{ config('admin-ferry.name', config('app.name', '後台')) }}</title>
 
   {{-- favicon --}}
   @forelse(config('admin-ferry.favicons') as $favicon)

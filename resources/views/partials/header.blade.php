@@ -10,7 +10,7 @@
   @endphp
 
   <div class="ferry-header-brand">
-    <a href="{{ $homeLink }}" data-fetch-url class="ferry-header-brand-name">{{ config('admin-ferry.name', '後台') }}</a>
+    <a href="{{ $homeLink }}" data-fetch-url class="ferry-header-brand-name">{{ config('admin-ferry.name', config('app.name', '後台')) }}</a>
     @if (! \App::environment('production'))
       <span class="ferry-for-test">測試</span>
     @endif

@@ -22,7 +22,7 @@
 
         <div class="text-2xl text-indigo-800 ml-2 font-medium">
           <h1 class="flex items-center space-x-2">
-            <span>{{ config('admin-ferry.name', '後台') }}</span>
+            <span>{{ config('admin-ferry.name', config('app.name', '後台')) }}</span>
             <small class="text-gray-300">|</small>
             <strong class="text-indigo-500 font-light">登入</strong>
           </h1>
