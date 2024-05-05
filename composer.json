@@ -1,6 +1,7 @@
 {
     "name": "dennykuo/laravel-admin-ferry",
     "description": "後台",
+    "type": "library",
     "require": {
         "spatie/yaml-front-matter": "^2.0",
         "spatie/laravel-html": "^3.2"
