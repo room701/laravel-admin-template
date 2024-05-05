@@ -24,5 +24,13 @@
                 "Dennykuo\\AdminFerry\\AdminFerryServiceProvider"
             ]
         }
+    },
+    "scripts": {
+        "post-update-cmd": [
+            "php artisan laravel-admin-ferry:assets-publish"
+        ],
+        "post-install-cmd": [
+            "php artisan laravel-admin-ferry:assets-publish"
+        ]
     }
 }
