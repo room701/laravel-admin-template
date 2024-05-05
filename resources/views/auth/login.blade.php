@@ -14,7 +14,7 @@
     <div class="w-full lg:w-1/2">
 
       {{-- Logo set --}}
-      <div class="flex justify-start items-center bg-indigo-100 lg:bg-white py-10 px-7 md:py-10 md:px-10 lg:max-w-lg mx-auto">
+      <div class="flex justify-start items-center bg-indigo-100 lg:bg-white py-10 px-7 md:py-9 md:px-10 lg:max-w-lg mx-auto">
 
         {{-- <div class="hidden md:flex items-center"> --}}
         {{--   <svg class="w-10 text-indigo-500" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 225 225" style="enable-background:new 0 0 225 225;" xml:space="preserve"> --}}
@@ -33,7 +33,7 @@
           <h1 class="flex flex-col _md:flex-row _md:items-center _md:space-x-3.5 text-4xl text-indigo-800 font-medium">
             <div class="mb-3 md:mb-5 leading-8">{{ config('admin-ferry.name', config('app.name', '後台')) }}</div>
             {{-- <small class="hidden md:inline-block text-gray-300">|</small> --}}
-            <div class="text-lg text-indigo-500 font-light">使用者登入</div>
+            <div class="text-xl text-indigo-600 font-light">使用者登入</div>
           </h1>
         </div>
 
