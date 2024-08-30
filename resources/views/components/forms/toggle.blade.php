@@ -1,5 +1,4 @@
 {{-- 注意 id 的設定，因會有未設 id 而自動帶入 --}}
-
 @props([
   'id' => null,
   'name' => null,
@@ -16,12 +15,17 @@
     $attributes = $attributes->except('required');
   }
 
-  $attributes = $attributes->class(['hidden'])
-                           ->merge(['id' => $id ?? "toggle-{$name}"])
-                           ->getAttributes();
+  if ($id === null) {
+    $id = "toggle-{$name}-" . bin2hex(random_bytes(6));
+  }
+
   if (! is_bool($checked)) {
     $checked = $checked == $value;
   }
+
+  $attributes = $attributes->class(['hidden'])
+                           ->merge(['id' => $id])
+                           ->getAttributes();
 @endphp
 
 <div class="form-group {{ $wrapperClass }}">
