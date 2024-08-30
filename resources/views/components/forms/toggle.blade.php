@@ -17,7 +17,7 @@
   }
 
   if ($id === null) {
-    $id = "toggle-{$name}-" . bin2hex(random_bytes(8));
+    $id = "toggle-{$name}-" . bin2hex(random_bytes(7));
   }
 
   if (! is_bool($checked)) {
