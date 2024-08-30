@@ -1,4 +1,4 @@
-<templat id="vue-ferry-nav">
+<section id="vue-ferry-nav">
 
   <div class="ferry-nav-mask" v-show="sidebar.isShow"></div>
 
@@ -43,7 +43,7 @@
     @endforeach
 
   </nav>
-</templat>
+</section>
 
 {{-- vue component template --}}
 <script id="ferry-nav-item-template" type="text/x-template">
