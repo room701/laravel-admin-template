@@ -35,9 +35,11 @@
   @endif
 
   <div>
+    {{-- 關閉狀態下的欄位值 --}}
     @if ($disabledValue !== null)
       {!! html()->checkbox($name, true, $disabledValue)->attributes(['id' => $id.'-disabled', 'class' => 'hidden']) !!}
     @endif
+    
     <label for="{{ $id }}" class="form-toggle inline-block cursor-pointer relative {{ $inputClass }}">
       {!! html()->checkbox($name, $checked, $value)->attributes($attributes) !!}
       <div class="bar w-12 h-7 bg-gray-200 rounded-full shadow-inner border border-gray-100 transition duration-300"></div>
