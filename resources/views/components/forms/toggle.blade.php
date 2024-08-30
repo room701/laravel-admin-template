@@ -5,7 +5,7 @@
   'name' => null,
   'label' => null,
   'value' => '1',
-  'checked' => null, // value, null, false (不做任何預先選擇)
+  'checked' => null, // {$value} (是否與 $value 相同而定), true, false
   'wrapperClass' => '',
   'inputClass' => '',
 ])
@@ -19,8 +19,9 @@
   $attributes = $attributes->class(['hidden'])
                            ->merge(['id' => $id ?? "toggle-{$name}"])
                            ->getAttributes();
-
-  $checked = $checked == $value ? true : null
+  if (! is_bool($checked)) {
+    $checked = $checked == $value;
+  }
 @endphp
 
 <div class="form-group {{ $wrapperClass }}">
