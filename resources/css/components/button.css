@@ -2,10 +2,10 @@
     .btn {
         @apply inline-block rounded text-center leading-none hover:cursor-pointer;
 
-        &.btn-xs { @apply px-2 py-1 text-xs; }
-        &.btn-sm { @apply px-3 py-1.5 text-sm; }
-        &.btn-md { @apply px-4 py-2 text-[15px]; }
-        &.btn-lg { @apply px-5 py-3 text-lg; }
+        &.btn-xs { @apply px-2 py-1 text-xs/none; }
+        &.btn-sm { @apply px-3 py-1.5 text-sm/none; }
+        &.btn-md { @apply px-4 py-2.5 text-[15px]/none min-h-[38px]; } /* 預設 */
+        &.btn-lg { @apply px-5 py-3.5 text-lg/none; }
 
         &.btn-blue { @apply bg-gradient-to-r from-blue-500 to-blue-600 text-white; }
         &.btn-sky  { @apply bg-gradient-to-r from-sky-500 to-sky-600 text-white; }
