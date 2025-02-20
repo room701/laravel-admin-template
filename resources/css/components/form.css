@@ -47,7 +47,7 @@
         @apply rounded-full;
     }
 
-    .form-checkbox + ,
+    .form-checkbox + *,
     .form-radio + *
     {
         @apply text-[15px] leading-none text-gray-500;
