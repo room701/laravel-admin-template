@@ -21,7 +21,7 @@
 
     .form-input, .form-select {
         @extend %form-input-style;
-        @apply block min-h-[32px] w-full text-gray-500 leading-none tracking-wide border rounded px-2.5 py-2; /* min-h-[38px] 為保證  input file 中的替代 label 同高 */
+        @apply block min-h-[32px] w-full text-gray-500 leading-none tracking-wide border border-gray-300/95 rounded px-2.5 py-2; /* min-h-[38px] 為保證 input file 中的替代 label 同高 */
     }
 
     .form-input:focus, .form-textarea:focus, .form-select:focus, .form-multiselect:focus {
@@ -34,10 +34,22 @@
         @apply bg-gray-100/70 border-gray-200;
     }
 
-    .form-checkbox + *,
+    /* .form-checkbox, .form-radio */
+    .form-checkbox,
+    .form-radio
+    {
+        @apply text-gray-500 leading-none border border-gray-300/95 rounded checked:bg-blue-500 checked:border-blue-500 p-2;
+    }
+
+    .form-radio
+    {
+        @apply rounded-full;
+    }
+
+    .form-checkbox + ,
     .form-radio + *
     {
-        @apply text-[15px] leading-none;
+        @apply text-[15px] leading-none text-gray-500;
     }
 
     /* .form-toggle */
@@ -47,7 +59,7 @@
         }
 
         input:checked ~ .bar {
-            @apply bg-blue-600;
+            @apply bg-blue-500;
         }
     }
 
