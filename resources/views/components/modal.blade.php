@@ -45,8 +45,8 @@
 
     {{-- 關閉按鈕 --}}
     @if ($hasCloseButton)
-      <div class="absolute inset-y-0-0 right-0 pt-5 sm:pt-6 pr-5">
-        <button type="button" class="js-modal-close w-5 h-5">
+      <div class="absolute inset-y-0-0 right-0 pt-5 sm:pt-6 pr-4 sm:pr-5">
+        <button type="button" class="js-modal-close w-6 h-6">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" class="oc se"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path></svg>
         </button>
       </div>
@@ -60,17 +60,18 @@
         {{--     <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z" /> --}}
         {{--   </svg> --}}
         {{-- </div> --}}
-        <div class="w-full mt-3 mr-5 sm:mt-0">
-          {{-- 標題 --}}
+        <div class="w-full">
+          {{-- 標題 (pr-7 為避開關閉按鈕) --}}
           @if ($title)
-            <h3 class="text-lg font-semibold leading-6 text-gray-900 pr-5">
+            <h3 class="text-lg font-semibold leading-6 text-gray-900 {{ $hasCloseButton ? 'pr-7' : '' }}">
               {{ $title }}
             </h3>
           @endif
 
           {{-- 內容 --}}
           @if ($slot->isNotEmpty())
-            <div @class(['mt-5' => ! empty($title), 'text-gray-500'])>
+            {{-- (pr-7 為避開關閉按鈕) --}}
+            <div @class(['mt-5' => ! empty($title),  'pr-7' => empty($title) && $hasCloseButton, 'text-gray-500'])>
               @if ($contentAllowHtml)
                 {!! $slot !!}
               @else
@@ -85,11 +86,12 @@
 
     @if ($hasFooter)
       {{-- Modal footer --}}
-      <div class="bg-gray-100/90 px-4 py-4 sm:flex sm:flex-row-reverse sm:px-6 text-sm">
-        <button type="button" class="js-modal-callback inline-flex w-full sm:w-auto justify-center rounded-md px-4 py-2.5 text-white shadow-sm !bg-red-400 hover:!bg-red-500 sm:ml-3">{{ $confirmBtnText }}</button>
-
-        <button type="button" class="js-modal-close inline-flex w-full sm:w-auto mt-3 sm:!mt-0 justify-center rounded-md !bg-white px-4 py-2.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50">
+      <div class="bg-gray-100/90 px-4 sm:px-6 py-4 flex sm:justify-end gap-3 text-sm">
+        <button type="button" class="js-modal-close inline-flex w-1/2 sm:w-auto justify-center rounded-md px-4 py-2.5 text-gray-900 bg-white shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50">
           {{ $cancelBtnText }}</button>
+
+        <button type="button" class="js-modal-callback inline-flex w-1/2 sm:w-auto justify-center rounded-md px-4 py-2.5 bg-red-400 hover:bg-red-500 text-white shadow-sm">
+          {{ $confirmBtnText }}</button>
       </div>
       {{-- /Modal footer --}}
     @endif
