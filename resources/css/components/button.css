@@ -2,8 +2,8 @@
     .btn {
         @apply inline-block rounded text-center leading-none hover:cursor-pointer;
 
-        &.btn-xs { @apply px-2.5 py-1 text-xs/none; }
-        &.btn-sm { @apply px-3.5 py-1.5 text-sm/none; }
+        &.btn-xs { @apply px-2.5 py-1.5 text-xs/none; }
+        &.btn-sm { @apply px-3.5 py-2 text-sm/none; }
         &.btn-md { @apply px-5 py-2.5 text-[15px]/none min-h-[38px]; } /* 預設 */
         &.btn-lg { @apply px-6 py-3.5 text-lg/none; }
 
